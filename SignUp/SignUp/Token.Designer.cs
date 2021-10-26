@@ -46,7 +46,7 @@ namespace PostaRomanaFrontend.SignUp
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Indigo;
-            this.label1.Location = new System.Drawing.Point(271, 200);
+            this.label1.Location = new System.Drawing.Point(236, 197);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(316, 26);
             this.label1.TabIndex = 0;
@@ -55,8 +55,8 @@ namespace PostaRomanaFrontend.SignUp
             // tb_Token
             // 
             this.tb_Token.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_Token.Font = new System.Drawing.Font("Berlin Sans FB", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Token.Location = new System.Drawing.Point(276, 256);
+            this.tb_Token.Font = new System.Drawing.Font("Berlin Sans FB", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_Token.Location = new System.Drawing.Point(241, 253);
             this.tb_Token.Multiline = true;
             this.tb_Token.Name = "tb_Token";
             this.tb_Token.Size = new System.Drawing.Size(303, 67);
@@ -70,14 +70,18 @@ namespace PostaRomanaFrontend.SignUp
             this.bt_Register.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
             this.bt_Register.FlatAppearance.BorderSize = 3;
             this.bt_Register.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Register.Font = new System.Drawing.Font("Impact", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Register.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Register.ForeColor = System.Drawing.Color.Black;
-            this.bt_Register.Location = new System.Drawing.Point(351, 382);
+            this.bt_Register.Image = ((System.Drawing.Image)(resources.GetObject("bt_Register.Image")));
+            this.bt_Register.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_Register.Location = new System.Drawing.Point(302, 355);
             this.bt_Register.Name = "bt_Register";
-            this.bt_Register.Size = new System.Drawing.Size(153, 50);
+            this.bt_Register.Size = new System.Drawing.Size(187, 61);
             this.bt_Register.TabIndex = 2;
             this.bt_Register.Text = "Register";
+            this.bt_Register.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.bt_Register.UseVisualStyleBackColor = false;
+            this.bt_Register.Click += new System.EventHandler(this.bt_Register_Click);
             // 
             // label2
             // 
@@ -86,7 +90,7 @@ namespace PostaRomanaFrontend.SignUp
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Berlin Sans FB Demi", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Indigo;
-            this.label2.Location = new System.Drawing.Point(109, 143);
+            this.label2.Location = new System.Drawing.Point(74, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(649, 37);
             this.label2.TabIndex = 3;
@@ -102,9 +106,10 @@ namespace PostaRomanaFrontend.SignUp
             this.gradientPanel1.Controls.Add(this.label2);
             this.gradientPanel1.Controls.Add(this.label1);
             this.gradientPanel1.Controls.Add(this.bt_Register);
-            this.gradientPanel1.Location = new System.Drawing.Point(-24, -3);
+            this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(875, 500);
+            this.gradientPanel1.Size = new System.Drawing.Size(805, 494);
             this.gradientPanel1.TabIndex = 4;
             // 
             // bt_Exit
@@ -112,13 +117,15 @@ namespace PostaRomanaFrontend.SignUp
             this.bt_Exit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bt_Exit.BackColor = System.Drawing.Color.Transparent;
             this.bt_Exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_Exit.BackgroundImage")));
-            this.bt_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.bt_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_Exit.FlatAppearance.BorderSize = 0;
             this.bt_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Exit.Location = new System.Drawing.Point(733, 15);
+            this.bt_Exit.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.bt_Exit.Location = new System.Drawing.Point(698, 12);
             this.bt_Exit.Name = "bt_Exit";
             this.bt_Exit.Size = new System.Drawing.Size(65, 66);
             this.bt_Exit.TabIndex = 4;
+            this.bt_Exit.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.bt_Exit.UseVisualStyleBackColor = false;
             this.bt_Exit.Click += new System.EventHandler(this.bt_Exit_Click);
             // 

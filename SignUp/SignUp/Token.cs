@@ -13,5 +13,10 @@ namespace PostaRomanaFrontend.SignUp
         {
             Application.Exit();
         }
+
+        private void bt_Register_Click(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

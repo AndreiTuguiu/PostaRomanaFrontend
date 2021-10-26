@@ -12,87 +12,12 @@ namespace PostaRomanaFrontend.SignUp
             InitializeComponent();
         }
 
-        private void tb_FirstName_TextChanged(object sender, EventArgs e)
+        private void CredentialsSignUp_Load(object sender, EventArgs e)
         {
-            if (tb_FirstName.Text.Length == 0)
-            {
-                l_error_firstName.Text = "This field is required!";
-            }
-            else
-            {
-                l_error_firstName.Text = "";
-            }
-        }
-
-        private void tb_LastName_TextChanged(object sender, EventArgs e)
-        {
-            if (tb_LastName.Text.Length == 0)
-            {
-                l_error_lastName.Text = "This field is required!";
-            }
-            else
-            {
-                l_error_lastName.Text = "";
-            }
-        }
-
-        private void tb_Username_TextChanged(object sender, EventArgs e)
-        {
-
-            if (tb_Username.Text.Length == 0)
-            {
-                l_error_username.Text = "This field is required!";
-            }
-            else
-            {
-                l_error_username.Text = "";
-            }
-        }
-        private void tb_Email_TextChanged(object sender, EventArgs e)
-        {
-            if (tb_Email.Text.Length == 0)
-            {
-                l_error_email.Text = "This field is required!";
-            }
-            else
-            {
-                l_error_email.Text = "";
-            }
-        }
-
-
-        private void tb_Password_TextChanged(object sender, EventArgs e)
-        {
-            if (tb_Password.Text.Length == 0)
-            {
-                l_error_password.Text = "This field is required!";
-            }
-            else
-            {
-                l_error_password.Text = "";
-            }
 
         }
 
-        private void bt_ShowPassword_Click(object sender, EventArgs e)
-        {
-            if (tb_Password.PasswordChar == '•') tb_Password.PasswordChar = default;
-            else tb_Password.PasswordChar = '•';
-        }
-
-        private void cb_Agree_CheckedChanged(object sender, EventArgs e)
-        {
-            if (cb_Agree.Checked)
-            {
-                bt_SignUp.Enabled = true;
-            } 
-            else
-            {
-                bt_SignUp.Enabled = false;
-            }
-        }
-
-        private void bt_SignUp_Click(object sender, EventArgs e)
+        private void bt_SignUp_Click_1(object sender, EventArgs e)
         {
             bool isValid = true;
 
@@ -150,13 +75,13 @@ namespace PostaRomanaFrontend.SignUp
             var hasUpperChar = new Regex(@"[A-Z]+");
 
             if (
-                tb_Password.Text.Length < 8 || 
+                tb_Password.Text.Length < 8 ||
                 !hasNumber.IsMatch(tb_Password.Text) ||
                 !hasUpperChar.IsMatch(tb_Password.Text))
             {
                 l_error_password.Text = "The password must have at least 8 characters, a number and an uppercase letter!";
                 isValid = false;
-            } 
+            }
             else
             {
                 l_error_password.Text = "";
@@ -167,17 +92,107 @@ namespace PostaRomanaFrontend.SignUp
                 Token token = new Token();
                 token.Show();
             }
+
         }
 
-        private void lL_Terms_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void cb_Agree_CheckedChanged_1(object sender, EventArgs e)
         {
+            if (cb_Agree.Checked)
+            {
+                bt_SignUp.Enabled = true;
+            }
+            else
+            {
+                bt_SignUp.Enabled = false;
+            }
+        }
+
+        private void lL_Terms_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
             Process.Start("https://privacyterms.io/view/fmAPyNfv-48B6KG3Q-DP6WQR/");
         }
 
-        private void CredentialsSignUp_Load(object sender, EventArgs e)
+        private void tb_FirstName_TextChanged_1(object sender, EventArgs e)
+        {
+            if (tb_FirstName.Text.Length == 0)
+            {
+                l_error_firstName.Text = "This field is required!";
+            }
+            else
+            {
+                l_error_firstName.Text = "";
+            }
+        }
+
+        private void tb_LastName_TextChanged_1(object sender, EventArgs e)
+        {
+            if (tb_LastName.Text.Length == 0)
+            {
+                l_error_lastName.Text = "This field is required!";
+            }
+            else
+            {
+                l_error_lastName.Text = "";
+            }
+        }
+
+        private void tb_Username_TextChanged_1(object sender, EventArgs e)
+        {
+            if (tb_Username.Text.Length == 0)
+            {
+                l_error_username.Text = "This field is required!";
+            }
+            else
+            {
+                l_error_username.Text = "";
+            }
+        }
+
+        private void tb_Email_TextChanged_1(object sender, EventArgs e)
+        {
+            if (tb_Email.Text.Length == 0)
+            {
+                l_error_email.Text = "This field is required!";
+            }
+            else
+            {
+                l_error_email.Text = "";
+            }
+        }
+
+        private void tb_Password_TextChanged_1(object sender, EventArgs e)
+        {
+            if (tb_Password.Text.Length == 0)
+            {
+                l_error_password.Text = "This field is required!";
+            }
+            else
+            {
+                l_error_password.Text = "";
+            }
+        }
+
+        private void bt_ShowPassword_Click_1(object sender, EventArgs e)
+        {
+            if (tb_Password.PasswordChar == '•') tb_Password.PasswordChar = default;
+            else tb_Password.PasswordChar = '•';
+        }
+
+        private void bt_Back_Click(object sender, EventArgs e)
+        {
+            SignUpMenu back = new SignUpMenu();
+            back.Show();
+        }
+
+        private void l_error_firstName_Click(object sender, EventArgs e)
         {
 
         }
 
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

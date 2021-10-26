@@ -20,5 +20,15 @@ namespace PostaRomanaFrontend.SignUp
         {
 
         }
+
+        private void bt_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void SignUpMenu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
