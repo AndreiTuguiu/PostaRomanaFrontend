@@ -1,4 +1,4 @@
-﻿using PostaRomana.LogIn;
+﻿using PostaRomanaFrontend.SignUp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +17,7 @@ namespace PostaRomana
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LoginMainPage());
+            Application.Run(new SignUpMenu());
             
         }
     }
