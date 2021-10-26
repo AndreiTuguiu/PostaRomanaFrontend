@@ -9,5 +9,9 @@ namespace PostaRomanaFrontend.SignUp
             InitializeComponent();
         }
 
+        private void bt_Exit_Click(object sender, System.EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
