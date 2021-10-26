@@ -29,6 +29,7 @@ namespace AddEditEvent
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEvent3));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -42,11 +43,16 @@ namespace AddEditEvent
             this.pb_firstStep = new System.Windows.Forms.PictureBox();
             this.pb_Close = new System.Windows.Forms.PictureBox();
             this.NextSlide = new System.Windows.Forms.PictureBox();
+            this.postaRomanaDataSet = new AddEditEvent.PostaRomanaDataSet();
+            this.eventTypeDictionaryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eventTypeDictionaryTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.EventTypeDictionaryTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pb_thirdStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_secondStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_firstStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NextSlide)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventTypeDictionaryBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -131,7 +137,6 @@ namespace AddEditEvent
             this.pb_secondStep.Size = new System.Drawing.Size(80, 65);
             this.pb_secondStep.TabIndex = 16;
             this.pb_secondStep.TabStop = false;
-            this.pb_secondStep.Click += new System.EventHandler(this.pb_secondStep_Click);
             // 
             // pb_firstStep
             // 
@@ -161,6 +166,20 @@ namespace AddEditEvent
             this.NextSlide.TabStop = false;
             this.NextSlide.Click += new System.EventHandler(this.NextSlide_Click);
             // 
+            // postaRomanaDataSet
+            // 
+            this.postaRomanaDataSet.DataSetName = "PostaRomanaDataSet";
+            this.postaRomanaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // eventTypeDictionaryBindingSource
+            // 
+            this.eventTypeDictionaryBindingSource.DataMember = "EventTypeDictionary";
+            this.eventTypeDictionaryBindingSource.DataSource = this.postaRomanaDataSet;
+            // 
+            // eventTypeDictionaryTableAdapter
+            // 
+            this.eventTypeDictionaryTableAdapter.ClearBeforeFill = true;
+            // 
             // AddEvent3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -181,11 +200,14 @@ namespace AddEditEvent
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddEvent3";
             this.Text = "AddEvent3";
+            this.Load += new System.EventHandler(this.AddEvent3_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pb_thirdStep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_secondStep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_firstStep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NextSlide)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventTypeDictionaryBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,5 +226,8 @@ namespace AddEditEvent
         private System.Windows.Forms.PictureBox pb_firstStep;
         public System.Windows.Forms.TextBox tb_cost;
         public System.Windows.Forms.ComboBox cb_EventType;
+        private PostaRomanaDataSet postaRomanaDataSet;
+        private System.Windows.Forms.BindingSource eventTypeDictionaryBindingSource;
+        private PostaRomanaDataSetTableAdapters.EventTypeDictionaryTableAdapter eventTypeDictionaryTableAdapter;
     }
 }
