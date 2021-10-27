@@ -53,5 +53,18 @@ namespace AddEditEvent
             this.Hide();
             back.Show();
         }
+
+        private void bt_NextSlide_Click(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.MyStartDate = StartDate.Value;
+            Properties.Settings.Default.MyEndDate = EndDate.Value;
+            Properties.Settings.Default.MyAddressLine = AddressLine.Text;
+            Properties.Settings.Default.MyCountry = countryBox.SelectedIndex;
+            Properties.Settings.Default.MyCity = citiesBox.SelectedIndex;
+            Properties.Settings.Default.MyCounty = countiesBox.SelectedIndex;
+            AddEvent3 next = new AddEvent3(NameEv, Descr, AddressLine.Text, StartDate.Value, EndDate.Value, countryBox.SelectedIndex, countiesBox.SelectedIndex, citiesBox.SelectedIndex);
+            this.Hide();
+            next.Show();
+        }
     }
 }

@@ -57,7 +57,11 @@ namespace AddEditEvent
             this.pb_secondStep = new System.Windows.Forms.PictureBox();
             this.pb_firstStep = new System.Windows.Forms.PictureBox();
             this.pb_Close = new System.Windows.Forms.PictureBox();
-            this.NextSlide = new System.Windows.Forms.PictureBox();
+            this.bt_NextSlide = new System.Windows.Forms.Button();
+            this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).BeginInit();
@@ -67,30 +71,35 @@ namespace AddEditEvent
             ((System.ComponentModel.ISupportInitialize)(this.pb_secondStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_firstStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NextSlide)).BeginInit();
+            this.gradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // StartDate
             // 
-            this.StartDate.Location = new System.Drawing.Point(107, 156);
+            this.StartDate.Font = new System.Drawing.Font("Berlin Sans FB", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartDate.Location = new System.Drawing.Point(637, 460);
             this.StartDate.Name = "StartDate";
-            this.StartDate.Size = new System.Drawing.Size(255, 26);
+            this.StartDate.Size = new System.Drawing.Size(310, 32);
             this.StartDate.TabIndex = 0;
             // 
             // EndDate
             // 
-            this.EndDate.Location = new System.Drawing.Point(418, 156);
+            this.EndDate.Font = new System.Drawing.Font("Berlin Sans FB", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndDate.Location = new System.Drawing.Point(1020, 460);
             this.EndDate.Name = "EndDate";
-            this.EndDate.Size = new System.Drawing.Size(255, 26);
+            this.EndDate.Size = new System.Drawing.Size(317, 32);
             this.EndDate.TabIndex = 1;
             // 
             // citiesBox
             // 
-            this.citiesBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.citiesBox.Font = new System.Drawing.Font("Berlin Sans FB", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.citiesBox.FormattingEnabled = true;
-            this.citiesBox.Location = new System.Drawing.Point(490, 291);
+            this.citiesBox.Location = new System.Drawing.Point(1154, 673);
             this.citiesBox.Name = "citiesBox";
-            this.citiesBox.Size = new System.Drawing.Size(183, 37);
+            this.citiesBox.Size = new System.Drawing.Size(183, 32);
             this.citiesBox.TabIndex = 2;
             // 
             // citiesBindingSource
@@ -110,11 +119,11 @@ namespace AddEditEvent
             // 
             // countryBox
             // 
-            this.countryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countryBox.Font = new System.Drawing.Font("Berlin Sans FB", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countryBox.FormattingEnabled = true;
-            this.countryBox.Location = new System.Drawing.Point(107, 291);
+            this.countryBox.Location = new System.Drawing.Point(637, 673);
             this.countryBox.Name = "countryBox";
-            this.countryBox.Size = new System.Drawing.Size(183, 37);
+            this.countryBox.Size = new System.Drawing.Size(191, 32);
             this.countryBox.TabIndex = 3;
             // 
             // countriesBindingSource
@@ -124,11 +133,11 @@ namespace AddEditEvent
             // 
             // countiesBox
             // 
-            this.countiesBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.countiesBox.Font = new System.Drawing.Font("Berlin Sans FB", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.countiesBox.FormattingEnabled = true;
-            this.countiesBox.Location = new System.Drawing.Point(301, 291);
+            this.countiesBox.Location = new System.Drawing.Point(888, 673);
             this.countiesBox.Name = "countiesBox";
-            this.countiesBox.Size = new System.Drawing.Size(183, 37);
+            this.countiesBox.Size = new System.Drawing.Size(183, 32);
             this.countiesBox.TabIndex = 4;
             // 
             // countiesBindingSource
@@ -150,70 +159,88 @@ namespace AddEditEvent
             // 
             // AddressLine
             // 
-            this.AddressLine.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddressLine.Location = new System.Drawing.Point(107, 220);
+            this.AddressLine.Font = new System.Drawing.Font("Berlin Sans FB", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddressLine.Location = new System.Drawing.Point(636, 559);
             this.AddressLine.Name = "AddressLine";
-            this.AddressLine.Size = new System.Drawing.Size(566, 35);
+            this.AddressLine.Size = new System.Drawing.Size(701, 32);
             this.AddressLine.TabIndex = 8;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(124, 133);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB Demi", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Indigo;
+            this.label1.Location = new System.Drawing.Point(632, 421);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(139, 20);
+            this.label1.Size = new System.Drawing.Size(188, 25);
             this.label1.TabIndex = 9;
             this.label1.Text = "Event\'s Start Date";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(433, 134);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Berlin Sans FB Demi", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Indigo;
+            this.label2.Location = new System.Drawing.Point(1015, 421);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(154, 20);
+            this.label2.Size = new System.Drawing.Size(210, 25);
             this.label2.TabIndex = 10;
             this.label2.Text = "Event\'s Ending Date";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(124, 197);
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Berlin Sans FB Demi", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Indigo;
+            this.label3.Location = new System.Drawing.Point(632, 519);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 20);
+            this.label3.Size = new System.Drawing.Size(137, 25);
             this.label3.TabIndex = 11;
             this.label3.Text = "Address Line";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(123, 275);
+            this.label4.BackColor = System.Drawing.Color.Transparent;
+            this.label4.Font = new System.Drawing.Font("Berlin Sans FB Demi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Indigo;
+            this.label4.Location = new System.Drawing.Point(639, 625);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 20);
+            this.label4.Size = new System.Drawing.Size(100, 27);
             this.label4.TabIndex = 12;
             this.label4.Text = "Country";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(321, 275);
+            this.label5.BackColor = System.Drawing.Color.Transparent;
+            this.label5.Font = new System.Drawing.Font("Berlin Sans FB Demi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.Indigo;
+            this.label5.Location = new System.Drawing.Point(886, 625);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 20);
+            this.label5.Size = new System.Drawing.Size(91, 27);
             this.label5.TabIndex = 13;
             this.label5.Text = "County";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(511, 275);
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Berlin Sans FB Demi", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Indigo;
+            this.label6.Location = new System.Drawing.Point(1150, 625);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 20);
+            this.label6.Size = new System.Drawing.Size(56, 27);
             this.label6.TabIndex = 14;
             this.label6.Text = "City";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(460, 40);
+            this.label7.Location = new System.Drawing.Point(987, 188);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(72, 20);
             this.label7.TabIndex = 20;
@@ -222,7 +249,7 @@ namespace AddEditEvent
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(296, 40);
+            this.label8.Location = new System.Drawing.Point(659, 188);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(72, 20);
             this.label8.TabIndex = 19;
@@ -231,77 +258,141 @@ namespace AddEditEvent
             // pb_thirdStep
             // 
             this.pb_thirdStep.Image = global::AddEditEvent.Properties.Resources.placeholder_stepper;
-            this.pb_thirdStep.Location = new System.Drawing.Point(531, 12);
+            this.pb_thirdStep.Location = new System.Drawing.Point(1234, 160);
             this.pb_thirdStep.Name = "pb_thirdStep";
-            this.pb_thirdStep.Size = new System.Drawing.Size(80, 65);
+            this.pb_thirdStep.Size = new System.Drawing.Size(144, 110);
+            this.pb_thirdStep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_thirdStep.TabIndex = 18;
             this.pb_thirdStep.TabStop = false;
             // 
             // pb_secondStep
             // 
             this.pb_secondStep.Image = global::AddEditEvent.Properties.Resources.placeholder_stepper;
-            this.pb_secondStep.Location = new System.Drawing.Point(374, 12);
+            this.pb_secondStep.Location = new System.Drawing.Point(901, 160);
             this.pb_secondStep.Name = "pb_secondStep";
-            this.pb_secondStep.Size = new System.Drawing.Size(80, 65);
+            this.pb_secondStep.Size = new System.Drawing.Size(144, 110);
+            this.pb_secondStep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_secondStep.TabIndex = 17;
             this.pb_secondStep.TabStop = false;
             // 
             // pb_firstStep
             // 
             this.pb_firstStep.Image = global::AddEditEvent.Properties.Resources.placeholder_stepper;
-            this.pb_firstStep.Location = new System.Drawing.Point(210, 12);
+            this.pb_firstStep.Location = new System.Drawing.Point(573, 160);
             this.pb_firstStep.Name = "pb_firstStep";
-            this.pb_firstStep.Size = new System.Drawing.Size(80, 65);
+            this.pb_firstStep.Size = new System.Drawing.Size(144, 110);
+            this.pb_firstStep.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_firstStep.TabIndex = 16;
             this.pb_firstStep.TabStop = false;
             this.pb_firstStep.Click += new System.EventHandler(this.pb_firstStep_Click);
             // 
             // pb_Close
             // 
-            this.pb_Close.Location = new System.Drawing.Point(728, 12);
+            this.pb_Close.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pb_Close.BackColor = System.Drawing.Color.Transparent;
+            this.pb_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pb_Close.Image = ((System.Drawing.Image)(resources.GetObject("pb_Close.Image")));
+            this.pb_Close.Location = new System.Drawing.Point(1786, 28);
             this.pb_Close.Name = "pb_Close";
-            this.pb_Close.Size = new System.Drawing.Size(60, 60);
+            this.pb_Close.Size = new System.Drawing.Size(81, 85);
+            this.pb_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_Close.TabIndex = 15;
             this.pb_Close.TabStop = false;
             this.pb_Close.Click += new System.EventHandler(this.pb_Close_Click);
             // 
-            // NextSlide
+            // bt_NextSlide
             // 
-            this.NextSlide.Image = ((System.Drawing.Image)(resources.GetObject("NextSlide.Image")));
-            this.NextSlide.Location = new System.Drawing.Point(628, 374);
-            this.NextSlide.Name = "NextSlide";
-            this.NextSlide.Size = new System.Drawing.Size(142, 64);
-            this.NextSlide.TabIndex = 7;
-            this.NextSlide.TabStop = false;
-            this.NextSlide.Click += new System.EventHandler(this.NextSlide_Click);
+            this.bt_NextSlide.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bt_NextSlide.BackColor = System.Drawing.Color.Transparent;
+            this.bt_NextSlide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_NextSlide.BackgroundImage")));
+            this.bt_NextSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.bt_NextSlide.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
+            this.bt_NextSlide.FlatAppearance.BorderSize = 3;
+            this.bt_NextSlide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.bt_NextSlide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.bt_NextSlide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_NextSlide.Location = new System.Drawing.Point(1393, 829);
+            this.bt_NextSlide.Name = "bt_NextSlide";
+            this.bt_NextSlide.Size = new System.Drawing.Size(116, 104);
+            this.bt_NextSlide.TabIndex = 21;
+            this.bt_NextSlide.UseVisualStyleBackColor = false;
+            this.bt_NextSlide.Click += new System.EventHandler(this.bt_NextSlide_Click);
+            // 
+            // gradientPanel1
+            // 
+            this.gradientPanel1.ColorBottom = System.Drawing.Color.LightCyan;
+            this.gradientPanel1.ColorTop = System.Drawing.Color.MediumTurquoise;
+            this.gradientPanel1.Controls.Add(this.pictureBox3);
+            this.gradientPanel1.Controls.Add(this.pictureBox2);
+            this.gradientPanel1.Controls.Add(this.pictureBox1);
+            this.gradientPanel1.Controls.Add(this.AddressLine);
+            this.gradientPanel1.Controls.Add(this.bt_NextSlide);
+            this.gradientPanel1.Controls.Add(this.StartDate);
+            this.gradientPanel1.Controls.Add(this.label7);
+            this.gradientPanel1.Controls.Add(this.EndDate);
+            this.gradientPanel1.Controls.Add(this.label8);
+            this.gradientPanel1.Controls.Add(this.citiesBox);
+            this.gradientPanel1.Controls.Add(this.pb_thirdStep);
+            this.gradientPanel1.Controls.Add(this.countryBox);
+            this.gradientPanel1.Controls.Add(this.pb_secondStep);
+            this.gradientPanel1.Controls.Add(this.countiesBox);
+            this.gradientPanel1.Controls.Add(this.pb_firstStep);
+            this.gradientPanel1.Controls.Add(this.label1);
+            this.gradientPanel1.Controls.Add(this.pb_Close);
+            this.gradientPanel1.Controls.Add(this.label2);
+            this.gradientPanel1.Controls.Add(this.label6);
+            this.gradientPanel1.Controls.Add(this.label3);
+            this.gradientPanel1.Controls.Add(this.label5);
+            this.gradientPanel1.Controls.Add(this.label4);
+            this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gradientPanel1.Name = "gradientPanel1";
+            this.gradientPanel1.Size = new System.Drawing.Size(1920, 1080);
+            this.gradientPanel1.TabIndex = 22;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(561, 442);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(561, 541);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(561, 655);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
             // 
             // AddEvent2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.pb_thirdStep);
-            this.Controls.Add(this.pb_secondStep);
-            this.Controls.Add(this.pb_firstStep);
-            this.Controls.Add(this.pb_Close);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.AddressLine);
-            this.Controls.Add(this.NextSlide);
-            this.Controls.Add(this.countiesBox);
-            this.Controls.Add(this.countryBox);
-            this.Controls.Add(this.citiesBox);
-            this.Controls.Add(this.EndDate);
-            this.Controls.Add(this.StartDate);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddEvent2";
             this.Text = "AddEvent2";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AddEvent2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSetBindingSource)).EndInit();
@@ -312,9 +403,12 @@ namespace AddEditEvent
             ((System.ComponentModel.ISupportInitialize)(this.pb_secondStep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_firstStep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NextSlide)).EndInit();
+            this.gradientPanel1.ResumeLayout(false);
+            this.gradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -327,7 +421,6 @@ namespace AddEditEvent
         private PostaRomanaDataSetTableAdapters.CountiesTableAdapter countiesTableAdapter;
         private System.Windows.Forms.BindingSource countriesBindingSource;
         private PostaRomanaDataSetTableAdapters.CountriesTableAdapter countriesTableAdapter;
-        private System.Windows.Forms.PictureBox NextSlide;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -346,5 +439,10 @@ namespace AddEditEvent
         public System.Windows.Forms.ComboBox countryBox;
         public System.Windows.Forms.ComboBox countiesBox;
         public System.Windows.Forms.TextBox AddressLine;
+        private System.Windows.Forms.Button bt_NextSlide;
+        private PostaRomanaFrontend.GradientPanel gradientPanel1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
