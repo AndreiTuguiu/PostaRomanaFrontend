@@ -35,6 +35,8 @@ namespace AddEditEvent
             Properties.Settings.Default.MyCountry = countryBox.SelectedIndex;
             Properties.Settings.Default.MyCity = citiesBox.SelectedIndex;
             Properties.Settings.Default.MyCounty = countiesBox.SelectedIndex;
+            Properties.Settings.Default.Save();
+
             AddEvent3 next = new AddEvent3(NameEv,Descr,AddressLine.Text,StartDate.Value,EndDate.Value,countryBox.SelectedIndex, countiesBox.SelectedIndex, citiesBox.SelectedIndex);
             this.Hide();
             next.Show();
