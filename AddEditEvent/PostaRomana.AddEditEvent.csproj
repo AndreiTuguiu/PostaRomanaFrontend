@@ -132,5 +132,11 @@
   <ItemGroup>
     <None Include="Resources\placeholder_stepper1.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{8c709db7-d2aa-4d82-bd7c-2ee02a7e7af4}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

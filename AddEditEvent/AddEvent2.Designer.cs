@@ -116,6 +116,7 @@ namespace AddEditEvent
             this.countryBox.Name = "countryBox";
             this.countryBox.Size = new System.Drawing.Size(183, 37);
             this.countryBox.TabIndex = 3;
+            this.countryBox.SelectedIndexChanged += new System.EventHandler(this.countryBox_SelectedIndexChanged);
             // 
             // countriesBindingSource
             // 

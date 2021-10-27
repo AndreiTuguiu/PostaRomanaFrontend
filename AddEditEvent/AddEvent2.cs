@@ -4,9 +4,11 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 
 namespace AddEditEvent
 {
@@ -19,6 +21,11 @@ namespace AddEditEvent
             InitializeComponent();
             NameEv = name;
             Descr = desc;
+            // var listOfCountries = api.GetListOfCountryies(); => List<CountryModel>
+            // countryBox.DataSource = listOfCountries;
+            // countryBox.DisplayMember = "Name";
+            // countryBox.ValueMember = "Id";
+
         }
 
         private void AddEvent2_Load(object sender, EventArgs e)
@@ -55,5 +62,42 @@ namespace AddEditEvent
             this.Hide();
             back.Show();
         }
+
+        private void countryBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var selectedCountry = countryBox.SelectedItem as dynamic; // as CountryModel
+            if (selectedCountry == null)
+            {
+                return;
+            }
+            var countryId = selectedCountry.id;
+            // listOfCounties = apiClient.GetListOfCounties(countryId);
+            // countyBox.DataSource = listOfCounties;
+            // countyBox.DisplayMember = "Name";
+            // countyBox.ValueMember = "Id";
+            // countyBox.DataBind(); //??? maybe
+        }
+
+        //private async void LoadCountry()
+        //{
+        //    List<Country> _country = new List<Country>();
+        //    _country.Add(new ()
+        //    {
+        //        Id = -1,
+        //        Name = ""
+
+
+
+        //    });
+        //    HttpResponseMessage response = await client.GetAsync("api/Dictionary/GetDictionaryCountry");
+        //    if (response.IsSuccessStatusCode)
+        //    {
+        //        _country.AddRange(await response.Content.ReadAsAsync<List<Country>>());
+        //    }
+
+        //    cbCountry.DataSource = _country;
+        //    cbCountry.SelectedIndex = -1;
+
+        //}
     }
 }
