@@ -36,5 +36,10 @@ namespace AddEditEvent
         {
             
         }
+
+        private void pb_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

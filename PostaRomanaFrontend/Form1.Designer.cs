@@ -1,5 +1,5 @@
 ﻿
-namespace PostaRomanaFrontend
+namespace PostaRomana
 {
     partial class Form1
     {
