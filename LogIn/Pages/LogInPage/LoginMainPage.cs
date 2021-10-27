@@ -13,6 +13,7 @@ using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -97,6 +98,7 @@ namespace PostaRomana.LogIn
 
                 //frm.FormClosing += delegate { this.Show(); }; //atunci cand inchid main page deschide login
                 frm.Show();
+                //Thread.Sleep(1000);
                 this.Hide();
             }
             else
@@ -150,6 +152,7 @@ namespace PostaRomana.LogIn
 
             //frm.FormClosing += delegate { this.Show(); }; //atunci cand inchid main page deschide login
             frm.Show();
+            //Thread.Sleep(1000);
             this.Hide();
         }
 
