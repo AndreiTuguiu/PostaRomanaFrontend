@@ -95,7 +95,7 @@ namespace PostaRomana.LogIn
                 Location = this.Location;
                 StartPosition = FormStartPosition.Manual;
 
-                frm.FormClosing += delegate { this.Show(); }; //atunci cand inchid main page deschide login
+                //frm.FormClosing += delegate { this.Show(); }; //atunci cand inchid main page deschide login
                 frm.Show();
                 this.Hide();
             }
@@ -148,7 +148,7 @@ namespace PostaRomana.LogIn
             Location = this.Location;
             StartPosition = FormStartPosition.Manual;
 
-            frm.FormClosing += delegate { this.Show(); }; //atunci cand inchid main page deschide login
+            //frm.FormClosing += delegate { this.Show(); }; //atunci cand inchid main page deschide login
             frm.Show();
             this.Hide();
         }

@@ -1,11 +1,6 @@
 using PostaRomana.LogIn;
+using PostaRomana.RecoverPasswordPage;
 using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LogIn
@@ -18,10 +13,10 @@ namespace LogIn
         [STAThread]
         static void Main()
         {
-            /*Application.SetHighDpiMode(HighDpiMode.SystemAware);
+            Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginMainPage());*/
+            Application.Run(new LoginMainPage());
 
 
 
@@ -32,7 +27,7 @@ namespace LogIn
                 return content;
             }
             Console.WriteLine(ContentGetHello());*/
-            Console.WriteLine(SerializeJson.Serialize());
+            //Console.WriteLine(SerializeJson.Serialize());
             //Console.WriteLine("GET");
 
         }

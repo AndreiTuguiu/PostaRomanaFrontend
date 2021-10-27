@@ -19,5 +19,10 @@ namespace PostaRomanaFrontend.SignUp
         {
 
         }
+
+        private void tb_Token_TextChanged(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }
