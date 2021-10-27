@@ -41,8 +41,8 @@ namespace AddEditEvent
             this.pb_firstStep = new System.Windows.Forms.PictureBox();
             this.pb_Close = new System.Windows.Forms.PictureBox();
             this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
-            this.bt_NextSlide = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bt_NextSlide = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pb_thirdStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_secondStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_firstStep)).BeginInit();
@@ -183,6 +183,16 @@ namespace AddEditEvent
             this.gradientPanel1.Size = new System.Drawing.Size(1920, 1080);
             this.gradientPanel1.TabIndex = 15;
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pb_Close);
+            this.panel1.Location = new System.Drawing.Point(0, -2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1920, 100);
+            this.panel1.TabIndex = 17;
+            // 
             // bt_NextSlide
             // 
             this.bt_NextSlide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_NextSlide.BackgroundImage")));
@@ -199,16 +209,6 @@ namespace AddEditEvent
             this.bt_NextSlide.TabIndex = 15;
             this.bt_NextSlide.UseVisualStyleBackColor = true;
             this.bt_NextSlide.Click += new System.EventHandler(this.bt_NextSlide_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.pb_Close);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1920, 100);
-            this.panel1.TabIndex = 17;
             // 
             // AddEvent1
             // 
