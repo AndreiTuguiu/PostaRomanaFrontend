@@ -1,4 +1,5 @@
-﻿using PostaRomana.MainPage;
+﻿using Microsoft.VisualBasic.ApplicationServices;
+using PostaRomana.MainPage;
 using PostaRomana.RecoverPasswordPage;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,9 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Headers;
+using System.Net.Http.Json;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -24,7 +27,7 @@ namespace PostaRomana.LogIn
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -77,13 +80,13 @@ namespace PostaRomana.LogIn
 
         private void LoginMainPage_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void bt_login_LogInButton_Click(object sender, EventArgs e)
         {
 
-           
+
             //if parola and username are leo and parola123 login, else
             if (this.textBox1.Text == "Leo" && this.textBox2.Text == "Parola")
             { //test moving view to mainpage here
@@ -131,7 +134,7 @@ namespace PostaRomana.LogIn
 
             Location = this.Location;
             StartPosition = FormStartPosition.Manual;
-            
+
             //rm.FormClosing += delegate { this.Show(); }; atunci cand inchid main page deschide login
             frm.Show();
             this.Hide();
@@ -157,13 +160,13 @@ namespace PostaRomana.LogIn
 
         private void checkbox_login_rememberPassword_KeyDown(object sender, KeyEventArgs e)
         {
-            
+
             if (e.KeyCode == Keys.Enter)
-            {   if(this.checkbox_login_rememberPassword.Checked == true)
-                this.checkbox_login_rememberPassword.Checked = false;
-            else
-                if(this.checkbox_login_rememberPassword.Checked == false)
-                this.checkbox_login_rememberPassword.Checked = true;
+            { if (this.checkbox_login_rememberPassword.Checked == true)
+                    this.checkbox_login_rememberPassword.Checked = false;
+                else
+              if (this.checkbox_login_rememberPassword.Checked == false)
+                    this.checkbox_login_rememberPassword.Checked = true;
             }
         }
 
@@ -175,9 +178,16 @@ namespace PostaRomana.LogIn
             }
         }
 
+        //public class ModelJson(){}
+        
         private void button_actuallogin_Click(object sender, EventArgs e)
         {
-            
+            var toSend = "test";
+            var client = new HttpClient();
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+            client.PostAsJsonAsync("https://localhost:5001/api/User/CreateUser", toSend);
+
         }
     }
 }
