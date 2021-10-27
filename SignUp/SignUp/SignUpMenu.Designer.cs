@@ -36,13 +36,19 @@ namespace PostaRomanaFrontend.SignUp
             this.linkSignUp = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gradientPanel1
             // 
             this.gradientPanel1.ColorBottom = System.Drawing.Color.LightCyan;
             this.gradientPanel1.ColorTop = System.Drawing.Color.MediumTurquoise;
+            this.gradientPanel1.Controls.Add(this.pictureBox1);
+            this.gradientPanel1.Controls.Add(this.pictureBox2);
             this.gradientPanel1.Controls.Add(this.bt_Exit);
             this.gradientPanel1.Controls.Add(this.btSignUp);
             this.gradientPanel1.Controls.Add(this.linkSignUp);
@@ -51,7 +57,7 @@ namespace PostaRomanaFrontend.SignUp
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1138, 566);
+            this.gradientPanel1.Size = new System.Drawing.Size(1920, 1080);
             this.gradientPanel1.TabIndex = 5;
             // 
             // bt_Exit
@@ -61,8 +67,10 @@ namespace PostaRomanaFrontend.SignUp
             this.bt_Exit.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_Exit.BackgroundImage")));
             this.bt_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_Exit.FlatAppearance.BorderSize = 0;
+            this.bt_Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.bt_Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bt_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Exit.Location = new System.Drawing.Point(1060, 12);
+            this.bt_Exit.Location = new System.Drawing.Point(1799, 42);
             this.bt_Exit.Name = "bt_Exit";
             this.bt_Exit.Size = new System.Drawing.Size(66, 60);
             this.bt_Exit.TabIndex = 6;
@@ -72,19 +80,20 @@ namespace PostaRomanaFrontend.SignUp
             // btSignUp
             // 
             this.btSignUp.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btSignUp.AutoSize = true;
             this.btSignUp.BackColor = System.Drawing.Color.Transparent;
+            this.btSignUp.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btSignUp.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
             this.btSignUp.FlatAppearance.BorderSize = 3;
+            this.btSignUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.DarkOrchid;
+            this.btSignUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DarkOrchid;
             this.btSignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btSignUp.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btSignUp.Image = ((System.Drawing.Image)(resources.GetObject("btSignUp.Image")));
-            this.btSignUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btSignUp.Location = new System.Drawing.Point(436, 316);
+            this.btSignUp.Location = new System.Drawing.Point(1071, 574);
             this.btSignUp.Name = "btSignUp";
-            this.btSignUp.Size = new System.Drawing.Size(330, 75);
+            this.btSignUp.Size = new System.Drawing.Size(302, 73);
             this.btSignUp.TabIndex = 0;
             this.btSignUp.Text = "Sign up with email";
-            this.btSignUp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btSignUp.UseVisualStyleBackColor = false;
             this.btSignUp.Click += new System.EventHandler(this.btSignUp_Click);
             // 
@@ -93,10 +102,10 @@ namespace PostaRomanaFrontend.SignUp
             this.linkSignUp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkSignUp.AutoSize = true;
             this.linkSignUp.BackColor = System.Drawing.Color.Transparent;
-            this.linkSignUp.Font = new System.Drawing.Font("Berlin Sans FB Demi", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkSignUp.Location = new System.Drawing.Point(692, 225);
+            this.linkSignUp.Font = new System.Drawing.Font("Berlin Sans FB Demi", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkSignUp.Location = new System.Drawing.Point(1360, 421);
             this.linkSignUp.Name = "linkSignUp";
-            this.linkSignUp.Size = new System.Drawing.Size(74, 25);
+            this.linkSignUp.Size = new System.Drawing.Size(94, 33);
             this.linkSignUp.TabIndex = 4;
             this.linkSignUp.TabStop = true;
             this.linkSignUp.Text = "Log In";
@@ -107,11 +116,11 @@ namespace PostaRomanaFrontend.SignUp
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Berlin Sans FB Demi", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB Demi", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Indigo;
-            this.label1.Location = new System.Drawing.Point(429, 157);
+            this.label1.Location = new System.Drawing.Point(1035, 300);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(323, 37);
+            this.label1.Size = new System.Drawing.Size(402, 45);
             this.label1.TabIndex = 2;
             this.label1.Text = "Sign up to get started";
             // 
@@ -120,28 +129,49 @@ namespace PostaRomanaFrontend.SignUp
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Berlin Sans FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Indigo;
-            this.label2.Location = new System.Drawing.Point(416, 226);
+            this.label2.Location = new System.Drawing.Point(1014, 426);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(273, 26);
+            this.label2.Size = new System.Drawing.Size(321, 31);
             this.label2.TabIndex = 3;
             this.label2.Text = "Already have an account?";
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(-2, -2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(593, 1154);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 8;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(587, 980);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1333, 151);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // SignUpMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1138, 566);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SignUpMenu";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "SignUpMenu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.SignUpMenu_Load);
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -154,5 +184,7 @@ namespace PostaRomanaFrontend.SignUp
         private System.Windows.Forms.LinkLabel linkSignUp;
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.Button bt_Exit;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

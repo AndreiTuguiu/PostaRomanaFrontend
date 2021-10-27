@@ -11,7 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PostaRomana.AddEditEvent", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignUp", "SignUp\SignUp.csproj", "{AB85AB08-B3A9-4A27-86DF-D9E3A0FD2592}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogIn", "LogIn\LogIn.csproj", "{DAF9C908-D49E-441B-9219-889EA9F88415}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogIn", "LogIn\LogIn.csproj", "{DAF9C908-D49E-441B-9219-889EA9F88415}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainPage", "MainPage\MainPage.csproj", "{A705688F-12C6-418A-BA41-10D1C038D7A3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{DAF9C908-D49E-441B-9219-889EA9F88415}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DAF9C908-D49E-441B-9219-889EA9F88415}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DAF9C908-D49E-441B-9219-889EA9F88415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A705688F-12C6-418A-BA41-10D1C038D7A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A705688F-12C6-418A-BA41-10D1C038D7A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A705688F-12C6-418A-BA41-10D1C038D7A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A705688F-12C6-418A-BA41-10D1C038D7A3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

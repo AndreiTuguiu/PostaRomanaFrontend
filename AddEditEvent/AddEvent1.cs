@@ -42,5 +42,10 @@ namespace AddEditEvent
         {
             this.Close();
         }
+
+        private void tb_Description_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

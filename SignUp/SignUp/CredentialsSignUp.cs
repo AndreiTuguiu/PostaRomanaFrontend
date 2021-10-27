@@ -185,11 +185,6 @@ namespace PostaRomanaFrontend.SignUp
             back.Show();
         }
 
-        private void l_error_firstName_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void gradientPanel1_Paint(object sender, PaintEventArgs e)
         {
 
