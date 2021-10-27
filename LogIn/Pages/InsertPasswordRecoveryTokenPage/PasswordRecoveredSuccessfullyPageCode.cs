@@ -66,5 +66,6 @@ namespace LogIn.Pages.PasswordRecoveredSuccessfullyPage
                 bt_recover_sendCode_Click(sender, e);
             }
         }
+
     }
 }

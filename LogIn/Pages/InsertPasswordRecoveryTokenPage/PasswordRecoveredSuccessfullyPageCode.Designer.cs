@@ -29,25 +29,11 @@ namespace LogIn.Pages.PasswordRecoveredSuccessfullyPage
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PasswordRecoveredSuccessfullyPageCode));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label_passRecSucc = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.bt_recover_sendCode = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(217, 82);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
             // 
             // label_passRecSucc
             // 
@@ -109,20 +95,16 @@ namespace LogIn.Pages.PasswordRecoveredSuccessfullyPage
             this.Controls.Add(this.bt_recover_sendCode);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label_passRecSucc);
-            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.Name = "PasswordRecoveredSuccessfullyPageCode";
             this.Text = "PasswordRecoveredSuccessfullyPage";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label_passRecSucc;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button bt_recover_sendCode;
