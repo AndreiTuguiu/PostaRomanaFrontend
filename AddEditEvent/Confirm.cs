@@ -12,27 +12,34 @@ namespace AddEditEvent
 {
     public partial class Confirm : Form
     {
-        public Confirm()
+        public Confirm(string name, string desc, string addline, DateTime start, DateTime end, int country, int county, int city,decimal cost, int type)
         {
             InitializeComponent();
-            AddEvent1 event1 = new AddEvent1();
-            AddEvent2 event2 = new AddEvent2();
-            AddEvent3 event3 = new AddEvent3();
-            tb_NameOfEvent.Text = event1.tb_EventName.Text;
-            cb_EventType.SelectedItem = event3.cb_EventType.SelectedItem;
-            tb_EventDesc.Text = event1.tb_Description.Text;
-            dt_start.Value = event2.StartDate.Value;
-            dt_end.Value = event2.EndDate.Value;
-            tb_AddressLine.Text = event2.AddressLine.Text;
-            cb_country.SelectedItem = event2.countryBox.SelectedItem;
-            cb_county.SelectedItem = event2.countiesBox.SelectedItem;
-            cb_city.SelectedItem = event2.citiesBox.SelectedItem;
-            tb_Cost.Text = event3.tb_cost.Text;
+            tb_NameOfEvent.Text = name;
+            tb_EventDesc.Text = desc;
+            tb_AddressLine.Text = addline;
+            cb_EventType.SelectedIndex = type;
+            dt_start.Value = start;
+            dt_end.Value = end;
+            cb_country.SelectedIndex = country;
+            cb_county.SelectedIndex = county;
+            cb_city.SelectedIndex = city;
+            tb_Cost.Text = cost.ToString();
         }
 
         private void b_Confirm_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Confirm_Load(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pb_Close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

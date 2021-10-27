@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AB85AB08-B3A9-4A27-86DF-D9E3A0FD2592}</ProjectGuid>
+    <ProjectGuid>{A705688F-12C6-418A-BA41-10D1C038D7A3}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SignUp</RootNamespace>
-    <AssemblyName>SignUp</AssemblyName>
+    <RootNamespace>MainPage</RootNamespace>
+    <AssemblyName>MainPage</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,31 +49,17 @@
     <Compile Include="GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="SignUp\CredentialsSignUp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SignUp\CredentialsSignUp.Designer.cs">
-      <DependentUpon>CredentialsSignUp.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SignUp\SignUpMenu.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SignUp\SignUpMenu.Designer.cs">
-      <DependentUpon>SignUpMenu.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SignUp\Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SignUp\Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
-    </Compile>
-    <Compile Include="SignUp\Token.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="SignUp\Token.Designer.cs">
-      <DependentUpon>Token.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -83,18 +69,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="SignUp\CredentialsSignUp.resx">
-      <DependentUpon>CredentialsSignUp.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SignUp\SignUpMenu.resx">
-      <DependentUpon>SignUpMenu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SignUp\Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SignUp\Token.resx">
-      <DependentUpon>Token.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -104,6 +78,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

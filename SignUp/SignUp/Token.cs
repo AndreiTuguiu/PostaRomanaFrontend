@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.Drawing;
+using System.Windows.Forms;
 
 namespace PostaRomanaFrontend.SignUp
 {
@@ -12,6 +13,11 @@ namespace PostaRomanaFrontend.SignUp
         private void bt_Exit_Click(object sender, System.EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void bt_Register_Click(object sender, System.EventArgs e)
+        {
+
         }
     }
 }
