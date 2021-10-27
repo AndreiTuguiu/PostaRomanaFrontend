@@ -85,5 +85,11 @@
   <ItemGroup>
     <Folder Include="Helpers\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogIn\LogIn.csproj">
+      <Project>{daf9c908-d49e-441b-9219-889ea9f88415}</Project>
+      <Name>LogIn</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -86,5 +86,11 @@ namespace MainPage
         {
 
         }
+
+        private void l_login_Click(object sender, EventArgs e)
+        {
+            //LoginMainPage login = new LoginMainPage();
+            //login.Show();
+        }
     }
 }

@@ -386,6 +386,7 @@ namespace MainPage
             this.l_login.Size = new System.Drawing.Size(87, 33);
             this.l_login.TabIndex = 2;
             this.l_login.Text = "LogIn";
+            this.l_login.Click += new System.EventHandler(this.l_login_Click);
             // 
             // bt_Exit
             // 
