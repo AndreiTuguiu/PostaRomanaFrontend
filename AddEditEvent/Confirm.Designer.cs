@@ -405,7 +405,6 @@ namespace AddEditEvent
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Confirm";
             this.Text = "Confirm";
-            this.Load += new System.EventHandler(this.Confirm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
