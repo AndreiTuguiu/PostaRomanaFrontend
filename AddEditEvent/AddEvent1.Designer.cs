@@ -74,7 +74,6 @@ namespace AddEditEvent
             this.tb_Description.Name = "tb_Description";
             this.tb_Description.Size = new System.Drawing.Size(494, 128);
             this.tb_Description.TabIndex = 7;
-            this.tb_Description.TextChanged += new System.EventHandler(this.tb_Description_TextChanged);
             // 
             // label2
             // 

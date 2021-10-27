@@ -30,7 +30,6 @@ namespace PostaRomanaFrontend.SignUp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CredentialsSignUp));
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.bt_Back = new System.Windows.Forms.Button();
@@ -114,6 +113,8 @@ namespace PostaRomanaFrontend.SignUp
             this.bt_Back.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_Back.BackgroundImage")));
             this.bt_Back.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_Back.FlatAppearance.BorderSize = 0;
+            this.bt_Back.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.bt_Back.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bt_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Back.ImageAlign = System.Drawing.ContentAlignment.TopRight;
             this.bt_Back.Location = new System.Drawing.Point(1822, 23);
@@ -192,6 +193,8 @@ namespace PostaRomanaFrontend.SignUp
             this.bt_ShowPassword.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_ShowPassword.BackgroundImage")));
             this.bt_ShowPassword.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_ShowPassword.FlatAppearance.BorderSize = 0;
+            this.bt_ShowPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.bt_ShowPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bt_ShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_ShowPassword.Location = new System.Drawing.Point(787, 701);
             this.bt_ShowPassword.Name = "bt_ShowPassword";
@@ -264,6 +267,8 @@ namespace PostaRomanaFrontend.SignUp
             // 
             this.cb_Agree.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cb_Agree.AutoSize = true;
+            this.cb_Agree.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.cb_Agree.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.cb_Agree.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Agree.Location = new System.Drawing.Point(858, 967);
             this.cb_Agree.Name = "cb_Agree";
@@ -279,6 +284,8 @@ namespace PostaRomanaFrontend.SignUp
             this.bt_SignUp.Enabled = false;
             this.bt_SignUp.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
             this.bt_SignUp.FlatAppearance.BorderSize = 3;
+            this.bt_SignUp.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Purple;
+            this.bt_SignUp.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bt_SignUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_SignUp.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_SignUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -299,6 +306,7 @@ namespace PostaRomanaFrontend.SignUp
             this.tb_Password.PasswordChar = '•';
             this.tb_Password.Size = new System.Drawing.Size(371, 60);
             this.tb_Password.TabIndex = 52;
+            this.tb_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_Password.TextChanged += new System.EventHandler(this.tb_Password_TextChanged_1);
             // 
             // tb_Email
@@ -310,6 +318,7 @@ namespace PostaRomanaFrontend.SignUp
             this.tb_Email.Name = "tb_Email";
             this.tb_Email.Size = new System.Drawing.Size(362, 60);
             this.tb_Email.TabIndex = 51;
+            this.tb_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_Email.TextChanged += new System.EventHandler(this.tb_Email_TextChanged_1);
             // 
             // tb_Username
@@ -321,6 +330,7 @@ namespace PostaRomanaFrontend.SignUp
             this.tb_Username.Name = "tb_Username";
             this.tb_Username.Size = new System.Drawing.Size(341, 59);
             this.tb_Username.TabIndex = 50;
+            this.tb_Username.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_Username.TextChanged += new System.EventHandler(this.tb_Username_TextChanged_1);
             // 
             // tb_LastName
@@ -333,6 +343,7 @@ namespace PostaRomanaFrontend.SignUp
             this.tb_LastName.Name = "tb_LastName";
             this.tb_LastName.Size = new System.Drawing.Size(368, 60);
             this.tb_LastName.TabIndex = 49;
+            this.tb_LastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_LastName.TextChanged += new System.EventHandler(this.tb_LastName_TextChanged_1);
             // 
             // tb_FirstName
@@ -345,6 +356,7 @@ namespace PostaRomanaFrontend.SignUp
             this.tb_FirstName.Name = "tb_FirstName";
             this.tb_FirstName.Size = new System.Drawing.Size(341, 59);
             this.tb_FirstName.TabIndex = 48;
+            this.tb_FirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_FirstName.TextChanged += new System.EventHandler(this.tb_FirstName_TextChanged_1);
             // 
             // label2
@@ -389,7 +401,6 @@ namespace PostaRomanaFrontend.SignUp
         }
 
         #endregion
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private GradientPanel gradientPanel1;
         private System.Windows.Forms.Button bt_Back;
         private System.Windows.Forms.Label l_error_password;
