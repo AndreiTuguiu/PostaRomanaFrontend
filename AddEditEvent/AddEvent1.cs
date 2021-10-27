@@ -56,15 +56,22 @@ namespace AddEditEvent
         }
 
         private void bt_NextSlide_Click(object sender, EventArgs e)
-        {
+        { 
             Properties.Settings.Default.MyEventName = tb_EventName.Text;
             Properties.Settings.Default.MyDescription = tb_Description.Text;
             Properties.Settings.Default.Save();
 
-
-            AddEvent2 next = new AddEvent2(tb_EventName.Text, tb_Description.Text);
-            this.Hide();
-            next.Show();
+            if(tb_EventName.Text.Length > 0 && tb_Description.Text.Length > 0) {
+                l_Error.Visible = false;
+                AddEvent2 next = new AddEvent2(tb_EventName.Text, tb_Description.Text);
+                this.Hide();
+                next.Show(); 
+            }
+            else
+            {
+                l_Error.Visible = true;
+            }
+            
         }
 
         private void pb_firstStep_Click(object sender, EventArgs e)

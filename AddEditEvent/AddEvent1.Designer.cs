@@ -46,6 +46,7 @@ namespace AddEditEvent
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.l_Error = new System.Windows.Forms.Label();
             this.gradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).BeginInit();
@@ -61,6 +62,7 @@ namespace AddEditEvent
             this.gradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gradientPanel1.ColorBottom = System.Drawing.Color.LightCyan;
             this.gradientPanel1.ColorTop = System.Drawing.Color.MediumTurquoise;
+            this.gradientPanel1.Controls.Add(this.l_Error);
             this.gradientPanel1.Controls.Add(this.label5);
             this.gradientPanel1.Controls.Add(this.label4);
             this.gradientPanel1.Controls.Add(this.pictureBox5);
@@ -112,7 +114,7 @@ namespace AddEditEvent
             this.bt_NextSlide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bt_NextSlide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_NextSlide.ForeColor = System.Drawing.Color.Transparent;
-            this.bt_NextSlide.Location = new System.Drawing.Point(1354, 914);
+            this.bt_NextSlide.Location = new System.Drawing.Point(1394, 966);
             this.bt_NextSlide.Name = "bt_NextSlide";
             this.bt_NextSlide.Size = new System.Drawing.Size(108, 102);
             this.bt_NextSlide.TabIndex = 15;
@@ -260,6 +262,18 @@ namespace AddEditEvent
             this.label5.TabIndex = 24;
             this.label5.Text = "3";
             // 
+            // l_Error
+            // 
+            this.l_Error.AutoSize = true;
+            this.l_Error.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_Error.ForeColor = System.Drawing.Color.Red;
+            this.l_Error.Location = new System.Drawing.Point(616, 940);
+            this.l_Error.Name = "l_Error";
+            this.l_Error.Size = new System.Drawing.Size(266, 26);
+            this.l_Error.TabIndex = 25;
+            this.l_Error.Text = "*The fields are required!";
+            this.l_Error.Visible = false;
+            // 
             // AddEvent1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -301,6 +315,7 @@ namespace AddEditEvent
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label l_Error;
     }
 }
 
