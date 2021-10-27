@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MainPage.Helpers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -65,6 +66,16 @@ namespace MainPage
                 List<string> selectedCities = cities.FindAll(x => x.Item1 == selectedCounty).Select(x => x.Item2).ToList();
                 bs.DataSource = selectedCities;
             }
+        }
+
+        private void pb_Close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void tb_Search_TextChanged(object sender, EventArgs e)
+        {
+            this.tb_Search = new PHTextBox("Search event");
         }
     }
 }

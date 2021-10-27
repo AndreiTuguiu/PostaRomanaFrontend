@@ -49,6 +49,9 @@
     <Compile Include="GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Helpers\PHTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
