@@ -57,9 +57,9 @@ namespace PostaRomana.AddEditEvent
 
         private void bt_NextSlide_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.MyEventName = tb_EventName.Text;
-            Properties.Settings.Default.MyDescription = tb_Description.Text;
-            Properties.Settings.Default.Save();
+            //Properties.Settings.Default.MyEventName = tb_EventName.Text;
+            //Properties.Settings.Default.MyDescription = tb_Description.Text;
+            //Properties.Settings.Default.Save();
 
 
             AddEvent2 next = new AddEvent2(tb_EventName.Text, tb_Description.Text);

@@ -1,5 +1,5 @@
 ﻿
-namespace AddEditEvent
+namespace PostaRomana.AddEditEvent
 {
     partial class AddEvent2
     {
@@ -36,14 +36,14 @@ namespace AddEditEvent
             this.citiesBox = new System.Windows.Forms.ComboBox();
             this.citiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.postaRomanaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.postaRomanaDataSet = new AddEditEvent.PostaRomanaDataSet();
+
             this.countryBox = new System.Windows.Forms.ComboBox();
             this.countriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.countiesBox = new System.Windows.Forms.ComboBox();
             this.countiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.citiesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CitiesTableAdapter();
-            this.countiesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CountiesTableAdapter();
-            this.countriesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CountriesTableAdapter();
+            //this.citiesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CitiesTableAdapter();
+            //this.countiesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CountiesTableAdapter();
+            //this.countriesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CountriesTableAdapter();
             this.AddressLine = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -63,11 +63,11 @@ namespace AddEditEvent
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countiesBindingSource)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSetBindingSource)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
+            //((System.ComponentModel.ISupportInitialize)(this.countiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_thirdStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_secondStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_firstStep)).BeginInit();
@@ -111,14 +111,14 @@ namespace AddEditEvent
             // 
             // postaRomanaDataSetBindingSource
             // 
-            this.postaRomanaDataSetBindingSource.DataSource = this.postaRomanaDataSet;
-            this.postaRomanaDataSetBindingSource.Position = 0;
+            //this.postaRomanaDataSetBindingSource.DataSource = this.postaRomanaDataSet;
+            //this.postaRomanaDataSetBindingSource.Position = 0;
             // 
             // postaRomanaDataSet
             // 
-            this.postaRomanaDataSet.DataSetName = "PostaRomanaDataSet";
-            this.postaRomanaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
+            //this.postaRomanaDataSet.DataSetName = "PostaRomanaDataSet";
+            //this.postaRomanaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            //// 
             // countryBox
             // 
             this.countryBox.Font = new System.Drawing.Font("Berlin Sans FB", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -149,15 +149,15 @@ namespace AddEditEvent
             // 
             // citiesTableAdapter
             // 
-            this.citiesTableAdapter.ClearBeforeFill = true;
-            // 
-            // countiesTableAdapter
-            // 
-            this.countiesTableAdapter.ClearBeforeFill = true;
-            // 
-            // countriesTableAdapter
-            // 
-            this.countriesTableAdapter.ClearBeforeFill = true;
+            //this.citiesTableAdapter.ClearBeforeFill = true;
+            //// 
+            //// countiesTableAdapter
+            //// 
+            //this.countiesTableAdapter.ClearBeforeFill = true;
+            //// 
+            //// countriesTableAdapter
+            //// 
+            //this.countriesTableAdapter.ClearBeforeFill = true;
             // 
             // AddressLine
             // 
@@ -318,7 +318,7 @@ namespace AddEditEvent
             this.bt_NextSlide.Size = new System.Drawing.Size(116, 104);
             this.bt_NextSlide.TabIndex = 21;
             this.bt_NextSlide.UseVisualStyleBackColor = false;
-            this.bt_NextSlide.Click += new System.EventHandler(this.bt_NextSlide_Click);
+            this.bt_NextSlide.Click += new System.EventHandler(this.NextSlide_Click);
             // 
             // gradientPanel1
             // 
@@ -406,9 +406,9 @@ namespace AddEditEvent
             this.Text = "AddEvent2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AddEvent2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSetBindingSource)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.countiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_thirdStep)).EndInit();
@@ -427,13 +427,13 @@ namespace AddEditEvent
 
         #endregion
         private System.Windows.Forms.BindingSource postaRomanaDataSetBindingSource;
-        private PostaRomanaDataSet postaRomanaDataSet;
+        //private PostaRomanaDataSet postaRomanaDataSet;
         private System.Windows.Forms.BindingSource citiesBindingSource;
-        private PostaRomanaDataSetTableAdapters.CitiesTableAdapter citiesTableAdapter;
+        //private PostaRomanaDataSetTableAdapters.CitiesTableAdapter citiesTableAdapter;
         private System.Windows.Forms.BindingSource countiesBindingSource;
-        private PostaRomanaDataSetTableAdapters.CountiesTableAdapter countiesTableAdapter;
+        //private PostaRomanaDataSetTableAdapters.CountiesTableAdapter countiesTableAdapter;
         private System.Windows.Forms.BindingSource countriesBindingSource;
-        private PostaRomanaDataSetTableAdapters.CountriesTableAdapter countriesTableAdapter;
+        //private PostaRomanaDataSetTableAdapters.CountriesTableAdapter countriesTableAdapter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
