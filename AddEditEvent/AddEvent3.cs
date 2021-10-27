@@ -56,6 +56,22 @@ namespace AddEditEvent
 
         }
 
+        private void bt_NextSlide_Click(object sender, EventArgs e)
+        {
+
+            decimal deccost = Decimal.Parse(tb_cost.Text);
+            Confirm next = new Confirm(NameEv, Descr, ALine, Start, End, Country, County, City, deccost, cb_EventType.SelectedIndex);
+            this.Hide();
+            next.Show();
+        }
+
+        private void pb_Close_Click(object sender, EventArgs e)
+        {
+            AddEvent1 close = new AddEvent1();
+            close.Close();
+            this.Close();
+        }
+
         //private void pb_secondStep_Click(object sender, EventArgs e)
         //{
         //    AddEvent2 event2 = new AddEvent2();

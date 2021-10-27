@@ -42,11 +42,13 @@ namespace AddEditEvent
             this.pb_Close = new System.Windows.Forms.PictureBox();
             this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
             this.bt_NextSlide = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pb_thirdStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_secondStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_firstStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).BeginInit();
             this.gradientPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tb_EventName
@@ -151,7 +153,7 @@ namespace AddEditEvent
             // pb_Close
             // 
             this.pb_Close.Image = ((System.Drawing.Image)(resources.GetObject("pb_Close.Image")));
-            this.pb_Close.Location = new System.Drawing.Point(1741, 33);
+            this.pb_Close.Location = new System.Drawing.Point(1817, 12);
             this.pb_Close.Name = "pb_Close";
             this.pb_Close.Size = new System.Drawing.Size(91, 78);
             this.pb_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -164,6 +166,7 @@ namespace AddEditEvent
             this.gradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gradientPanel1.ColorBottom = System.Drawing.Color.LightCyan;
             this.gradientPanel1.ColorTop = System.Drawing.Color.MediumTurquoise;
+            this.gradientPanel1.Controls.Add(this.panel1);
             this.gradientPanel1.Controls.Add(this.bt_NextSlide);
             this.gradientPanel1.Controls.Add(this.tb_Description);
             this.gradientPanel1.Controls.Add(this.label4);
@@ -174,7 +177,6 @@ namespace AddEditEvent
             this.gradientPanel1.Controls.Add(this.pb_secondStep);
             this.gradientPanel1.Controls.Add(this.label2);
             this.gradientPanel1.Controls.Add(this.pb_firstStep);
-            this.gradientPanel1.Controls.Add(this.pb_Close);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gradientPanel1.Name = "gradientPanel1";
@@ -191,12 +193,22 @@ namespace AddEditEvent
             this.bt_NextSlide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bt_NextSlide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_NextSlide.ForeColor = System.Drawing.Color.Transparent;
-            this.bt_NextSlide.Location = new System.Drawing.Point(1318, 917);
+            this.bt_NextSlide.Location = new System.Drawing.Point(1354, 914);
             this.bt_NextSlide.Name = "bt_NextSlide";
             this.bt_NextSlide.Size = new System.Drawing.Size(108, 102);
             this.bt_NextSlide.TabIndex = 15;
             this.bt_NextSlide.UseVisualStyleBackColor = true;
             this.bt_NextSlide.Click += new System.EventHandler(this.bt_NextSlide_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pb_Close);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1920, 100);
+            this.panel1.TabIndex = 17;
             // 
             // AddEvent1
             // 
@@ -215,6 +227,7 @@ namespace AddEditEvent
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).EndInit();
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -232,6 +245,7 @@ namespace AddEditEvent
         public System.Windows.Forms.TextBox tb_Description;
         private PostaRomanaFrontend.GradientPanel gradientPanel1;
         private System.Windows.Forms.Button bt_NextSlide;
+        private System.Windows.Forms.Panel panel1;
     }
 }
 
