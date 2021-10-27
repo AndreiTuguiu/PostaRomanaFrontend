@@ -12,9 +12,13 @@ namespace AddEditEvent
 {
     public partial class AddEvent2 : Form
     {
-        public AddEvent2()
+        string NameEv { get; set; }
+        string Descr { get; set; }
+        public AddEvent2(string name, string desc)
         {
             InitializeComponent();
+            NameEv = name;
+            Descr = desc;
         }
 
         private void AddEvent2_Load(object sender, EventArgs e)
@@ -31,7 +35,7 @@ namespace AddEditEvent
             Properties.Settings.Default.MyCountry = countryBox.SelectedIndex;
             Properties.Settings.Default.MyCity = citiesBox.SelectedIndex;
             Properties.Settings.Default.MyCounty = countiesBox.SelectedIndex;
-            AddEvent3 next = new AddEvent3();
+            AddEvent3 next = new AddEvent3(NameEv,Descr,AddressLine.Text,StartDate.Value,EndDate.Value,countryBox.SelectedIndex, countiesBox.SelectedIndex, citiesBox.SelectedIndex);
             this.Hide();
             next.Show();
         }

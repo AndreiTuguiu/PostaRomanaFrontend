@@ -12,14 +12,32 @@ namespace AddEditEvent
 {
     public partial class AddEvent3 : Form
     {
-        public AddEvent3()
+        string NameEv { get; set; }
+        string Descr { get; set; }
+        string ALine { get; set; }
+        DateTime Start { get; set; }
+        DateTime End { get; set; }
+        int Country { get; set; }
+        int County { get; set; }
+        int City { get; set; }
+        public AddEvent3(string name, string desc, string addline, DateTime start, DateTime end, int country, int county, int city)
         {
             InitializeComponent();
+            NameEv = name;
+            Descr = desc;
+            ALine = addline;
+            Start = start;
+            End = end;
+            Country = country;
+            County = county;
+            City = city;
         }
 
         private void NextSlide_Click(object sender, EventArgs e)
         {
-            Confirm next = new Confirm();
+
+            decimal deccost = Decimal.Parse(tb_cost.Text);
+            Confirm next = new Confirm(NameEv,Descr,ALine,Start,End,Country,County,City,deccost,cb_EventType.SelectedIndex);
             this.Hide();
             next.Show();
         }
@@ -31,11 +49,18 @@ namespace AddEditEvent
             back.Show();
         }
 
-        private void pb_secondStep_Click(object sender, EventArgs e)
+        private void AddEvent3_Load(object sender, EventArgs e)
         {
-            AddEvent2 event2 = new AddEvent2();
-            this.Hide();
-            event2.Show();
+            // TODO: This line of code loads data into the 'postaRomanaDataSet.EventTypeDictionary' table. You can move, or remove it, as needed.
+            
+
         }
+
+        //private void pb_secondStep_Click(object sender, EventArgs e)
+        //{
+        //    AddEvent2 event2 = new AddEvent2();
+        //    this.Hide();
+        //    event2.Show();
+        //}
     }
 }
