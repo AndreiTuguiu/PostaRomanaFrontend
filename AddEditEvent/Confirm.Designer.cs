@@ -70,8 +70,8 @@ namespace AddEditEvent
             this.citiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.citiesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CitiesTableAdapter();
             this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -82,8 +82,8 @@ namespace AddEditEvent
             ((System.ComponentModel.ISupportInitialize)(this.countiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).BeginInit();
             this.gradientPanel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tb_NameOfEvent
@@ -381,7 +381,7 @@ namespace AddEditEvent
             this.b_Confirm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.b_Confirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.b_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_Confirm.Font = new System.Drawing.Font("Berlin Sans FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_Confirm.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_Confirm.ForeColor = System.Drawing.Color.Black;
             this.b_Confirm.Location = new System.Drawing.Point(1212, 973);
             this.b_Confirm.Name = "b_Confirm";
@@ -469,6 +469,16 @@ namespace AddEditEvent
             this.gradientPanel1.Size = new System.Drawing.Size(1920, 1080);
             this.gradientPanel1.TabIndex = 21;
             // 
+            // panel5
+            // 
+            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
+            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel5.Controls.Add(this.pb_Close);
+            this.panel5.Location = new System.Drawing.Point(0, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(1920, 100);
+            this.panel5.TabIndex = 22;
+            // 
             // panel4
             // 
             this.panel4.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -479,16 +489,6 @@ namespace AddEditEvent
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(159, 81);
             this.panel4.TabIndex = 21;
-            // 
-            // panel5
-            // 
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Controls.Add(this.pb_Close);
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(1920, 100);
-            this.panel5.TabIndex = 22;
             // 
             // Confirm
             // 
@@ -514,9 +514,9 @@ namespace AddEditEvent
             ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).EndInit();
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
+            this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

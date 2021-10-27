@@ -42,7 +42,9 @@ namespace LogIn.Pages.CreateNewPassword
             this.button3 = new System.Windows.Forms.Button();
             this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
             this.bt_Exit = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.gradientPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -196,7 +198,7 @@ namespace LogIn.Pages.CreateNewPassword
             // 
             this.gradientPanel1.ColorBottom = System.Drawing.Color.LightCyan;
             this.gradientPanel1.ColorTop = System.Drawing.Color.MediumTurquoise;
-            this.gradientPanel1.Controls.Add(this.bt_Exit);
+            this.gradientPanel1.Controls.Add(this.panel1);
             this.gradientPanel1.Controls.Add(this.label4);
             this.gradientPanel1.Controls.Add(this.button3);
             this.gradientPanel1.Controls.Add(this.label1);
@@ -220,11 +222,21 @@ namespace LogIn.Pages.CreateNewPassword
             this.bt_Exit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_Exit.FlatAppearance.BorderSize = 0;
             this.bt_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Exit.Location = new System.Drawing.Point(1799, 22);
+            this.bt_Exit.Location = new System.Drawing.Point(1809, 6);
             this.bt_Exit.Name = "bt_Exit";
             this.bt_Exit.Size = new System.Drawing.Size(95, 81);
             this.bt_Exit.TabIndex = 15;
             this.bt_Exit.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.bt_Exit);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1924, 100);
+            this.panel1.TabIndex = 16;
             // 
             // CreateNewPasswordPage
             // 
@@ -238,6 +250,7 @@ namespace LogIn.Pages.CreateNewPassword
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -255,5 +268,6 @@ namespace LogIn.Pages.CreateNewPassword
         private System.Windows.Forms.Button button3;
         private PostaRomanaFrontend.GradientPanel gradientPanel1;
         private System.Windows.Forms.Button bt_Exit;
+        private System.Windows.Forms.Panel panel1;
     }
 }
