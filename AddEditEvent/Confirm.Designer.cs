@@ -29,6 +29,7 @@ namespace AddEditEvent
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tb_NameOfEvent = new System.Windows.Forms.TextBox();
             this.tb_EventDesc = new System.Windows.Forms.TextBox();
             this.dt_start = new System.Windows.Forms.DateTimePicker();
@@ -58,10 +59,24 @@ namespace AddEditEvent
             this.b_Confirm = new System.Windows.Forms.Button();
             this.pb_Close = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.postaRomanaDataSet = new AddEditEvent.PostaRomanaDataSet();
+            this.eventTypeDictionaryBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.eventTypeDictionaryTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.EventTypeDictionaryTableAdapter();
+            this.countriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.countriesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CountriesTableAdapter();
+            this.countiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.countiesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CountiesTableAdapter();
+            this.citiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.citiesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CitiesTableAdapter();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventTypeDictionaryBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countiesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tb_NameOfEvent
@@ -328,6 +343,47 @@ namespace AddEditEvent
             this.pb_Close.TabIndex = 20;
             this.pb_Close.TabStop = false;
             // 
+            // postaRomanaDataSet
+            // 
+            this.postaRomanaDataSet.DataSetName = "PostaRomanaDataSet";
+            this.postaRomanaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // eventTypeDictionaryBindingSource
+            // 
+            this.eventTypeDictionaryBindingSource.DataMember = "EventTypeDictionary";
+            this.eventTypeDictionaryBindingSource.DataSource = this.postaRomanaDataSet;
+            // 
+            // eventTypeDictionaryTableAdapter
+            // 
+            this.eventTypeDictionaryTableAdapter.ClearBeforeFill = true;
+            // 
+            // countriesBindingSource
+            // 
+            this.countriesBindingSource.DataMember = "Countries";
+            this.countriesBindingSource.DataSource = this.postaRomanaDataSet;
+            // 
+            // countriesTableAdapter
+            // 
+            this.countriesTableAdapter.ClearBeforeFill = true;
+            // 
+            // countiesBindingSource
+            // 
+            this.countiesBindingSource.DataMember = "Counties";
+            this.countiesBindingSource.DataSource = this.postaRomanaDataSet;
+            // 
+            // countiesTableAdapter
+            // 
+            this.countiesTableAdapter.ClearBeforeFill = true;
+            // 
+            // citiesBindingSource
+            // 
+            this.citiesBindingSource.DataMember = "Cities";
+            this.citiesBindingSource.DataSource = this.postaRomanaDataSet;
+            // 
+            // citiesTableAdapter
+            // 
+            this.citiesTableAdapter.ClearBeforeFill = true;
+            // 
             // Confirm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -356,21 +412,17 @@ namespace AddEditEvent
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eventTypeDictionaryBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countiesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox tb_NameOfEvent;
-        private System.Windows.Forms.TextBox tb_EventDesc;
-        private System.Windows.Forms.DateTimePicker dt_start;
-        private System.Windows.Forms.DateTimePicker dt_end;
-        private System.Windows.Forms.ComboBox cb_country;
-        private System.Windows.Forms.ComboBox cb_city;
-        private System.Windows.Forms.ComboBox cb_county;
-        private System.Windows.Forms.ComboBox cb_EventType;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label6;
@@ -382,15 +434,32 @@ namespace AddEditEvent
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox tb_AddressLine;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox tb_Cost;
         private System.Windows.Forms.Button b_Confirm;
         private System.Windows.Forms.PictureBox pb_Close;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        public System.Windows.Forms.TextBox tb_NameOfEvent;
+        public System.Windows.Forms.TextBox tb_EventDesc;
+        public System.Windows.Forms.DateTimePicker dt_start;
+        public System.Windows.Forms.DateTimePicker dt_end;
+        public System.Windows.Forms.ComboBox cb_country;
+        public System.Windows.Forms.ComboBox cb_city;
+        public System.Windows.Forms.ComboBox cb_county;
+        public System.Windows.Forms.ComboBox cb_EventType;
+        public System.Windows.Forms.TextBox tb_AddressLine;
+        public System.Windows.Forms.TextBox tb_Cost;
+        private PostaRomanaDataSet postaRomanaDataSet;
+        private System.Windows.Forms.BindingSource eventTypeDictionaryBindingSource;
+        private PostaRomanaDataSetTableAdapters.EventTypeDictionaryTableAdapter eventTypeDictionaryTableAdapter;
+        private System.Windows.Forms.BindingSource countriesBindingSource;
+        private PostaRomanaDataSetTableAdapters.CountriesTableAdapter countriesTableAdapter;
+        private System.Windows.Forms.BindingSource countiesBindingSource;
+        private PostaRomanaDataSetTableAdapters.CountiesTableAdapter countiesTableAdapter;
+        private System.Windows.Forms.BindingSource citiesBindingSource;
+        private PostaRomanaDataSetTableAdapters.CitiesTableAdapter citiesTableAdapter;
     }
 }

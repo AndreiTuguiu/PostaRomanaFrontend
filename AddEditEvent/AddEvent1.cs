@@ -33,7 +33,9 @@ namespace AddEditEvent
             Properties.Settings.Default.MyEventName = tb_EventName.Text;
             Properties.Settings.Default.MyDescription = tb_Description.Text;
             Properties.Settings.Default.Save();
-            AddEvent2 next = new AddEvent2();
+
+            
+            AddEvent2 next = new AddEvent2(tb_EventName.Text,tb_Description.Text);
             this.Hide();
             next.Show();
         }
@@ -42,10 +44,15 @@ namespace AddEditEvent
         {
             this.Close();
         }
-
-        private void tb_Description_TextChanged(object sender, EventArgs e)
+        
+        public string MyEventName
         {
+            get { return tb_EventName.Text; }
+        }
 
+        public string MyDescription
+        {
+            get { return tb_Description.Text; }
         }
     }
 }
