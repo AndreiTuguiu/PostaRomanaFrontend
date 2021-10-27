@@ -46,9 +46,10 @@ namespace PostaRomanaFrontend.SignUp
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Indigo;
-            this.label1.Location = new System.Drawing.Point(741, 448);
+            this.label1.Location = new System.Drawing.Point(287, 180);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(417, 35);
+            this.label1.Size = new System.Drawing.Size(293, 24);
             this.label1.TabIndex = 0;
             this.label1.Text = "Please, insert your Token here!";
             // 
@@ -56,12 +57,14 @@ namespace PostaRomanaFrontend.SignUp
             // 
             this.tb_Token.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_Token.Font = new System.Drawing.Font("Berlin Sans FB", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Token.Location = new System.Drawing.Point(763, 540);
+            this.tb_Token.Location = new System.Drawing.Point(302, 240);
+            this.tb_Token.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tb_Token.Multiline = true;
             this.tb_Token.Name = "tb_Token";
-            this.tb_Token.Size = new System.Drawing.Size(350, 67);
+            this.tb_Token.Size = new System.Drawing.Size(235, 45);
             this.tb_Token.TabIndex = 1;
             this.tb_Token.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tb_Token.TextChanged += new System.EventHandler(this.tb_Token_TextChanged);
             // 
             // bt_Register
             // 
@@ -76,9 +79,10 @@ namespace PostaRomanaFrontend.SignUp
             this.bt_Register.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Register.ForeColor = System.Drawing.Color.Black;
             this.bt_Register.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.bt_Register.Location = new System.Drawing.Point(860, 648);
+            this.bt_Register.Location = new System.Drawing.Point(366, 310);
+            this.bt_Register.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_Register.Name = "bt_Register";
-            this.bt_Register.Size = new System.Drawing.Size(187, 61);
+            this.bt_Register.Size = new System.Drawing.Size(125, 40);
             this.bt_Register.TabIndex = 2;
             this.bt_Register.Text = "Register";
             this.bt_Register.UseVisualStyleBackColor = false;
@@ -91,9 +95,10 @@ namespace PostaRomanaFrontend.SignUp
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Berlin Sans FB Demi", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Indigo;
-            this.label2.Location = new System.Drawing.Point(572, 250);
+            this.label2.Location = new System.Drawing.Point(174, 51);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(809, 45);
+            this.label2.Size = new System.Drawing.Size(541, 31);
             this.label2.TabIndex = 3;
             this.label2.Text = "Check your email address to get your Token";
             // 
@@ -109,8 +114,9 @@ namespace PostaRomanaFrontend.SignUp
             this.gradientPanel1.Controls.Add(this.bt_Register);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1920, 1080);
+            this.gradientPanel1.Size = new System.Drawing.Size(867, 481);
             this.gradientPanel1.TabIndex = 4;
             // 
             // bt_Exit
@@ -124,9 +130,10 @@ namespace PostaRomanaFrontend.SignUp
             this.bt_Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bt_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Exit.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.bt_Exit.Location = new System.Drawing.Point(1793, 42);
+            this.bt_Exit.Location = new System.Drawing.Point(988, -84);
+            this.bt_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.bt_Exit.Name = "bt_Exit";
-            this.bt_Exit.Size = new System.Drawing.Size(65, 66);
+            this.bt_Exit.Size = new System.Drawing.Size(43, 43);
             this.bt_Exit.TabIndex = 4;
             this.bt_Exit.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.bt_Exit.UseVisualStyleBackColor = false;
@@ -134,12 +141,13 @@ namespace PostaRomanaFrontend.SignUp
             // 
             // Token
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(1920, 1080);
+            this.ClientSize = new System.Drawing.Size(867, 481);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Token";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Token";

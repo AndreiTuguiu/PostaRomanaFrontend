@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogIn.Pages.PasswordRecoveredSuccessfullyPage;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,18 +31,41 @@ namespace PostaRomana.RecoverPasswordPage
 
         private void bt_recover_sendCode_Click(object sender, EventArgs e)
         {
-            if (!Regex.IsMatch(recoverPasswordTextBox.Text, @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"))
-            { label_recover_invalidEmail.Visible = true;
-            label_passwordRecoverySuccess.Visible = false; }
+            if (!Regex.IsMatch(textBox1.Text, @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"))
+            {
+                label_recover_invalidEmail.Visible = true;
+                //
+                // tabel nou sau field nou la user numit passwordRecoveryToken
+                // backend.verifytoken returneaza bool 1 daca matchuieste
+                // daca returneaza 1 
+                //
+                //
+                //
+                //
+
+            }
             else
-            { label_passwordRecoverySuccess.Visible = true;
-                label_recover_invalidEmail.Visible = false; }
+            {
+                label_recover_invalidEmail.Visible = false;
+                var frm = new PasswordRecoveredSuccessfullyPageCode();
+
+                Location = this.Location;
+                StartPosition = FormStartPosition.Manual;
+
+                //frm.FormClosing += delegate { this.Show(); }; //atunci cand inchid main page deschide login
+                frm.Show();
+                this.Hide();
+            }
+
 
         }
 
-       
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
 
-        private void recoverPasswordTextBox_KeyDown(object sender, KeyEventArgs e)
+        }
+
+        private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -49,9 +73,19 @@ namespace PostaRomana.RecoverPasswordPage
             }
         }
 
-        private void recoverPasswordTextBox_TextChanged(object sender, EventArgs e)
+        private void textBox1_KeyDown_1(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Enter)
+            {
+                bt_recover_sendCode_Click(sender, e);
+            }
         }
     }
-}
+
+       
+
+        
+
+        
+    }
+

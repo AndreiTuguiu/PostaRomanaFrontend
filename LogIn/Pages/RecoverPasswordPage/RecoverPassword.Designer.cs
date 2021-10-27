@@ -34,21 +34,20 @@ namespace PostaRomana.RecoverPasswordPage
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RecoverPassword));
             this.InsertEmailLabel = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.recoverPasswordTextBox = new System.Windows.Forms.TextBox();
             this.label_login_username = new System.Windows.Forms.Label();
             this.label_recover_invalidEmail = new System.Windows.Forms.Label();
             this.bt_recover_sendCode = new System.Windows.Forms.Button();
-            this.label_passwordRecoverySuccess = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // InsertEmailLabel
             // 
             this.InsertEmailLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.InsertEmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.InsertEmailLabel.Location = new System.Drawing.Point(85, 65);
+            this.InsertEmailLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.InsertEmailLabel.Location = new System.Drawing.Point(94, 81);
             this.InsertEmailLabel.Name = "InsertEmailLabel";
-            this.InsertEmailLabel.Size = new System.Drawing.Size(689, 174);
+            this.InsertEmailLabel.Size = new System.Drawing.Size(766, 218);
             this.InsertEmailLabel.TabIndex = 0;
             this.InsertEmailLabel.Text = "Insert the email associated to your account below and we will send you a password" +
     " recovery code.";
@@ -58,29 +57,20 @@ namespace PostaRomana.RecoverPasswordPage
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 15);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 66);
+            this.pictureBox1.Size = new System.Drawing.Size(217, 82);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
-            // 
-            // recoverPasswordTextBox
-            // 
-            this.recoverPasswordTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.recoverPasswordTextBox.Location = new System.Drawing.Point(237, 254);
-            this.recoverPasswordTextBox.Name = "recoverPasswordTextBox";
-            this.recoverPasswordTextBox.Size = new System.Drawing.Size(389, 26);
-            this.recoverPasswordTextBox.TabIndex = 1;
-            this.recoverPasswordTextBox.TextChanged += new System.EventHandler(this.recoverPasswordTextBox_TextChanged);
-            this.recoverPasswordTextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.recoverPasswordTextBox_KeyDown);
             // 
             // label_login_username
             // 
             this.label_login_username.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_login_username.AutoSize = true;
-            this.label_login_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_login_username.Location = new System.Drawing.Point(232, 226);
+            this.label_login_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label_login_username.Location = new System.Drawing.Point(258, 282);
             this.label_login_username.Name = "label_login_username";
             this.label_login_username.Size = new System.Drawing.Size(66, 25);
             this.label_login_username.TabIndex = 5;
@@ -91,9 +81,9 @@ namespace PostaRomana.RecoverPasswordPage
             // 
             this.label_recover_invalidEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_recover_invalidEmail.AutoSize = true;
-            this.label_recover_invalidEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_recover_invalidEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_recover_invalidEmail.ForeColor = System.Drawing.Color.Red;
-            this.label_recover_invalidEmail.Location = new System.Drawing.Point(360, 297);
+            this.label_recover_invalidEmail.Location = new System.Drawing.Point(400, 371);
             this.label_recover_invalidEmail.Name = "label_recover_invalidEmail";
             this.label_recover_invalidEmail.Size = new System.Drawing.Size(124, 25);
             this.label_recover_invalidEmail.TabIndex = 13;
@@ -103,40 +93,38 @@ namespace PostaRomana.RecoverPasswordPage
             // bt_recover_sendCode
             // 
             this.bt_recover_sendCode.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bt_recover_sendCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_recover_sendCode.Location = new System.Drawing.Point(295, 343);
+            this.bt_recover_sendCode.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bt_recover_sendCode.Location = new System.Drawing.Point(343, 438);
+            this.bt_recover_sendCode.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.bt_recover_sendCode.Name = "bt_recover_sendCode";
-            this.bt_recover_sendCode.Size = new System.Drawing.Size(247, 50);
+            this.bt_recover_sendCode.Size = new System.Drawing.Size(257, 52);
             this.bt_recover_sendCode.TabIndex = 2;
             this.bt_recover_sendCode.Text = "Send recovery code";
             this.bt_recover_sendCode.UseVisualStyleBackColor = true;
             this.bt_recover_sendCode.Click += new System.EventHandler(this.bt_recover_sendCode_Click);
             // 
-            // label_passwordRecoverySuccess
+            // textBox1
             // 
-            this.label_passwordRecoverySuccess.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label_passwordRecoverySuccess.AutoSize = true;
-            this.label_passwordRecoverySuccess.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_passwordRecoverySuccess.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label_passwordRecoverySuccess.Location = new System.Drawing.Point(232, 297);
-            this.label_passwordRecoverySuccess.Name = "label_passwordRecoverySuccess";
-            this.label_passwordRecoverySuccess.Size = new System.Drawing.Size(402, 25);
-            this.label_passwordRecoverySuccess.TabIndex = 14;
-            this.label_passwordRecoverySuccess.Text = "Success! A code has been sent to this email!";
-            this.label_passwordRecoverySuccess.Visible = false;
+            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.textBox1.Location = new System.Drawing.Point(260, 309);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(429, 31);
+            this.textBox1.TabIndex = 15;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown_1);
             // 
             // RecoverPassword
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(862, 534);
-            this.Controls.Add(this.label_passwordRecoverySuccess);
+            this.ClientSize = new System.Drawing.Size(958, 668);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.bt_recover_sendCode);
             this.Controls.Add(this.label_recover_invalidEmail);
             this.Controls.Add(this.label_login_username);
-            this.Controls.Add(this.recoverPasswordTextBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.InsertEmailLabel);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "RecoverPassword";
             this.Text = "RecoverPassword";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -150,11 +138,10 @@ namespace PostaRomana.RecoverPasswordPage
 
         private System.Windows.Forms.Label InsertEmailLabel;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox recoverPasswordTextBox;
         private System.Windows.Forms.Label label_login_username;
         private System.Windows.Forms.Label label_recover_invalidEmail;
         private System.Windows.Forms.Button bt_recover_sendCode;
-        private System.Windows.Forms.Label label_passwordRecoverySuccess;
+        private TextBox textBox1;
         //this.TextBox.KeyDown += new System.Windows.Forms.KeyEventHandler(this.OnKeyDownHandler);
-        }
+    }
 }
