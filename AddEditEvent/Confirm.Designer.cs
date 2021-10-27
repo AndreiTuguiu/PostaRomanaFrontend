@@ -342,6 +342,7 @@ namespace AddEditEvent
             this.pb_Close.Size = new System.Drawing.Size(60, 60);
             this.pb_Close.TabIndex = 20;
             this.pb_Close.TabStop = false;
+            this.pb_Close.Click += new System.EventHandler(this.pb_Close_Click);
             // 
             // postaRomanaDataSet
             // 
