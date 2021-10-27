@@ -1,5 +1,4 @@
-﻿using MainPage.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -75,7 +74,17 @@ namespace MainPage
 
         private void tb_Search_TextChanged(object sender, EventArgs e)
         {
-            this.tb_Search = new PHTextBox("Search event");
+
+        }
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

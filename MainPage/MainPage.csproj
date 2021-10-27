@@ -49,9 +49,6 @@
     <Compile Include="GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Helpers\PHTextBox.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +81,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Helpers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
