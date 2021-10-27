@@ -1,5 +1,7 @@
 ﻿
-namespace AddEditEvent
+using AddEditEvent;
+
+namespace PostaRomana.AddEditEvent
 {
     partial class AddEvent2
     {
@@ -36,14 +38,10 @@ namespace AddEditEvent
             this.citiesBox = new System.Windows.Forms.ComboBox();
             this.citiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.postaRomanaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.postaRomanaDataSet = new AddEditEvent.PostaRomanaDataSet();
             this.countryBox = new System.Windows.Forms.ComboBox();
             this.countriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.countiesBox = new System.Windows.Forms.ComboBox();
             this.countiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.citiesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CitiesTableAdapter();
-            this.countiesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CountiesTableAdapter();
-            this.countriesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CountriesTableAdapter();
             this.AddressLine = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,7 +58,6 @@ namespace AddEditEvent
             this.NextSlide = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_thirdStep)).BeginInit();
@@ -98,16 +95,6 @@ namespace AddEditEvent
             this.citiesBindingSource.DataMember = "Cities";
             this.citiesBindingSource.DataSource = this.postaRomanaDataSetBindingSource;
             // 
-            // postaRomanaDataSetBindingSource
-            // 
-            this.postaRomanaDataSetBindingSource.DataSource = this.postaRomanaDataSet;
-            this.postaRomanaDataSetBindingSource.Position = 0;
-            // 
-            // postaRomanaDataSet
-            // 
-            this.postaRomanaDataSet.DataSetName = "PostaRomanaDataSet";
-            this.postaRomanaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // countryBox
             // 
             this.countryBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -131,23 +118,12 @@ namespace AddEditEvent
             this.countiesBox.Name = "countiesBox";
             this.countiesBox.Size = new System.Drawing.Size(183, 37);
             this.countiesBox.TabIndex = 4;
+            this.countiesBox.SelectedIndexChanged += new System.EventHandler(this.countiesBox_SelectedIndexChanged);
             // 
             // countiesBindingSource
             // 
             this.countiesBindingSource.DataMember = "Counties";
             this.countiesBindingSource.DataSource = this.postaRomanaDataSetBindingSource;
-            // 
-            // citiesTableAdapter
-            // 
-            this.citiesTableAdapter.ClearBeforeFill = true;
-            // 
-            // countiesTableAdapter
-            // 
-            this.countiesTableAdapter.ClearBeforeFill = true;
-            // 
-            // countriesTableAdapter
-            // 
-            this.countriesTableAdapter.ClearBeforeFill = true;
             // 
             // AddressLine
             // 
@@ -304,11 +280,10 @@ namespace AddEditEvent
             this.Name = "AddEvent2";
             this.Text = "AddEvent2";
             this.Load += new System.EventHandler(this.AddEvent2_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.countiesBindingSource)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSetBindingSource)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).EndInit();
+            //((System.ComponentModel.ISupportInitialize)(this.countiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_thirdStep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_secondStep)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_firstStep)).EndInit();
@@ -323,11 +298,8 @@ namespace AddEditEvent
         private System.Windows.Forms.BindingSource postaRomanaDataSetBindingSource;
         private PostaRomanaDataSet postaRomanaDataSet;
         private System.Windows.Forms.BindingSource citiesBindingSource;
-        private PostaRomanaDataSetTableAdapters.CitiesTableAdapter citiesTableAdapter;
         private System.Windows.Forms.BindingSource countiesBindingSource;
-        private PostaRomanaDataSetTableAdapters.CountiesTableAdapter countiesTableAdapter;
         private System.Windows.Forms.BindingSource countriesBindingSource;
-        private PostaRomanaDataSetTableAdapters.CountriesTableAdapter countriesTableAdapter;
         private System.Windows.Forms.PictureBox NextSlide;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
