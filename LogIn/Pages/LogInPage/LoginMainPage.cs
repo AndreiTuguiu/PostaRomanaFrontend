@@ -192,5 +192,10 @@ namespace PostaRomana.LogIn
             client.PostAsJsonAsync("https://localhost:5001/api/User/CreateUser", toSend);
 
         }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

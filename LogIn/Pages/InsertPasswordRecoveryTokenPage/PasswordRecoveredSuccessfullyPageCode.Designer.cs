@@ -47,7 +47,7 @@ namespace LogIn.Pages.PasswordRecoveredSuccessfullyPage
             this.label_passRecSucc.Name = "label_passRecSucc";
             this.label_passRecSucc.Size = new System.Drawing.Size(750, 116);
             this.label_passRecSucc.TabIndex = 4;
-            this.label_passRecSucc.Text = "Sucess! Please insert below the five digit code we sent to your email.";
+            this.label_passRecSucc.Text = "Please insert below the five digit code we sent to your email.";
             this.label_passRecSucc.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label_passRecSucc.Click += new System.EventHandler(this.label_passRecSucc_Click);
             // 
