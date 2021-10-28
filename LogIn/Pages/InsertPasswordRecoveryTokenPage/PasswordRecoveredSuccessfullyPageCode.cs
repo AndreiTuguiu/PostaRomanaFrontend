@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+public System.Windows.Forms.FormBorderStyle FormBorderStyle { get; set; }
 
 namespace LogIn.Pages.PasswordRecoveredSuccessfullyPage
 {
@@ -67,5 +68,9 @@ namespace LogIn.Pages.PasswordRecoveredSuccessfullyPage
             }
         }
 
+        private void PasswordRecoveredSuccessfullyPageCode_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

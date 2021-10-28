@@ -307,7 +307,7 @@ namespace MainPage
             this.l_LocationComplete.BackColor = System.Drawing.Color.Transparent;
             this.l_LocationComplete.Font = new System.Drawing.Font("Berlin Sans FB Demi", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_LocationComplete.ForeColor = System.Drawing.Color.Indigo;
-            this.l_LocationComplete.Location = new System.Drawing.Point(105, 278);
+            this.l_LocationComplete.Location = new System.Drawing.Point(101, 299);
             this.l_LocationComplete.Name = "l_LocationComplete";
             this.l_LocationComplete.Size = new System.Drawing.Size(164, 21);
             this.l_LocationComplete.TabIndex = 10;
@@ -319,7 +319,7 @@ namespace MainPage
             this.l_CostComplete.BackColor = System.Drawing.Color.Transparent;
             this.l_CostComplete.Font = new System.Drawing.Font("Berlin Sans FB Demi", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_CostComplete.ForeColor = System.Drawing.Color.Indigo;
-            this.l_CostComplete.Location = new System.Drawing.Point(105, 231);
+            this.l_CostComplete.Location = new System.Drawing.Point(101, 252);
             this.l_CostComplete.Name = "l_CostComplete";
             this.l_CostComplete.Size = new System.Drawing.Size(129, 21);
             this.l_CostComplete.TabIndex = 9;
@@ -331,7 +331,7 @@ namespace MainPage
             this.l_DateComplete.BackColor = System.Drawing.Color.Transparent;
             this.l_DateComplete.Font = new System.Drawing.Font("Berlin Sans FB Demi", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_DateComplete.ForeColor = System.Drawing.Color.Indigo;
-            this.l_DateComplete.Location = new System.Drawing.Point(105, 175);
+            this.l_DateComplete.Location = new System.Drawing.Point(101, 196);
             this.l_DateComplete.Name = "l_DateComplete";
             this.l_DateComplete.Size = new System.Drawing.Size(135, 21);
             this.l_DateComplete.TabIndex = 8;
@@ -343,7 +343,7 @@ namespace MainPage
             this.l_OrganizerNameComplete.BackColor = System.Drawing.Color.Transparent;
             this.l_OrganizerNameComplete.Font = new System.Drawing.Font("Berlin Sans FB Demi", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_OrganizerNameComplete.ForeColor = System.Drawing.Color.Indigo;
-            this.l_OrganizerNameComplete.Location = new System.Drawing.Point(167, 124);
+            this.l_OrganizerNameComplete.Location = new System.Drawing.Point(163, 145);
             this.l_OrganizerNameComplete.Name = "l_OrganizerNameComplete";
             this.l_OrganizerNameComplete.Size = new System.Drawing.Size(230, 21);
             this.l_OrganizerNameComplete.TabIndex = 7;
@@ -355,7 +355,7 @@ namespace MainPage
             this.l_NameComplete.BackColor = System.Drawing.Color.Transparent;
             this.l_NameComplete.Font = new System.Drawing.Font("Berlin Sans FB Demi", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.l_NameComplete.ForeColor = System.Drawing.Color.Indigo;
-            this.l_NameComplete.Location = new System.Drawing.Point(167, 44);
+            this.l_NameComplete.Location = new System.Drawing.Point(163, 65);
             this.l_NameComplete.Name = "l_NameComplete";
             this.l_NameComplete.Size = new System.Drawing.Size(143, 21);
             this.l_NameComplete.TabIndex = 1;
@@ -381,7 +381,7 @@ namespace MainPage
             this.l_Location.AutoSize = true;
             this.l_Location.BackColor = System.Drawing.Color.Transparent;
             this.l_Location.Font = new System.Drawing.Font("Berlin Sans FB", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_Location.Location = new System.Drawing.Point(18, 278);
+            this.l_Location.Location = new System.Drawing.Point(14, 299);
             this.l_Location.Name = "l_Location";
             this.l_Location.Size = new System.Drawing.Size(85, 23);
             this.l_Location.TabIndex = 5;
@@ -392,7 +392,7 @@ namespace MainPage
             this.l_Cost.AutoSize = true;
             this.l_Cost.BackColor = System.Drawing.Color.Transparent;
             this.l_Cost.Font = new System.Drawing.Font("Berlin Sans FB", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_Cost.Location = new System.Drawing.Point(18, 231);
+            this.l_Cost.Location = new System.Drawing.Point(14, 252);
             this.l_Cost.Name = "l_Cost";
             this.l_Cost.Size = new System.Drawing.Size(50, 23);
             this.l_Cost.TabIndex = 4;
@@ -403,7 +403,7 @@ namespace MainPage
             this.l_date.AutoSize = true;
             this.l_date.BackColor = System.Drawing.Color.Transparent;
             this.l_date.Font = new System.Drawing.Font("Berlin Sans FB", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_date.Location = new System.Drawing.Point(14, 172);
+            this.l_date.Location = new System.Drawing.Point(10, 193);
             this.l_date.Name = "l_date";
             this.l_date.Size = new System.Drawing.Size(57, 23);
             this.l_date.TabIndex = 3;
@@ -414,7 +414,7 @@ namespace MainPage
             this.l_organizerName.AutoSize = true;
             this.l_organizerName.BackColor = System.Drawing.Color.Transparent;
             this.l_organizerName.Font = new System.Drawing.Font("Berlin Sans FB", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_organizerName.Location = new System.Drawing.Point(167, 89);
+            this.l_organizerName.Location = new System.Drawing.Point(163, 110);
             this.l_organizerName.Name = "l_organizerName";
             this.l_organizerName.Size = new System.Drawing.Size(149, 23);
             this.l_organizerName.TabIndex = 2;
@@ -425,7 +425,7 @@ namespace MainPage
             this.l_name.AutoSize = true;
             this.l_name.BackColor = System.Drawing.Color.Transparent;
             this.l_name.Font = new System.Drawing.Font("Berlin Sans FB", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_name.Location = new System.Drawing.Point(167, 12);
+            this.l_name.Location = new System.Drawing.Point(163, 33);
             this.l_name.Name = "l_name";
             this.l_name.Size = new System.Drawing.Size(66, 23);
             this.l_name.TabIndex = 1;
