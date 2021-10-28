@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
+﻿using LogIn.Actions;
+using Microsoft.VisualBasic.ApplicationServices;
 using PostaRomana.MainPage;
 using PostaRomana.RecoverPasswordPage;
 using System;
@@ -22,9 +23,13 @@ namespace PostaRomana.LogIn
     public partial class LoginMainPage : Form
     {
         public LoginMainPage()
-        {
+        {   //var sescheck = new SessionChecker();
+            DateTime FourSecondsLater = DateTime.Now.AddSeconds(4);
             InitializeComponent();
+            //Thread.Sleep(3000);
+            //SessionChecker.CheckSessionValidity(FourSecondsLater);
         }
+        DateTime FourSecondsLater = DateTime.Now.AddSeconds(4);
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -196,6 +201,13 @@ namespace PostaRomana.LogIn
         private void button1_Click_2(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+
+            SessionChecker.CheckSessionValidity(FourSecondsLater);
         }
     }
 }

@@ -1,6 +1,8 @@
+using LogIn.Actions;
 using PostaRomana.LogIn;
 using PostaRomana.RecoverPasswordPage;
 using System;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace LogIn
@@ -13,10 +15,19 @@ namespace LogIn
         [STAThread]
         static void Main()
         {
+            /*var sescheck = new SessionChecker();
+            DateTime FourSecondsLater = DateTime.Now.AddSeconds(4);*/
+
+
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
             Application.Run(new LoginMainPage());
+
+
+           /* Thread.Sleep(5000);
+            if (SessionChecker.CheckSessionValidity(FourSecondsLater)) { Application.Exit(); }*/
 
 
 

@@ -166,9 +166,9 @@ namespace LogIn.Pages.CreateNewPassword
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Berlin Sans FB Demi", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Indigo;
-            this.label4.Location = new System.Drawing.Point(660, 172);
+            this.label4.Location = new System.Drawing.Point(659, 374);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(564, 169);
+            this.label4.Size = new System.Drawing.Size(619, 261);
             this.label4.TabIndex = 13;
             this.label4.Text = "Your password has been reset! You can now log in with your new password.";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,7 +185,7 @@ namespace LogIn.Pages.CreateNewPassword
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(827, 658);
+            this.button3.Location = new System.Drawing.Point(827, 657);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(274, 102);
             this.button3.TabIndex = 14;

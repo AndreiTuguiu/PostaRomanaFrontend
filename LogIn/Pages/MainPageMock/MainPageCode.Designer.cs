@@ -29,6 +29,7 @@ namespace PostaRomana.MainPage
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPageCode));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -43,10 +44,9 @@ namespace PostaRomana.MainPage
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.splitter1 = new System.Windows.Forms.Splitter();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -68,7 +68,7 @@ namespace PostaRomana.MainPage
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(298, 298);
+            this.label1.Location = new System.Drawing.Point(399, 95);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(428, 46);
             this.label1.TabIndex = 3;
@@ -89,6 +89,7 @@ namespace PostaRomana.MainPage
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.flowLayoutPanel1.Controls.Add(this.groupBox1);
             this.flowLayoutPanel1.Controls.Add(this.groupBox2);
             this.flowLayoutPanel1.Controls.Add(this.groupBox3);
@@ -98,10 +99,10 @@ namespace PostaRomana.MainPage
             this.flowLayoutPanel1.Controls.Add(this.groupBox8);
             this.flowLayoutPanel1.Controls.Add(this.groupBox9);
             this.flowLayoutPanel1.Controls.Add(this.groupBox10);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(53, 359);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(250, 254);
             this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(838, 440);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(684, 463);
             this.flowLayoutPanel1.TabIndex = 5;
             // 
             // groupBox2
@@ -213,58 +214,43 @@ namespace PostaRomana.MainPage
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "groupBox10";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 25;
-            this.listBox1.Location = new System.Drawing.Point(127, 201);
-            this.listBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(133, 104);
-            this.listBox1.TabIndex = 6;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(7, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(1112, 24);
-            this.menuStrip1.TabIndex = 7;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // progressBar1
-            // 
-            this.progressBar1.Location = new System.Drawing.Point(400, 102);
-            this.progressBar1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(373, 82);
-            this.progressBar1.TabIndex = 8;
-            this.progressBar1.Click += new System.EventHandler(this.progressBar1_Click);
-            // 
             // splitter1
             // 
-            this.splitter1.Location = new System.Drawing.Point(0, 24);
+            this.splitter1.Location = new System.Drawing.Point(0, 0);
             this.splitter1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.splitter1.Name = "splitter1";
-            this.splitter1.Size = new System.Drawing.Size(3, 804);
+            this.splitter1.Size = new System.Drawing.Size(3, 541);
             this.splitter1.TabIndex = 9;
             this.splitter1.TabStop = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tag = "Timer Session Timeout";
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // button1
+            // 
+            this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button1.Location = new System.Drawing.Point(457, 153);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(301, 94);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Page 2";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // MainPageCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1112, 828);
+            this.ClientSize = new System.Drawing.Size(1160, 541);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.splitter1);
-            this.Controls.Add(this.progressBar1);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainPageCode";
             this.Text = "Event App - Main Page";
@@ -292,9 +278,8 @@ namespace PostaRomana.MainPage
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Splitter splitter1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Button button1;
     }
 }
