@@ -82,6 +82,16 @@ namespace PostaRomana.RecoverPasswordPage
                 bt_recover_sendCode_Click(sender, e);
             }
         }
+
+        private void bt_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
        
