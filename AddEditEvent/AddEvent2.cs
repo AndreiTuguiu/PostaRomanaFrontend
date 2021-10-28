@@ -52,8 +52,11 @@ namespace PostaRomana.AddEditEvent
             //Properties.Settings.Default.MyCity = citiesBox.SelectedIndex;
             //Properties.Settings.Default.MyCounty = countiesBox.SelectedIndex;
             //Properties.Settings.Default.Save();
+            int country = countryBox.SelectedIndex;
+            int county = countiesBox.SelectedIndex;
+            int city = citiesBox.SelectedIndex;
 
-            AddEvent3 next = new AddEvent3(NameEv,Descr,AddressLine.Text,StartDate.Value,EndDate.Value,countryBox.SelectedIndex, countiesBox.SelectedIndex, citiesBox.SelectedIndex);
+            AddEvent3 next = new AddEvent3(NameEv,Descr,AddressLine.Text,StartDate.Value,EndDate.Value,country, county, city);
             this.Hide();
             next.Show();
         }
@@ -96,10 +99,10 @@ namespace PostaRomana.AddEditEvent
                 {
                     _country.AddRange(await response.Content.ReadAsAsync<List<Country>>());
                     countryBox.DataSource = _country;
-                    countryBox.SelectedIndex = -1;
+                    
                 }
 
-            
+            countryBox.SelectedIndex = -1;
 
         }
 
@@ -118,9 +121,10 @@ namespace PostaRomana.AddEditEvent
             {
                 _county.AddRange(await response.Content.ReadAsAsync<List<County>>());
                 countiesBox.DataSource = _county;
-                countiesBox.SelectedIndex = -1;
+                
             }
-            
+            countiesBox.SelectedIndex = -1;
+
 
         }
 
@@ -139,10 +143,10 @@ namespace PostaRomana.AddEditEvent
             {
                 _city.AddRange(await response.Content.ReadAsAsync<List<City>>());
                 citiesBox.DataSource = _city;
-                citiesBox.SelectedIndex = -1;
+               
             }
+            citiesBox.SelectedIndex = -1;
 
-            
 
 
         }

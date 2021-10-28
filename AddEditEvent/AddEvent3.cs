@@ -59,8 +59,11 @@ namespace AddEditEvent
 
         private void bt_NextSlide_Click(object sender, EventArgs e)
         {
-
-            decimal deccost = Decimal.Parse(tb_cost.Text);
+            decimal deccost = 0;
+            if (!string.IsNullOrEmpty(tb_cost.Text))
+            {
+                deccost = Decimal.Parse(tb_cost.Text);
+            }
             Confirm next = new Confirm(NameEv, Descr, ALine, Start, End, Country, County, City, deccost, cb_EventType.SelectedIndex);
             this.Hide();
             next.Show();

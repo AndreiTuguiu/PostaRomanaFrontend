@@ -36,14 +36,10 @@ namespace PostaRomana.AddEditEvent
             this.citiesBox = new System.Windows.Forms.ComboBox();
             this.citiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.postaRomanaDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-
             this.countryBox = new System.Windows.Forms.ComboBox();
             this.countriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.countiesBox = new System.Windows.Forms.ComboBox();
             this.countiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            //this.citiesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CitiesTableAdapter();
-            //this.countiesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CountiesTableAdapter();
-            //this.countriesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CountriesTableAdapter();
             this.AddressLine = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -59,24 +55,23 @@ namespace PostaRomana.AddEditEvent
             this.pb_Close = new System.Windows.Forms.PictureBox();
             this.bt_NextSlide = new System.Windows.Forms.Button();
             this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            //((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSetBindingSource)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
-            //((System.ComponentModel.ISupportInitialize)(this.countiesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_thirdStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_secondStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_firstStep)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).BeginInit();
             this.gradientPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // StartDate
@@ -106,19 +101,8 @@ namespace PostaRomana.AddEditEvent
             // 
             // citiesBindingSource
             // 
-            this.citiesBindingSource.DataMember = "Cities";
             this.citiesBindingSource.DataSource = this.postaRomanaDataSetBindingSource;
             // 
-            // postaRomanaDataSetBindingSource
-            // 
-            //this.postaRomanaDataSetBindingSource.DataSource = this.postaRomanaDataSet;
-            //this.postaRomanaDataSetBindingSource.Position = 0;
-            // 
-            // postaRomanaDataSet
-            // 
-            //this.postaRomanaDataSet.DataSetName = "PostaRomanaDataSet";
-            //this.postaRomanaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            //// 
             // countryBox
             // 
             this.countryBox.Font = new System.Drawing.Font("Berlin Sans FB", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -127,10 +111,10 @@ namespace PostaRomana.AddEditEvent
             this.countryBox.Name = "countryBox";
             this.countryBox.Size = new System.Drawing.Size(191, 32);
             this.countryBox.TabIndex = 3;
+            this.countryBox.SelectedIndexChanged += new System.EventHandler(this.countryBox_SelectedIndexChanged);
             // 
             // countriesBindingSource
             // 
-            this.countriesBindingSource.DataMember = "Countries";
             this.countriesBindingSource.DataSource = this.postaRomanaDataSetBindingSource;
             // 
             // countiesBox
@@ -141,23 +125,11 @@ namespace PostaRomana.AddEditEvent
             this.countiesBox.Name = "countiesBox";
             this.countiesBox.Size = new System.Drawing.Size(183, 32);
             this.countiesBox.TabIndex = 4;
+            this.countiesBox.SelectedIndexChanged += new System.EventHandler(this.countiesBox_SelectedIndexChanged);
             // 
             // countiesBindingSource
             // 
-            this.countiesBindingSource.DataMember = "Counties";
             this.countiesBindingSource.DataSource = this.postaRomanaDataSetBindingSource;
-            // 
-            // citiesTableAdapter
-            // 
-            //this.citiesTableAdapter.ClearBeforeFill = true;
-            //// 
-            //// countiesTableAdapter
-            //// 
-            //this.countiesTableAdapter.ClearBeforeFill = true;
-            //// 
-            //// countriesTableAdapter
-            //// 
-            //this.countriesTableAdapter.ClearBeforeFill = true;
             // 
             // AddressLine
             // 
@@ -352,6 +324,16 @@ namespace PostaRomana.AddEditEvent
             this.gradientPanel1.Size = new System.Drawing.Size(1920, 1080);
             this.gradientPanel1.TabIndex = 22;
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pb_Close);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1920, 100);
+            this.panel1.TabIndex = 25;
+            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
@@ -385,16 +367,6 @@ namespace PostaRomana.AddEditEvent
             this.pictureBox1.TabIndex = 22;
             this.pictureBox1.TabStop = false;
             // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.pb_Close);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1920, 100);
-            this.panel1.TabIndex = 25;
-            // 
             // AddEvent2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -406,9 +378,8 @@ namespace PostaRomana.AddEditEvent
             this.Text = "AddEvent2";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AddEvent2_Load);
-            //((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSetBindingSource)).EndInit();
-            //((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.countiesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pb_thirdStep)).EndInit();
@@ -417,10 +388,10 @@ namespace PostaRomana.AddEditEvent
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).EndInit();
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
