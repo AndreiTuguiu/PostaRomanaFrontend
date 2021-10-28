@@ -66,6 +66,7 @@ namespace AddEditEvent
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.l_Error = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.citiesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).BeginInit();
@@ -281,6 +282,7 @@ namespace AddEditEvent
             this.gradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gradientPanel1.ColorBottom = System.Drawing.Color.LightCyan;
             this.gradientPanel1.ColorTop = System.Drawing.Color.MediumTurquoise;
+            this.gradientPanel1.Controls.Add(this.l_Error);
             this.gradientPanel1.Controls.Add(this.label9);
             this.gradientPanel1.Controls.Add(this.pictureBox8);
             this.gradientPanel1.Controls.Add(this.label7);
@@ -450,6 +452,18 @@ namespace AddEditEvent
             this.label9.TabIndex = 33;
             this.label9.Text = "1";
             // 
+            // l_Error
+            // 
+            this.l_Error.AutoSize = true;
+            this.l_Error.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_Error.ForeColor = System.Drawing.Color.Red;
+            this.l_Error.Location = new System.Drawing.Point(573, 815);
+            this.l_Error.Name = "l_Error";
+            this.l_Error.Size = new System.Drawing.Size(245, 25);
+            this.l_Error.TabIndex = 34;
+            this.l_Error.Text = "*The fields are required!";
+            this.l_Error.Visible = false;
+            // 
             // AddEvent2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -518,5 +532,6 @@ namespace AddEditEvent
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Label l_Error;
     }
 }

@@ -56,15 +56,23 @@ namespace AddEditEvent
 
         private void bt_NextSlide_Click(object sender, EventArgs e)
         {
-            Properties.Settings.Default.MyStartDate = StartDate.Value;
-            Properties.Settings.Default.MyEndDate = EndDate.Value;
-            Properties.Settings.Default.MyAddressLine = AddressLine.Text;
-            Properties.Settings.Default.MyCountry = countryBox.SelectedIndex;
-            Properties.Settings.Default.MyCity = citiesBox.SelectedIndex;
-            Properties.Settings.Default.MyCounty = countiesBox.SelectedIndex;
-            AddEvent3 next = new AddEvent3(NameEv, Descr, AddressLine.Text, StartDate.Value, EndDate.Value, countryBox.SelectedIndex, countiesBox.SelectedIndex, citiesBox.SelectedIndex);
-            this.Hide();
-            next.Show();
+            if (AddressLine.Text.Length > 0 && countryBox.Text.Length > 0 && countiesBox.Text.Length > 0 && citiesBox.Text.Length > 0)
+            {
+                l_Error.Visible = false;
+                Properties.Settings.Default.MyStartDate = StartDate.Value;
+                Properties.Settings.Default.MyEndDate = EndDate.Value;
+                Properties.Settings.Default.MyAddressLine = AddressLine.Text;
+                Properties.Settings.Default.MyCountry = countryBox.SelectedIndex;
+                Properties.Settings.Default.MyCity = citiesBox.SelectedIndex;
+                Properties.Settings.Default.MyCounty = countiesBox.SelectedIndex;
+                AddEvent3 next = new AddEvent3(NameEv, Descr, AddressLine.Text, StartDate.Value, EndDate.Value, countryBox.SelectedIndex, countiesBox.SelectedIndex, citiesBox.SelectedIndex);
+                this.Hide();
+                next.Show();
+            }
+            else
+            {
+                l_Error.Visible = true;
+            }
         }
     }
 }

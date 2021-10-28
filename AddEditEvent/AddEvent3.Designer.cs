@@ -51,6 +51,7 @@ namespace AddEditEvent
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.l_Error = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventTypeDictionaryBindingSource)).BeginInit();
             this.gradientPanel1.SuspendLayout();
@@ -81,6 +82,7 @@ namespace AddEditEvent
             // 
             this.gradientPanel1.ColorBottom = System.Drawing.Color.LightCyan;
             this.gradientPanel1.ColorTop = System.Drawing.Color.MediumTurquoise;
+            this.gradientPanel1.Controls.Add(this.l_Error);
             this.gradientPanel1.Controls.Add(this.label9);
             this.gradientPanel1.Controls.Add(this.pictureBox8);
             this.gradientPanel1.Controls.Add(this.label7);
@@ -295,6 +297,20 @@ namespace AddEditEvent
             this.pictureBox7.TabIndex = 34;
             this.pictureBox7.TabStop = false;
             // 
+            // l_Error
+            // 
+            this.l_Error.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.l_Error.AutoSize = true;
+            this.l_Error.BackColor = System.Drawing.Color.Transparent;
+            this.l_Error.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_Error.ForeColor = System.Drawing.Color.Red;
+            this.l_Error.Location = new System.Drawing.Point(492, 710);
+            this.l_Error.Name = "l_Error";
+            this.l_Error.Size = new System.Drawing.Size(245, 25);
+            this.l_Error.TabIndex = 42;
+            this.l_Error.Text = "*The fields are required!";
+            this.l_Error.Visible = false;
+            // 
             // AddEvent3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -342,5 +358,6 @@ namespace AddEditEvent
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label l_Error;
     }
 }

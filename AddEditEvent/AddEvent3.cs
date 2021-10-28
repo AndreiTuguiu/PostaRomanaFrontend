@@ -37,7 +37,7 @@ namespace AddEditEvent
         {
 
             decimal deccost = Decimal.Parse(tb_cost.Text);
-            Confirm next = new Confirm(NameEv,Descr,ALine,Start,End,Country,County,City,deccost,cb_EventType.SelectedIndex);
+            Confirm next = new Confirm(NameEv, Descr, ALine, Start, End, Country, County, City, deccost, cb_EventType.SelectedIndex);
             this.Hide();
             next.Show();
         }
@@ -52,17 +52,22 @@ namespace AddEditEvent
         private void AddEvent3_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'postaRomanaDataSet.EventTypeDictionary' table. You can move, or remove it, as needed.
-            
 
         }
 
         private void bt_NextSlide_Click(object sender, EventArgs e)
         {
-
-            decimal deccost = Decimal.Parse(tb_cost.Text);
-            Confirm next = new Confirm(NameEv, Descr, ALine, Start, End, Country, County, City, deccost, cb_EventType.SelectedIndex);
-            this.Hide();
-            next.Show();
+            if (tb_cost.Text.Length > 0 && cb_EventType.Text.Length > 0)
+            {
+                decimal deccost = Decimal.Parse(tb_cost.Text);
+                Confirm next = new Confirm(NameEv, Descr, ALine, Start, End, Country, County, City, deccost, cb_EventType.SelectedIndex);
+                this.Hide();
+                next.Show();
+            }
+            else
+            {
+                l_Error.Visible = true;
+            }
         }
 
         private void pb_Close_Click(object sender, EventArgs e)
