@@ -23,17 +23,6 @@ namespace AddEditEvent.Properties {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=TS1678\\SQLEXPRESS,1091;Initial Catalog=PostaRomana;User ID=Internship" +
-            ";Password=123;Context Connection=False;Column Encryption Setting=Disabled")]
-        public string PostaRomanaConnectionString {
-            get {
-                return ((string)(this["PostaRomanaConnectionString"]));
-            }
-        }
-        
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]

@@ -1,4 +1,5 @@
 using LogIn.Actions;
+using LogIn.Pages.MainPageMock;
 using PostaRomana.LogIn;
 using PostaRomana.RecoverPasswordPage;
 using System;
@@ -23,7 +24,7 @@ namespace LogIn
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new LoginMainPage());
+            Application.Run(new Uhh());
 
 
            /* Thread.Sleep(5000);

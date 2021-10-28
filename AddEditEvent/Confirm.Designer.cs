@@ -32,12 +32,12 @@ namespace AddEditEvent
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Confirm));
             this.tb_NameOfEvent = new System.Windows.Forms.TextBox();
-            this.tb_EventDesc = new System.Windows.Forms.TextBox();
-            this.dt_start = new System.Windows.Forms.DateTimePicker();
-            this.dt_end = new System.Windows.Forms.DateTimePicker();
             this.cb_country = new System.Windows.Forms.ComboBox();
             this.cb_city = new System.Windows.Forms.ComboBox();
             this.cb_county = new System.Windows.Forms.ComboBox();
+            this.tb_EventDesc = new System.Windows.Forms.TextBox();
+            this.dt_start = new System.Windows.Forms.DateTimePicker();
+            this.dt_end = new System.Windows.Forms.DateTimePicker();
             this.cb_EventType = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -95,6 +95,32 @@ namespace AddEditEvent
             this.tb_NameOfEvent.TabIndex = 0;
             this.tb_NameOfEvent.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // cb_country
+            // 
+            this.cb_country.Font = new System.Drawing.Font("Berlin Sans FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_country.Location = new System.Drawing.Point(505, 36);
+            this.cb_country.Name = "cb_country";
+            this.cb_country.Size = new System.Drawing.Size(215, 39);
+            this.cb_country.TabIndex = 4;
+            this.cb_country.SelectedIndexChanged += new System.EventHandler(this.cb_country_SelectedIndexChanged);
+            // 
+            // cb_city
+            // 
+            this.cb_city.Font = new System.Drawing.Font("Berlin Sans FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_city.Location = new System.Drawing.Point(505, 122);
+            this.cb_city.Name = "cb_city";
+            this.cb_city.Size = new System.Drawing.Size(215, 39);
+            this.cb_city.TabIndex = 5;
+            // 
+            // cb_county
+            // 
+            this.cb_county.Font = new System.Drawing.Font("Berlin Sans FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_county.Location = new System.Drawing.Point(505, 79);
+            this.cb_county.Name = "cb_county";
+            this.cb_county.Size = new System.Drawing.Size(215, 39);
+            this.cb_county.TabIndex = 6;
+            this.cb_county.SelectedIndexChanged += new System.EventHandler(this.cb_county_SelectedIndexChanged);
+            // 
             // tb_EventDesc
             // 
             this.tb_EventDesc.Font = new System.Drawing.Font("Berlin Sans FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,33 +146,6 @@ namespace AddEditEvent
             this.dt_end.Size = new System.Drawing.Size(342, 32);
             this.dt_end.TabIndex = 3;
             // 
-            // cb_country
-            // 
-            this.cb_country.Font = new System.Drawing.Font("Berlin Sans FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_country.FormattingEnabled = true;
-            this.cb_country.Location = new System.Drawing.Point(505, 36);
-            this.cb_country.Name = "cb_country";
-            this.cb_country.Size = new System.Drawing.Size(215, 39);
-            this.cb_country.TabIndex = 4;
-            // 
-            // cb_city
-            // 
-            this.cb_city.Font = new System.Drawing.Font("Berlin Sans FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_city.FormattingEnabled = true;
-            this.cb_city.Location = new System.Drawing.Point(505, 122);
-            this.cb_city.Name = "cb_city";
-            this.cb_city.Size = new System.Drawing.Size(215, 39);
-            this.cb_city.TabIndex = 5;
-            // 
-            // cb_county
-            // 
-            this.cb_county.Font = new System.Drawing.Font("Berlin Sans FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_county.FormattingEnabled = true;
-            this.cb_county.Location = new System.Drawing.Point(505, 79);
-            this.cb_county.Name = "cb_county";
-            this.cb_county.Size = new System.Drawing.Size(215, 39);
-            this.cb_county.TabIndex = 6;
-            // 
             // cb_EventType
             // 
             this.cb_EventType.Font = new System.Drawing.Font("Berlin Sans FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -164,7 +163,7 @@ namespace AddEditEvent
             this.panel1.Controls.Add(this.tb_NameOfEvent);
             this.panel1.Controls.Add(this.cb_EventType);
             this.panel1.Controls.Add(this.tb_EventDesc);
-            this.panel1.Location = new System.Drawing.Point(582, 231);
+            this.panel1.Location = new System.Drawing.Point(576, 232);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(750, 314);
             this.panel1.TabIndex = 8;
@@ -177,7 +176,7 @@ namespace AddEditEvent
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.dt_start);
             this.panel2.Controls.Add(this.dt_end);
-            this.panel2.Location = new System.Drawing.Point(581, 570);
+            this.panel2.Location = new System.Drawing.Point(575, 571);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(751, 110);
             this.panel2.TabIndex = 9;
@@ -209,7 +208,7 @@ namespace AddEditEvent
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Berlin Sans FB Demi", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Indigo;
-            this.label1.Location = new System.Drawing.Point(573, 174);
+            this.label1.Location = new System.Drawing.Point(567, 175);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 45);
             this.label1.TabIndex = 10;
@@ -222,7 +221,7 @@ namespace AddEditEvent
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Berlin Sans FB Demi", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Indigo;
-            this.label2.Location = new System.Drawing.Point(457, 360);
+            this.label2.Location = new System.Drawing.Point(451, 361);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(123, 25);
             this.label2.TabIndex = 11;
@@ -235,7 +234,7 @@ namespace AddEditEvent
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Berlin Sans FB Demi", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Indigo;
-            this.label3.Location = new System.Drawing.Point(519, 302);
+            this.label3.Location = new System.Drawing.Point(513, 303);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(61, 25);
             this.label3.TabIndex = 12;
@@ -248,7 +247,7 @@ namespace AddEditEvent
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Berlin Sans FB Demi", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Indigo;
-            this.label4.Location = new System.Drawing.Point(519, 252);
+            this.label4.Location = new System.Drawing.Point(513, 253);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(56, 25);
             this.label4.TabIndex = 13;
@@ -261,7 +260,7 @@ namespace AddEditEvent
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Berlin Sans FB Demi", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Indigo;
-            this.label5.Location = new System.Drawing.Point(431, 570);
+            this.label5.Location = new System.Drawing.Point(425, 571);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(144, 25);
             this.label5.TabIndex = 14;
@@ -279,7 +278,7 @@ namespace AddEditEvent
             this.panel3.Controls.Add(this.cb_country);
             this.panel3.Controls.Add(this.cb_city);
             this.panel3.Controls.Add(this.cb_county);
-            this.panel3.Location = new System.Drawing.Point(582, 713);
+            this.panel3.Location = new System.Drawing.Point(576, 714);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(750, 192);
             this.panel3.TabIndex = 15;
@@ -340,7 +339,7 @@ namespace AddEditEvent
             this.label12.BackColor = System.Drawing.Color.Transparent;
             this.label12.Font = new System.Drawing.Font("Berlin Sans FB Demi", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Indigo;
-            this.label12.Location = new System.Drawing.Point(477, 713);
+            this.label12.Location = new System.Drawing.Point(471, 714);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(98, 25);
             this.label12.TabIndex = 16;
@@ -353,7 +352,7 @@ namespace AddEditEvent
             this.label13.BackColor = System.Drawing.Color.Transparent;
             this.label13.Font = new System.Drawing.Font("Berlin Sans FB Demi", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Indigo;
-            this.label13.Location = new System.Drawing.Point(453, 973);
+            this.label13.Location = new System.Drawing.Point(447, 974);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(117, 50);
             this.label13.TabIndex = 17;
@@ -381,9 +380,9 @@ namespace AddEditEvent
             this.b_Confirm.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.b_Confirm.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.b_Confirm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.b_Confirm.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.b_Confirm.Font = new System.Drawing.Font("Berlin Sans FB", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.b_Confirm.ForeColor = System.Drawing.Color.Black;
-            this.b_Confirm.Location = new System.Drawing.Point(1212, 973);
+            this.b_Confirm.Location = new System.Drawing.Point(1206, 974);
             this.b_Confirm.Name = "b_Confirm";
             this.b_Confirm.Size = new System.Drawing.Size(244, 81);
             this.b_Confirm.TabIndex = 19;
@@ -461,12 +460,11 @@ namespace AddEditEvent
             this.gradientPanel1.Controls.Add(this.label12);
             this.gradientPanel1.Controls.Add(this.panel3);
             this.gradientPanel1.Controls.Add(this.label5);
-            this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Font = new System.Drawing.Font("Berlin Sans FB", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gradientPanel1.ForeColor = System.Drawing.Color.White;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1920, 1080);
+            this.gradientPanel1.Size = new System.Drawing.Size(1908, 1082);
             this.gradientPanel1.TabIndex = 21;
             // 
             // panel5
@@ -485,7 +483,7 @@ namespace AddEditEvent
             this.panel4.BackColor = System.Drawing.Color.Teal;
             this.panel4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panel4.Controls.Add(this.tb_Cost);
-            this.panel4.Location = new System.Drawing.Point(576, 973);
+            this.panel4.Location = new System.Drawing.Point(570, 974);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(159, 81);
             this.panel4.TabIndex = 21;
@@ -500,6 +498,7 @@ namespace AddEditEvent
             this.Name = "Confirm";
             this.Text = "Confirm";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Confirm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

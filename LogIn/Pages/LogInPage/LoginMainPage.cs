@@ -22,12 +22,22 @@ namespace PostaRomana.LogIn
 {
     public partial class LoginMainPage : Form
     {
+        static HttpClient client = new HttpClient();
         public LoginMainPage()
-        {   //var sescheck = new SessionChecker();
+        {
             DateTime FourSecondsLater = DateTime.Now.AddSeconds(4);
             InitializeComponent();
-            //Thread.Sleep(3000);
-            //SessionChecker.CheckSessionValidity(FourSecondsLater);
+
+            client.BaseAddress = new Uri("https://localhost:5001/");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/json"));
+        }
+
+        private async Task<HttpResponseMessage> GetAMessageAsync()
+        {
+            HttpResponseMessage response = await client.GetAsync("api/Event/ListOfCountries");
+            return response;
         }
         DateTime FourSecondsLater = DateTime.Now.AddSeconds(4);
 
@@ -95,7 +105,13 @@ namespace PostaRomana.LogIn
 
             //if parola and username are leo and parola123 login, else
             if (this.textBox1.Text == "Leo" && this.textBox2.Text == "Parola")
-            { //test moving view to mainpage here
+
+                /*
+                  //send textBox1 and textBox2 to httpPost LogTheUser (Compare credentials + Create Session)
+                  //if LogIn returns not null (the session ValidTo)
+                  save ValidTo in a variable for the timer
+                */
+            { 
                 var frm = new MainPageCode();
 
                 Location = this.Location;
@@ -103,7 +119,6 @@ namespace PostaRomana.LogIn
 
                 //frm.FormClosing += delegate { this.Show(); }; //atunci cand inchid main page deschide login
                 frm.Show();
-                //Thread.Sleep(1000);
                 this.Hide();
             }
             else

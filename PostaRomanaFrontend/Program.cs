@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿
+using System;
 using System.Windows.Forms;
 
-namespace PostaRomana
+namespace PostaRomanaFrontend
 {
     static class Program
     {
@@ -16,8 +14,7 @@ namespace PostaRomana
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new LoginMainPage());
-            
+            //Application.Run(new SignUpMenu());
         }
     }
 }

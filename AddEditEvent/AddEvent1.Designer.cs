@@ -1,5 +1,5 @@
 ﻿
-namespace AddEditEvent
+namespace PostaRomana.AddEditEvent
 {
     partial class AddEvent1
     {
