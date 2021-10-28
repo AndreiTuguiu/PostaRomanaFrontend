@@ -198,6 +198,11 @@ namespace PostaRomana.LogIn
 
         }
 
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
 

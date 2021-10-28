@@ -67,5 +67,9 @@ namespace LogIn.Pages.PasswordRecoveredSuccessfullyPage
             }
         }
 
+        private void PasswordRecoveredSuccessfullyPageCode_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
