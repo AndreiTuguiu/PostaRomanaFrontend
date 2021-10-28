@@ -10,7 +10,6 @@ namespace LogIn.Actions
 {
     public class SessionChecker
     {
-
         public static bool CheckSessionValidity(DateTime ValidTo)
         {
             if (ValidTo.CompareTo(DateTime.Now) < 0) 

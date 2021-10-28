@@ -90,9 +90,9 @@ namespace PostaRomanaFrontend.SignUp
             this.bt_Exit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.bt_Exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bt_Exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_Exit.Location = new System.Drawing.Point(1799, 42);
+            this.bt_Exit.Location = new System.Drawing.Point(1809, 12);
             this.bt_Exit.Name = "bt_Exit";
-            this.bt_Exit.Size = new System.Drawing.Size(66, 60);
+            this.bt_Exit.Size = new System.Drawing.Size(86, 83);
             this.bt_Exit.TabIndex = 6;
             this.bt_Exit.UseVisualStyleBackColor = false;
             this.bt_Exit.Click += new System.EventHandler(this.bt_Exit_Click);

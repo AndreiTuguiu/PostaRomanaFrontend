@@ -31,8 +31,9 @@ namespace PostaRomanaFrontend.SignUp
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CredentialsSignUp));
             this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.bt_Back = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.l_error_password = new System.Windows.Forms.Label();
             this.l_error_email = new System.Windows.Forms.Label();
             this.l_error_username = new System.Windows.Forms.Label();
@@ -55,6 +56,7 @@ namespace PostaRomanaFrontend.SignUp
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.gradientPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,8 +65,8 @@ namespace PostaRomanaFrontend.SignUp
             this.gradientPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gradientPanel1.ColorBottom = System.Drawing.Color.LightCyan;
             this.gradientPanel1.ColorTop = System.Drawing.Color.MediumTurquoise;
+            this.gradientPanel1.Controls.Add(this.panel1);
             this.gradientPanel1.Controls.Add(this.pictureBox1);
-            this.gradientPanel1.Controls.Add(this.bt_Back);
             this.gradientPanel1.Controls.Add(this.l_error_password);
             this.gradientPanel1.Controls.Add(this.l_error_email);
             this.gradientPanel1.Controls.Add(this.l_error_username);
@@ -94,17 +96,16 @@ namespace PostaRomanaFrontend.SignUp
             this.gradientPanel1.TabIndex = 23;
             this.gradientPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.gradientPanel1_Paint);
             // 
-            // pictureBox1
+            // panel1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(848, 864);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 67;
-            this.pictureBox1.TabStop = false;
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.bt_Back);
+            this.panel1.Location = new System.Drawing.Point(-6, -16);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1948, 100);
+            this.panel1.TabIndex = 68;
             // 
             // bt_Back
             // 
@@ -117,12 +118,24 @@ namespace PostaRomanaFrontend.SignUp
             this.bt_Back.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bt_Back.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Back.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.bt_Back.Location = new System.Drawing.Point(1822, 23);
+            this.bt_Back.Location = new System.Drawing.Point(1816, 0);
             this.bt_Back.Name = "bt_Back";
-            this.bt_Back.Size = new System.Drawing.Size(75, 71);
+            this.bt_Back.Size = new System.Drawing.Size(98, 94);
             this.bt_Back.TabIndex = 24;
             this.bt_Back.UseVisualStyleBackColor = false;
             this.bt_Back.Click += new System.EventHandler(this.bt_Back_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(848, 864);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(64, 64);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 67;
+            this.pictureBox1.TabStop = false;
             // 
             // l_error_password
             // 
@@ -395,6 +408,7 @@ namespace PostaRomanaFrontend.SignUp
             this.Load += new System.EventHandler(this.CredentialsSignUp_Load);
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
+            this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -425,5 +439,6 @@ namespace PostaRomanaFrontend.SignUp
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
