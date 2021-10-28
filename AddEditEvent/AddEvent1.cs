@@ -62,9 +62,17 @@ namespace PostaRomana.AddEditEvent
             //Properties.Settings.Default.Save();
 
 
-            AddEvent2 next = new AddEvent2(tb_EventName.Text, tb_Description.Text);
-            this.Hide();
-            next.Show();
+            if (tb_EventName.Text.Length > 0 && tb_Description.Text.Length > 0)
+            {
+                l_Error.Visible = false;
+                AddEvent2 next = new AddEvent2(tb_EventName.Text, tb_Description.Text);
+                this.Hide();
+                next.Show();
+            }
+            else
+            {
+                l_Error.Visible = true;
+            }
         }
     }
 }

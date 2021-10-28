@@ -45,20 +45,28 @@ namespace PostaRomana.AddEditEvent
 
         private void NextSlide_Click(object sender, EventArgs e)
         {
-            //Properties.Settings.Default.MyStartDate = StartDate.Value;
-            //Properties.Settings.Default.MyEndDate = EndDate.Value;
-            //Properties.Settings.Default.MyAddressLine = AddressLine.Text;
-            //Properties.Settings.Default.MyCountry = countryBox.SelectedIndex;
-            //Properties.Settings.Default.MyCity = citiesBox.SelectedIndex;
-            //Properties.Settings.Default.MyCounty = countiesBox.SelectedIndex;
-            //Properties.Settings.Default.Save();
+
             int country = countryBox.SelectedIndex;
             int county = countiesBox.SelectedIndex;
             int city = citiesBox.SelectedIndex;
 
-            AddEvent3 next = new AddEvent3(NameEv,Descr,AddressLine.Text,StartDate.Value,EndDate.Value,country, county, city);
-            this.Hide();
-            next.Show();
+            if (AddressLine.Text.Length > 0 && countryBox.Text.Length > 0 && countiesBox.Text.Length > 0 && citiesBox.Text.Length > 0)
+            {
+                l_Error.Visible = false;
+                //Properties.Settings.Default.MyStartDate = StartDate.Value;
+                //Properties.Settings.Default.MyEndDate = EndDate.Value;
+                //Properties.Settings.Default.MyAddressLine = AddressLine.Text;
+                //Properties.Settings.Default.MyCountry = countryBox.SelectedIndex;
+                //Properties.Settings.Default.MyCity = citiesBox.SelectedIndex;
+                //Properties.Settings.Default.MyCounty = countiesBox.SelectedIndex;
+                AddEvent3 next = new AddEvent3(NameEv, Descr, AddressLine.Text, StartDate.Value, EndDate.Value, country, county, city);
+                this.Hide();
+                next.Show();
+            }
+            else
+            {
+                l_Error.Visible = true;
+            }
         }
 
         private void pb_Close_Click(object sender, EventArgs e)
