@@ -29,7 +29,6 @@ namespace PostaRomana.AddEditEvent
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEvent2));
             this.StartDate = new System.Windows.Forms.DateTimePicker();
             this.EndDate = new System.Windows.Forms.DateTimePicker();
@@ -46,30 +45,30 @@ namespace PostaRomana.AddEditEvent
             this.pb_Close = new System.Windows.Forms.PictureBox();
             this.bt_NextSlide = new System.Windows.Forms.Button();
             this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.l_Error = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.l_Error = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).BeginInit();
             this.gradientPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // StartDate
@@ -97,16 +96,6 @@ namespace PostaRomana.AddEditEvent
             this.citiesBox.Size = new System.Drawing.Size(183, 32);
             this.citiesBox.TabIndex = 2;
             // 
-            // citiesBindingSource
-            // 
-
-            // 
-            // postaRomanaDataSetBindingSource
-            // 
-            // 
-            // postaRomanaDataSet
-            // 
-            // 
             // countryBox
             // 
             this.countryBox.Font = new System.Drawing.Font("Berlin Sans FB", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -115,10 +104,7 @@ namespace PostaRomana.AddEditEvent
             this.countryBox.Name = "countryBox";
             this.countryBox.Size = new System.Drawing.Size(191, 32);
             this.countryBox.TabIndex = 3;
-            // 
-            // countriesBindingSource
-            // 
-
+            this.countryBox.SelectedIndexChanged += new System.EventHandler(this.countryBox_SelectedIndexChanged);
             // 
             // countiesBox
             // 
@@ -128,12 +114,7 @@ namespace PostaRomana.AddEditEvent
             this.countiesBox.Name = "countiesBox";
             this.countiesBox.Size = new System.Drawing.Size(183, 32);
             this.countiesBox.TabIndex = 4;
-            // 
-            // countiesBindingSource
-            // 
-
-            // 
-
+            this.countiesBox.SelectedIndexChanged += new System.EventHandler(this.countiesBox_SelectedIndexChanged);
             // 
             // AddressLine
             // 
@@ -245,7 +226,7 @@ namespace PostaRomana.AddEditEvent
             this.bt_NextSlide.Size = new System.Drawing.Size(116, 104);
             this.bt_NextSlide.TabIndex = 21;
             this.bt_NextSlide.UseVisualStyleBackColor = false;
-            this.bt_NextSlide.Click += new System.EventHandler(NextSlide_Click);
+            this.bt_NextSlide.Click += new System.EventHandler(this.NextSlide_Click);
             // 
             // gradientPanel1
             // 
@@ -284,48 +265,41 @@ namespace PostaRomana.AddEditEvent
             this.gradientPanel1.Size = new System.Drawing.Size(1920, 1080);
             this.gradientPanel1.TabIndex = 22;
             // 
-            // panel1
+            // l_Error
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.pb_Close);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1920, 100);
-            this.panel1.TabIndex = 25;
+            this.l_Error.AutoSize = true;
+            this.l_Error.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_Error.ForeColor = System.Drawing.Color.Red;
+            this.l_Error.Location = new System.Drawing.Point(573, 815);
+            this.l_Error.Name = "l_Error";
+            this.l_Error.Size = new System.Drawing.Size(245, 25);
+            this.l_Error.TabIndex = 34;
+            this.l_Error.Text = "*The fields are required!";
+            this.l_Error.Visible = false;
             // 
-            // pictureBox3
+            // label9
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(573, 743);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(53, 50);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 24;
-            this.pictureBox3.TabStop = false;
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Berlin Sans FB", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Green;
+            this.label9.Location = new System.Drawing.Point(591, 235);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(48, 65);
+            this.label9.TabIndex = 33;
+            this.label9.Text = "1";
             // 
-            // pictureBox2
+            // pictureBox8
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(573, 629);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(53, 50);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 23;
-            this.pictureBox2.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(573, 530);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(53, 50);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 22;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(507, 169);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(220, 180);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox8.TabIndex = 32;
+            this.pictureBox8.TabStop = false;
             // 
             // label7
             // 
@@ -398,41 +372,48 @@ namespace PostaRomana.AddEditEvent
             this.pictureBox7.TabIndex = 26;
             this.pictureBox7.TabStop = false;
             // 
-            // pictureBox8
+            // panel1
             // 
-            this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(507, 169);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(220, 180);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 32;
-            this.pictureBox8.TabStop = false;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pb_Close);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1920, 100);
+            this.panel1.TabIndex = 25;
             // 
-            // label9
+            // pictureBox3
             // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.White;
-            this.label9.Font = new System.Drawing.Font("Berlin Sans FB", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.Green;
-            this.label9.Location = new System.Drawing.Point(591, 235);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 65);
-            this.label9.TabIndex = 33;
-            this.label9.Text = "1";
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(573, 743);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 24;
+            this.pictureBox3.TabStop = false;
             // 
-            // l_Error
+            // pictureBox2
             // 
-            this.l_Error.AutoSize = true;
-            this.l_Error.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_Error.ForeColor = System.Drawing.Color.Red;
-            this.l_Error.Location = new System.Drawing.Point(573, 815);
-            this.l_Error.Name = "l_Error";
-            this.l_Error.Size = new System.Drawing.Size(245, 25);
-            this.l_Error.TabIndex = 34;
-            this.l_Error.Text = "*The fields are required!";
-            this.l_Error.Visible = false;
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(573, 629);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 23;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(573, 530);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 22;
+            this.pictureBox1.TabStop = false;
             // 
             // AddEvent2
             // 
@@ -448,15 +429,15 @@ namespace PostaRomana.AddEditEvent
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).EndInit();
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
