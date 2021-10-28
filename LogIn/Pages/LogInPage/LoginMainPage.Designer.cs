@@ -33,6 +33,7 @@ namespace PostaRomana.LogIn
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.bt_login_LogInButton = new System.Windows.Forms.Button();
@@ -48,6 +49,7 @@ namespace PostaRomana.LogIn
             this.button_login_showPassword = new System.Windows.Forms.Button();
             this.label_login_placeholderSuccessfullyLoggedIn = new System.Windows.Forms.Label();
             this.button_actuallogin = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // textBox1
@@ -126,7 +128,7 @@ namespace PostaRomana.LogIn
             this.label_login_WelcomeBack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_login_WelcomeBack.AutoSize = true;
             this.label_login_WelcomeBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_login_WelcomeBack.Location = new System.Drawing.Point(713, 222);
+            this.label_login_WelcomeBack.Location = new System.Drawing.Point(747, 242);
             this.label_login_WelcomeBack.Name = "label_login_WelcomeBack";
             this.label_login_WelcomeBack.Size = new System.Drawing.Size(439, 69);
             this.label_login_WelcomeBack.TabIndex = 7;
@@ -138,7 +140,7 @@ namespace PostaRomana.LogIn
             this.label_login_WelcomeSubtitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_login_WelcomeSubtitle.AutoSize = true;
             this.label_login_WelcomeSubtitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_login_WelcomeSubtitle.Location = new System.Drawing.Point(550, 337);
+            this.label_login_WelcomeSubtitle.Location = new System.Drawing.Point(603, 355);
             this.label_login_WelcomeSubtitle.Name = "label_login_WelcomeSubtitle";
             this.label_login_WelcomeSubtitle.Size = new System.Drawing.Size(746, 36);
             this.label_login_WelcomeSubtitle.TabIndex = 8;
@@ -149,7 +151,7 @@ namespace PostaRomana.LogIn
             // 
             this.label_login_dontHaveAccount.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_login_dontHaveAccount.AutoSize = true;
-            this.label_login_dontHaveAccount.Location = new System.Drawing.Point(812, 637);
+            this.label_login_dontHaveAccount.Location = new System.Drawing.Point(828, 637);
             this.label_login_dontHaveAccount.Name = "label_login_dontHaveAccount";
             this.label_login_dontHaveAccount.Size = new System.Drawing.Size(193, 25);
             this.label_login_dontHaveAccount.TabIndex = 9;
@@ -161,7 +163,7 @@ namespace PostaRomana.LogIn
             this.label_login_invalidUsername.AutoSize = true;
             this.label_login_invalidUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_login_invalidUsername.ForeColor = System.Drawing.Color.Red;
-            this.label_login_invalidUsername.Location = new System.Drawing.Point(802, 594);
+            this.label_login_invalidUsername.Location = new System.Drawing.Point(828, 607);
             this.label_login_invalidUsername.Name = "label_login_invalidUsername";
             this.label_login_invalidUsername.Size = new System.Drawing.Size(276, 25);
             this.label_login_invalidUsername.TabIndex = 12;
@@ -173,7 +175,7 @@ namespace PostaRomana.LogIn
             // 
             this.linkLabel_signUp.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.linkLabel_signUp.AutoSize = true;
-            this.linkLabel_signUp.Location = new System.Drawing.Point(1012, 637);
+            this.linkLabel_signUp.Location = new System.Drawing.Point(1025, 637);
             this.linkLabel_signUp.Name = "linkLabel_signUp";
             this.linkLabel_signUp.Size = new System.Drawing.Size(79, 25);
             this.linkLabel_signUp.TabIndex = 6;
@@ -210,10 +212,11 @@ namespace PostaRomana.LogIn
             // 
             // label_login_placeholderSuccessfullyLoggedIn
             // 
+            this.label_login_placeholderSuccessfullyLoggedIn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_login_placeholderSuccessfullyLoggedIn.AutoSize = true;
             this.label_login_placeholderSuccessfullyLoggedIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.label_login_placeholderSuccessfullyLoggedIn.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label_login_placeholderSuccessfullyLoggedIn.Location = new System.Drawing.Point(443, 430);
+            this.label_login_placeholderSuccessfullyLoggedIn.Location = new System.Drawing.Point(885, 607);
             this.label_login_placeholderSuccessfullyLoggedIn.Name = "label_login_placeholderSuccessfullyLoggedIn";
             this.label_login_placeholderSuccessfullyLoggedIn.Size = new System.Drawing.Size(162, 25);
             this.label_login_placeholderSuccessfullyLoggedIn.TabIndex = 16;
@@ -231,6 +234,14 @@ namespace PostaRomana.LogIn
             this.button_actuallogin.Text = "actual login";
             this.button_actuallogin.UseVisualStyleBackColor = true;
             this.button_actuallogin.Click += new System.EventHandler(this.button_actuallogin_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 5000; // will be 30 000
+            this.timer1.Tag = "Timer Session Timeout";
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            
             // 
             // LoginMainPage
             // 
@@ -281,5 +292,6 @@ namespace PostaRomana.LogIn
         private System.Windows.Forms.Button button_login_showPassword;
         private System.Windows.Forms.Label label_login_placeholderSuccessfullyLoggedIn;
         private Button button_actuallogin;
+        private Timer timer1;
     }
 }

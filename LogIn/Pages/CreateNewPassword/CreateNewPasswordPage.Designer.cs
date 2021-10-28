@@ -41,8 +41,8 @@ namespace LogIn.Pages.CreateNewPassword
             this.label4 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
-            this.bt_Exit = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.bt_Exit = new System.Windows.Forms.Button();
             this.gradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -166,9 +166,9 @@ namespace LogIn.Pages.CreateNewPassword
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Berlin Sans FB Demi", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label4.ForeColor = System.Drawing.Color.Indigo;
-            this.label4.Location = new System.Drawing.Point(660, 172);
+            this.label4.Location = new System.Drawing.Point(659, 374);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(564, 169);
+            this.label4.Size = new System.Drawing.Size(619, 261);
             this.label4.TabIndex = 13;
             this.label4.Text = "Your password has been reset! You can now log in with your new password.";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -185,7 +185,7 @@ namespace LogIn.Pages.CreateNewPassword
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Impact", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button3.Location = new System.Drawing.Point(827, 773);
+            this.button3.Location = new System.Drawing.Point(827, 657);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(274, 102);
             this.button3.TabIndex = 14;
@@ -215,6 +215,16 @@ namespace LogIn.Pages.CreateNewPassword
             this.gradientPanel1.Size = new System.Drawing.Size(1924, 1024);
             this.gradientPanel1.TabIndex = 15;
             // 
+            // panel1
+            // 
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.bt_Exit);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1924, 100);
+            this.panel1.TabIndex = 16;
+            // 
             // bt_Exit
             // 
             this.bt_Exit.BackColor = System.Drawing.Color.Transparent;
@@ -227,16 +237,6 @@ namespace LogIn.Pages.CreateNewPassword
             this.bt_Exit.Size = new System.Drawing.Size(95, 81);
             this.bt_Exit.TabIndex = 15;
             this.bt_Exit.UseVisualStyleBackColor = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.bt_Exit);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1924, 100);
-            this.panel1.TabIndex = 16;
             // 
             // CreateNewPasswordPage
             // 

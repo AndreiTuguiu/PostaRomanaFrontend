@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
+﻿using LogIn.Actions;
+using Microsoft.VisualBasic.ApplicationServices;
 using PostaRomana.MainPage;
 using PostaRomana.RecoverPasswordPage;
 using System;
@@ -22,9 +23,13 @@ namespace PostaRomana.LogIn
     public partial class LoginMainPage : Form
     {
         public LoginMainPage()
-        {
+        {   //var sescheck = new SessionChecker();
+            DateTime FourSecondsLater = DateTime.Now.AddSeconds(4);
             InitializeComponent();
+            //Thread.Sleep(3000);
+            //SessionChecker.CheckSessionValidity(FourSecondsLater);
         }
+        DateTime FourSecondsLater = DateTime.Now.AddSeconds(4);
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -191,6 +196,13 @@ namespace PostaRomana.LogIn
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             client.PostAsJsonAsync("https://localhost:5001/api/User/CreateUser", toSend);
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+
+            SessionChecker.CheckSessionValidity(FourSecondsLater);
         }
     }
 }
