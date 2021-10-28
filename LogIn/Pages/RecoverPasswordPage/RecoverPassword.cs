@@ -7,6 +7,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -54,6 +55,7 @@ namespace PostaRomana.RecoverPasswordPage
 
                 //frm.FormClosing += delegate { this.Show(); }; //atunci cand inchid main page deschide login
                 frm.Show();
+                //Thread.Sleep(1000);
                 this.Hide();
             }
 
@@ -79,6 +81,16 @@ namespace PostaRomana.RecoverPasswordPage
             {
                 bt_recover_sendCode_Click(sender, e);
             }
+        }
+
+        private void bt_Exit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

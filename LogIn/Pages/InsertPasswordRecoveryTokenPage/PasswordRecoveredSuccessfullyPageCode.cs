@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -42,6 +43,7 @@ namespace LogIn.Pages.PasswordRecoveredSuccessfullyPage
 
                 //frm.FormClosing += delegate { this.Show(); }; //atunci cand inchid main page deschide login
                 frm.Show();
+                //Thread.Sleep(1000);
                 this.Hide();
             }
             else
@@ -63,6 +65,11 @@ namespace LogIn.Pages.PasswordRecoveredSuccessfullyPage
             {
                 bt_recover_sendCode_Click(sender, e);
             }
+        }
+
+        private void PasswordRecoveredSuccessfullyPageCode_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

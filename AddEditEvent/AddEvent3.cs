@@ -38,7 +38,7 @@ namespace AddEditEvent
         {
 
             decimal deccost = Decimal.Parse(tb_cost.Text);
-            Confirm next = new Confirm(NameEv,Descr,ALine,Start,End,Country,County,City,deccost,cb_EventType.SelectedIndex);
+            Confirm next = new Confirm(NameEv, Descr, ALine, Start, End, Country, County, City, deccost, cb_EventType.SelectedIndex);
             this.Hide();
             next.Show();
         }
@@ -53,7 +53,6 @@ namespace AddEditEvent
         private void AddEvent3_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'postaRomanaDataSet.EventTypeDictionary' table. You can move, or remove it, as needed.
-            
 
         }
 

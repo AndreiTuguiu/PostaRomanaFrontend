@@ -1,5 +1,4 @@
-﻿using MainPage.Helpers;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,56 +15,43 @@ namespace MainPage
         List<string> countries;
         List<(string, string)> counties;
         List<(string, string)> cities;
+        List<string> intervals;
+        List<string> eventTypes;
+        List<string> locations;
+        List<string> organizers;
+        List<string> costs;
+
         BindingSource bs;
         public MainPage()
         {
             InitializeComponent();
-            countries = new List<string>();
-            countries.Add("Romania");
-            countries.Add("Italia");
-            countries.Add("Grecia");
-            counties = new List<(string, string)>();
-            counties.Add(("Romania","Prahova"));
-            counties.Add(("Romania", "Iasi"));
-            counties.Add(("Romania", "Vrancea"));
-            counties.Add(("Grecia", "Pieria"));
-            cities = new List<(string, string)>();
-            cities.Add(("Prahova", "Valenii de Munte"));
-            cities.Add(("Iasi", "Iasi"));
-            cities.Add(("Pieria", "Katerini"));
+            locations = new List<string>();
+            locations.Add("Greacia, Pieria, Katerini");
+            locations.Add("Romania, Iasi, Iasi");
 
-            lb_country.DataSource = countries;
-            bs = new BindingSource();
-            lb_city.DataSource = bs;
-            
+            //asta ramane
+            cb_Interval.DataSource = intervals;
+            cb_Interval.ResetText();
+            cb_Location.SelectedIndex = -1;
+            cb_EventType.DataSource = eventTypes;
+            cb_EventType.ResetText();
+            cb_EventType.SelectedIndex = -1;
+            cb_Location.DataSource = locations;
+            cb_Location.ResetText();
+            cb_Location.SelectedIndex = -1;
+            cb_Organizer.DataSource = organizers;
+            cb_Organizer.ResetText();
+            cb_Organizer.SelectedIndex = -1;
+            cb_Cost.DataSource = costs;
+            cb_Cost.ResetText();
+            cb_Cost.SelectedIndex = -1;
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
 
-        }
-
-        private void lb_country_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selectedCountry = (string)lb_country.SelectedItem;
-            if(selectedCountry != null)
-            {
-                lb_county.Items.Clear();
-                List<string> selectedCounties = counties.FindAll(x=> x.Item1 == selectedCountry).Select(x=> x.Item2).ToList();
-                lb_county.DataSource = selectedCounties;
-            }
-        }
-
-
-        private void lb_city_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string selectedCounty = (string)lb_county.SelectedItem;
-            if (selectedCounty != null)
-            {
-                lb_city.Items.Clear();
-                List<string> selectedCities = cities.FindAll(x => x.Item1 == selectedCounty).Select(x => x.Item2).ToList();
-                bs.DataSource = selectedCities;
-            }
         }
 
         private void pb_Close_Click(object sender, EventArgs e)
@@ -75,7 +61,38 @@ namespace MainPage
 
         private void tb_Search_TextChanged(object sender, EventArgs e)
         {
-            this.tb_Search = new PHTextBox("Search event");
+
+        }
+
+        private void gradientPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void l_login_Click(object sender, EventArgs e)
+        {
+            //LoginMainPage login = new LoginMainPage();
+            //login.Show();
+        }
+
+        private void pb_Search_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_Location_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cb_Interval_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

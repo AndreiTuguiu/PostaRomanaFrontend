@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -55,6 +56,7 @@ namespace LogIn.Pages.CreateNewPassword
 
             //frm.FormClosing += delegate { this.Show(); }; //atunci cand inchid main page deschide login
             frm.Show();
+            //Thread.Sleep(1000);
             this.Close();
         }
 

@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
+﻿using LogIn.Actions;
+using Microsoft.VisualBasic.ApplicationServices;
 using PostaRomana.MainPage;
 using PostaRomana.RecoverPasswordPage;
 using System;
@@ -13,6 +14,7 @@ using System.Net.Http.Headers;
 using System.Net.Http.Json;
 using System.Text;
 using System.Text.Json;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,10 +22,24 @@ namespace PostaRomana.LogIn
 {
     public partial class LoginMainPage : Form
     {
+        static HttpClient client = new HttpClient();
         public LoginMainPage()
         {
+            DateTime FourSecondsLater = DateTime.Now.AddSeconds(4);
             InitializeComponent();
+
+            client.BaseAddress = new Uri("https://localhost:5001/");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+            new MediaTypeWithQualityHeaderValue("application/json"));
         }
+
+        private async Task<HttpResponseMessage> GetAMessageAsync()
+        {
+            HttpResponseMessage response = await client.GetAsync("api/Event/ListOfCountries");
+            return response;
+        }
+        DateTime FourSecondsLater = DateTime.Now.AddSeconds(4);
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -89,7 +105,13 @@ namespace PostaRomana.LogIn
 
             //if parola and username are leo and parola123 login, else
             if (this.textBox1.Text == "Leo" && this.textBox2.Text == "Parola")
-            { //test moving view to mainpage here
+
+                /*
+                  //send textBox1 and textBox2 to httpPost LogTheUser (Compare credentials + Create Session)
+                  //if LogIn returns not null (the session ValidTo)
+                  save ValidTo in a variable for the timer
+                */
+            { 
                 var frm = new MainPageCode();
 
                 Location = this.Location;
@@ -150,6 +172,7 @@ namespace PostaRomana.LogIn
 
             //frm.FormClosing += delegate { this.Show(); }; //atunci cand inchid main page deschide login
             frm.Show();
+            //Thread.Sleep(1000);
             this.Hide();
         }
 
@@ -188,6 +211,18 @@ namespace PostaRomana.LogIn
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             client.PostAsJsonAsync("https://localhost:5001/api/User/CreateUser", toSend);
 
+        }
+
+        private void button1_Click_2(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+
+            SessionChecker.CheckSessionValidity(FourSecondsLater);
         }
     }
 }
