@@ -29,23 +29,23 @@ namespace MainPage
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pb_Icon = new System.Windows.Forms.PictureBox();
             this.l_name = new System.Windows.Forms.Label();
             this.l_organizer = new System.Windows.Forms.Label();
             this.l_date = new System.Windows.Forms.Label();
-            this.l_Location = new System.Windows.Forms.Label();
+            this.l_location = new System.Windows.Forms.Label();
             this.l_cost = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Icon)).BeginInit();
             this.SuspendLayout();
             // 
-            // pictureBox1
+            // pb_Icon
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(13, 11);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(158, 169);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.pb_Icon.Location = new System.Drawing.Point(13, 11);
+            this.pb_Icon.Name = "pb_Icon";
+            this.pb_Icon.Size = new System.Drawing.Size(158, 169);
+            this.pb_Icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pb_Icon.TabIndex = 0;
+            this.pb_Icon.TabStop = false;
             // 
             // l_name
             // 
@@ -75,14 +75,14 @@ namespace MainPage
             this.l_date.TabIndex = 3;
             this.l_date.Text = "Date:";
             // 
-            // l_Location
+            // l_location
             // 
-            this.l_Location.AutoSize = true;
-            this.l_Location.Location = new System.Drawing.Point(192, 140);
-            this.l_Location.Name = "l_Location";
-            this.l_Location.Size = new System.Drawing.Size(74, 20);
-            this.l_Location.TabIndex = 4;
-            this.l_Location.Text = "Location:";
+            this.l_location.AutoSize = true;
+            this.l_location.Location = new System.Drawing.Point(188, 139);
+            this.l_location.Name = "l_location";
+            this.l_location.Size = new System.Drawing.Size(74, 20);
+            this.l_location.TabIndex = 4;
+            this.l_location.Text = "Location:";
             // 
             // l_cost
             // 
@@ -98,14 +98,15 @@ namespace MainPage
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.l_cost);
-            this.Controls.Add(this.l_Location);
+            this.Controls.Add(this.l_location);
             this.Controls.Add(this.l_date);
             this.Controls.Add(this.l_organizer);
             this.Controls.Add(this.l_name);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pb_Icon);
             this.Name = "ListItem";
-            this.Size = new System.Drawing.Size(1293, 195);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Size = new System.Drawing.Size(743, 195);
+            this.Load += new System.EventHandler(this.ListItem_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Icon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -113,11 +114,11 @@ namespace MainPage
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pb_Icon;
         private System.Windows.Forms.Label l_name;
         private System.Windows.Forms.Label l_organizer;
         private System.Windows.Forms.Label l_date;
-        private System.Windows.Forms.Label l_Location;
+        private System.Windows.Forms.Label l_location;
         private System.Windows.Forms.Label l_cost;
     }
 }
