@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -7,14 +9,29 @@ namespace PostaRomanaFrontend.SignUp
 {
     public partial class CredentialsSignUp : Form
     {
+        static HttpClient client = new HttpClient();
         public CredentialsSignUp()
         {
             InitializeComponent();
+
+            client.BaseAddress = new Uri("https://localhost:5001/");
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+                   new MediaTypeWithQualityHeaderValue("application/json"));
+
+        }
+
+        public class ToSend
+        { 
+            public string fullName { get; set; }
+            public string username { get; set; }
+            public string password { get; set; }
+            public string email { get; set; }
         }
 
         private void CredentialsSignUp_Load(object sender, EventArgs e)
         {
-
+         
         }
 
         private void bt_SignUp_Click_1(object sender, EventArgs e)
@@ -92,6 +109,16 @@ namespace PostaRomanaFrontend.SignUp
                 Token token = new Token();
                 token.Show();
             }
+
+            var toSend = new ToSend()
+            {
+                fullName = tb_FirstName.Text.Trim() + " " + tb_LastName.Text.Trim(),
+                username = tb_Username.Text.Trim(),
+                password = tb_Password.Text.Trim(),
+                email = tb_Email.Text.Trim()
+            };
+
+            client.PostAsJsonAsync("/api/Account/Create", toSend);
 
         }
 

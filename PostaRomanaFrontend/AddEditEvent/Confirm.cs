@@ -41,8 +41,6 @@ namespace AddEditEvent
             client.DefaultRequestHeaders.Accept.Add(
                    new MediaTypeWithQualityHeaderValue("application/json"));
 
-
-
             EvName = name;
             Description = desc;
             EventyType = type;
