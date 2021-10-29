@@ -97,11 +97,7 @@ namespace PostaRomana.AddEditEvent
         private async void LoadCountry()
             {
                 List<Country> _country = new List<Country>();
-                _country.Add(new Country()
-                    {
-                        Id = -1,
-                        Name = ""
-                    });
+                
                 HttpResponseMessage response = await client.GetAsync("api/Event/ListOfCountries");
                 if (response.IsSuccessStatusCode)
                 {
@@ -117,12 +113,7 @@ namespace PostaRomana.AddEditEvent
         private async void LoadCounty(int countryId)
         {
             List<County> _county = new List<County>();
-            _county.Add(new County()
-            {
-                Id = -1,
-                Name = "",
-                CountryId = -1
-            });
+            
             
             HttpResponseMessage response = await client.GetAsync($"api/Event/ListOfCounties?CountryId={countryId}");
             if (response.IsSuccessStatusCode)
@@ -139,11 +130,7 @@ namespace PostaRomana.AddEditEvent
         private async void LoadCity(int countyId)
         {
             List<City> _city = new List<City>();
-            _city.Add(new City()
-            {
-                Id = -1,
-                Name = ""
-            });
+           
            
 
             HttpResponseMessage response = await client.GetAsync($"api/Event/ListOfCities?CountyId={countyId}");

@@ -115,13 +115,30 @@ namespace AddEditEvent
         private void Confirm_Load(object sender, EventArgs e)
         {
             cb_country.DataSource = LoadCountries();
-            List<string> c = LoadCounties();
+            var c = LoadCountiesByCountry(CountryId);
             cb_county.DataSource = c;
-            List<string> l = LoadCities();
+            for(int i = 0; i < c.Count ; i++)
+            {
+                if (c[i].Id == CountyId)
+                {
+                    cb_county.Text = c[i].Name;
+                    break;
+                }
+            }
+            
+            List<City> l = LoadCitiesByCounty(CountyId);
             cb_city.DataSource = l;
+            for (int i = 0; i < l.Count; i++)
+            {
+                if (l[i].Id == CountyId)
+                {
+                    cb_county.Text = l[i].Name;
+                    break;
+                }
+            }
+            
             cb_country.SelectedIndex = CountryId;
-            //cb_county.SelectedIndex = CountyId;
-            //cb_city.SelectedIndex = CityId;
+            
         }
 
         private void pb_Close_Click(object sender, EventArgs e)
@@ -220,10 +237,10 @@ namespace AddEditEvent
             counties = list;
             List<string> _counties = new List<string>();
 
-            foreach (var items in list)
-            {
-                _counties.Add(items.Name);
-            }
+
+            list.ForEach(item => _counties.Add(item.Name));
+            
+
             return _counties;
         }
 
@@ -247,7 +264,7 @@ namespace AddEditEvent
             }
             return _cities;
         }
-        private List<string> LoadCountiesByCountry(int country)
+        private List<County> LoadCountiesByCountry(int country)
         {
             var url = $"https://localhost:5001/api/Event/ListOfCounties?CountryId={country}";
             var httpRequest = (HttpWebRequest)WebRequest.Create(url);
@@ -259,15 +276,15 @@ namespace AddEditEvent
                 list = JsonConvert.DeserializeObject<List<County>>(result);
             }
             counties = list;
-            List<string> _counties = new List<string>();
+            //List<string> _counties = new List<string>();
 
-            foreach (var items in list)
-            {
-                _counties.Add(items.Name);
-            }
-            return _counties;
+            //foreach (var items in list)
+            //{
+            //    _counties.Add(items.Name);
+            //}
+            return counties;
         }
-        private List<string> LoadCitiesByCounty(int county)
+        private List<City> LoadCitiesByCounty(int county)
         {
             var url = $"https://localhost:5001/api/Event/ListOfCities?CountyId={county}";
             var httpRequest = (HttpWebRequest)WebRequest.Create(url);
@@ -278,14 +295,14 @@ namespace AddEditEvent
                 var result = streamReader.ReadToEnd();
                 list = JsonConvert.DeserializeObject<List<City>>(result);
             }
-            
-            List<string> _counties = new List<string>();
+            cities = list;
+            //List<string> _counties = new List<string>();
 
-            foreach (var items in list)
-            {
-                _counties.Add(items.Name);
-            }
-            return _counties;
+            //foreach (var items in list)
+            //{
+            //    _counties.Add(items.Name);
+            //}
+            return cities;
         }
 
 
@@ -308,7 +325,7 @@ namespace AddEditEvent
         {
             cb_city.SelectedIndex = -1;
 
-            string selectedCounty = (string)cb_county.SelectedItem;
+            string selectedCounty = (string)cb_county.SelectedText;
             var selection = counties.FirstOrDefault(x => x.Name == selectedCounty);
             if (selection == null)
             {
@@ -321,7 +338,7 @@ namespace AddEditEvent
 
         public int getCountryId()
         {
-            string selectedCountryName = (string)cb_country.SelectedItem;
+            string selectedCountryName = (string)cb_country.SelectedText;
             if(countries != null)
             {
                 var selectedCountry = countries.FirstOrDefault(x => x.Name == selectedCountryName);
