@@ -52,6 +52,47 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddEditEvent\AddEvent1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditEvent\AddEvent1.Designer.cs">
+      <DependentUpon>AddEvent1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditEvent\AddEvent2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditEvent\AddEvent2.Designer.cs">
+      <DependentUpon>AddEvent2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditEvent\AddEvent3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditEvent\AddEvent3.Designer.cs">
+      <DependentUpon>AddEvent3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditEvent\Confirm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddEditEvent\Confirm.Designer.cs">
+      <DependentUpon>Confirm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddEditEvent\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="AddEditEvent\Models\City.cs" />
+    <Compile Include="AddEditEvent\Models\Country.cs" />
+    <Compile Include="AddEditEvent\Models\County.cs" />
+    <Compile Include="AddEditEvent\Models\Event.cs" />
+    <Compile Include="AddEditEvent\Models\EventXUser.cs" />
+    <Compile Include="AddEditEvent\Models\Location.cs" />
+    <Compile Include="AddEditEvent\Models\Register.cs" />
+    <Compile Include="AddEditEvent\Models\User.cs" />
+    <Compile Include="AddEditEvent\PostaRomanaDataSet.Designer.cs">
+      <DependentUpon>PostaRomanaDataSet.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="AddEditEvent\Program.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,8 +102,137 @@
     <Compile Include="GradientPanel.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="LogIn\Actions\EncryptPasswords.cs" />
+    <Compile Include="LogIn\Actions\Get Hello.cs" />
+    <Compile Include="LogIn\Actions\SerializeJson.cs" />
+    <Compile Include="LogIn\Actions\SessionChecker.cs" />
+    <Compile Include="LogIn\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="LogIn\Pages\CreateNewPassword\CreateNewPasswordPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\Pages\CreateNewPassword\CreateNewPasswordPage.Designer.cs">
+      <DependentUpon>CreateNewPasswordPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\Pages\InsertPasswordRecoveryTokenPage\PasswordRecoveredSuccessfullyPageCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\Pages\InsertPasswordRecoveryTokenPage\PasswordRecoveredSuccessfullyPageCode.Designer.cs">
+      <DependentUpon>PasswordRecoveredSuccessfullyPageCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\Pages\LogInPage\LoginMainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\Pages\LogInPage\LoginMainPage.Designer.cs">
+      <DependentUpon>LoginMainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\Pages\MainPageMock\MainPageCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\Pages\MainPageMock\MainPageCode.Designer.cs">
+      <DependentUpon>MainPageCode.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\Pages\MainPageMock\MainPageSecond.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\Pages\MainPageMock\MainPageSecond.Designer.cs">
+      <DependentUpon>MainPageSecond.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\Pages\MainPageMock\Uhh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\Pages\MainPageMock\Uhh.Designer.cs">
+      <DependentUpon>Uhh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\Pages\RecoverPasswordPage\RecoverPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LogIn\Pages\RecoverPasswordPage\RecoverPassword.Designer.cs">
+      <DependentUpon>RecoverPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LogIn\Program.cs" />
+    <Compile Include="LogIn\Properties\Resources.Designer.cs" />
+    <Compile Include="MainPage\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MainPage\ListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainPage\ListItem.Designer.cs">
+      <DependentUpon>ListItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage\MainPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainPage\MainPage.Designer.cs">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainPage\Program.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SigningUp\GradientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SigningUp\Program.cs" />
+    <Compile Include="SigningUp\SignUp\CredentialsSignUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SigningUp\SignUp\CredentialsSignUp.Designer.cs">
+      <DependentUpon>CredentialsSignUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SigningUp\SignUp\SignUpMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SigningUp\SignUp\SignUpMenu.Designer.cs">
+      <DependentUpon>SignUpMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SigningUp\SignUp\Token.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SigningUp\SignUp\Token.Designer.cs">
+      <DependentUpon>Token.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddEditEvent\AddEvent1.resx">
+      <DependentUpon>AddEvent1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditEvent\AddEvent2.resx">
+      <DependentUpon>AddEvent2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditEvent\AddEvent3.resx">
+      <DependentUpon>AddEvent3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddEditEvent\Confirm.resx">
+      <DependentUpon>Confirm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\Pages\CreateNewPassword\CreateNewPasswordPage.resx">
+      <DependentUpon>CreateNewPasswordPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\Pages\InsertPasswordRecoveryTokenPage\PasswordRecoveredSuccessfullyPageCode.resx">
+      <DependentUpon>PasswordRecoveredSuccessfullyPageCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\Pages\LogInPage\LoginMainPage.resx">
+      <DependentUpon>LoginMainPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\Pages\MainPageMock\MainPageCode.resx">
+      <DependentUpon>MainPageCode.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\Pages\MainPageMock\MainPageSecond.resx">
+      <DependentUpon>MainPageSecond.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\Pages\MainPageMock\Uhh.resx">
+      <DependentUpon>Uhh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\Pages\RecoverPasswordPage\RecoverPassword.resx">
+      <DependentUpon>RecoverPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn\Properties\Resources.resx" />
+    <EmbeddedResource Include="MainPage\ListItem.resx">
+      <DependentUpon>ListItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainPage\MainPage.resx">
+      <DependentUpon>MainPage.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -72,6 +242,28 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SigningUp\SignUp\CredentialsSignUp.resx">
+      <DependentUpon>CredentialsSignUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SigningUp\SignUp\SignUpMenu.resx">
+      <DependentUpon>SignUpMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SigningUp\SignUp\Token.resx">
+      <DependentUpon>Token.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AddEditEvent\App.config" />
+    <None Include="AddEditEvent\PostaRomanaDataSet.xsc">
+      <DependentUpon>PostaRomanaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AddEditEvent\PostaRomanaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PostaRomanaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AddEditEvent\PostaRomanaDataSet.xss">
+      <DependentUpon>PostaRomanaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MainPage\App.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -85,6 +277,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="AddEditEvent\Resources\arrow_forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AddEditEvent\Resources\placeholder_stepper.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AddEditEvent\Resources\placeholder_stepper1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LogIn\Resources\OIP.jpg" />
+    <Content Include="LogIn\Resources\showpasgrey.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
