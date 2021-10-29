@@ -1,5 +1,6 @@
 ﻿using Models;
 using Newtonsoft.Json;
+using PostaRomanaFrontend.AddEditEvent.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +23,7 @@ namespace AddEditEvent
 
         public string EvName { get; set; }
         public string Description { get; set; }
-        public int EventyType { get; set; }
+        public int EventType { get; set; }
         public string Addressline { get; set; }
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
@@ -43,7 +44,7 @@ namespace AddEditEvent
 
             EvName = name;
             Description = desc;
-            EventyType = type;
+            EventType = type;
             Addressline = addline;
             StartDate = start;
             EndDate = end;
@@ -55,7 +56,6 @@ namespace AddEditEvent
             tb_NameOfEvent.Text = EvName;
             tb_EventDesc.Text = Description;
             tb_AddressLine.Text = Addressline;
-            cb_EventType.SelectedIndex = EventyType;
             dt_start.Value = StartDate;
             dt_end.Value = EndDate;
             tb_Cost.Text = Cost.ToString();
@@ -64,6 +64,7 @@ namespace AddEditEvent
         List<Country> countries;
         List<County> counties;
         List<City> cities;
+        List<EventTypeDictionary> types;
         public class toSend
         {
             public string name { get; set; }
@@ -92,7 +93,7 @@ namespace AddEditEvent
             var organizer = 1;
             var Start = dt_start.Value;
             var End = dt_end.Value;
-            var Type = 1;
+            var Type = cb_EventType.SelectedIndex+1;
             var CostOfEvent = Cost;
             toSend send = new toSend()
             {
@@ -115,28 +116,32 @@ namespace AddEditEvent
 
         private void Confirm_Load(object sender, EventArgs e)
         {
+            cb_EventType.DataSource=LoadTypes();
+
+            cb_EventType.SelectedIndex = EventType;
+
             cb_country.DataSource = LoadCountries();
-            var c = LoadCountiesByCountry(CountryId);
-            cb_county.DataSource = c;
-            for(int i = 0; i < c.Count ; i++)
-            {
-                if (c[i].Id == CountyId)
-                {
-                    cb_county.Text = c[i].Name;
-                    break;
-                }
-            }
+            //var c = LoadCountiesByCountry(CountryId);
+            //cb_county.DataSource = c;
+            //for(int i = 0; i < c.Count ; i++)
+            //{
+            //    if (c[i].Id == CountyId)
+            //    {
+            //        cb_county.Text = c[i].Name;
+            //        break;
+            //    }
+            //}
             
-            List<City> l = LoadCitiesByCounty(CountyId);
-            cb_city.DataSource = l;
-            for (int i = 0; i < l.Count; i++)
-            {
-                if (l[i].Id == CountyId)
-                {
-                    cb_county.Text = l[i].Name;
-                    break;
-                }
-            }
+            //List<City> l = LoadCitiesByCounty(CountyId);
+            //cb_city.DataSource = l;
+            //for (int i = 0; i < l.Count; i++)
+            //{
+            //    if (l[i].Id == CountyId)
+            //    {
+            //        cb_county.Text = l[i].Name;
+            //        break;
+            //    }
+            //}
             
             cb_country.SelectedIndex = CountryId;
             
@@ -265,7 +270,7 @@ namespace AddEditEvent
             }
             return _cities;
         }
-        private List<County> LoadCountiesByCountry(int country)
+        private List<string> LoadCountiesByCountry(int country)
         {
             var url = $"https://localhost:5001/api/Event/ListOfCounties?CountryId={country}";
             var httpRequest = (HttpWebRequest)WebRequest.Create(url);
@@ -277,15 +282,15 @@ namespace AddEditEvent
                 list = JsonConvert.DeserializeObject<List<County>>(result);
             }
             counties = list;
-            //List<string> _counties = new List<string>();
+            List<string> _counties = new List<string>();
 
-            //foreach (var items in list)
-            //{
-            //    _counties.Add(items.Name);
-            //}
-            return counties;
+            foreach (var items in list)
+            {
+                _counties.Add(items.Name);
+            }
+            return _counties;
         }
-        private List<City> LoadCitiesByCounty(int county)
+        private List<string> LoadCitiesByCounty(int county)
         {
             var url = $"https://localhost:5001/api/Event/ListOfCities?CountyId={county}";
             var httpRequest = (HttpWebRequest)WebRequest.Create(url);
@@ -297,13 +302,13 @@ namespace AddEditEvent
                 list = JsonConvert.DeserializeObject<List<City>>(result);
             }
             cities = list;
-            //List<string> _counties = new List<string>();
+            List<string> _cities = new List<string>();
 
-            //foreach (var items in list)
-            //{
-            //    _counties.Add(items.Name);
-            //}
-            return cities;
+            foreach (var items in list)
+            {
+                _cities.Add(items.Name);
+            }
+            return _cities;
         }
 
 
@@ -326,7 +331,7 @@ namespace AddEditEvent
         {
             cb_city.SelectedIndex = -1;
 
-            string selectedCounty = (string)cb_county.SelectedText;
+            string selectedCounty = (string)cb_county.SelectedItem;
             var selection = counties.FirstOrDefault(x => x.Name == selectedCounty);
             if (selection == null)
             {
@@ -339,7 +344,7 @@ namespace AddEditEvent
 
         public int getCountryId()
         {
-            string selectedCountryName = (string)cb_country.SelectedText;
+            string selectedCountryName = (string)cb_country.SelectedItem;
             if(countries != null)
             {
                 var selectedCountry = countries.FirstOrDefault(x => x.Name == selectedCountryName);
@@ -371,6 +376,28 @@ namespace AddEditEvent
                 return cityId;
             }
             return -1;
+        }
+
+        private List<string> LoadTypes()
+        {
+            var url = "https://localhost:5001/api/Event/GetfTypes";
+            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            List<EventTypeDictionary> list = new List<EventTypeDictionary>();
+            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+                list = JsonConvert.DeserializeObject<List<EventTypeDictionary>>(result);
+            }
+            types = list;
+            List<string> _types = new List<string>();
+
+            foreach (var items in list)
+            {
+                _types.Add(items.EventTypeName);
+            }
+            return _types;
+
         }
     }
 }

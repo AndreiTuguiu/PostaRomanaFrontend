@@ -80,6 +80,7 @@
     <Compile Include="AddEditEvent\Models\Country.cs" />
     <Compile Include="AddEditEvent\Models\County.cs" />
     <Compile Include="AddEditEvent\Models\Event.cs" />
+    <Compile Include="AddEditEvent\Models\EventTypeDictionary.cs" />
     <Compile Include="AddEditEvent\Models\EventXUser.cs" />
     <Compile Include="AddEditEvent\Models\Location.cs" />
     <Compile Include="AddEditEvent\Models\Register.cs" />
