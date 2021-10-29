@@ -125,8 +125,9 @@ namespace PostaRomana.LogIn
                   //if LogIn returns not null (the session ValidTo)
                   save ValidTo in a variable for the timer
                 */
-            { 
-                var frm = new MainPageCode();
+            {
+                MainPage.MainPage frm = new MainPage.MainPage();
+               
 
                 Location = this.Location;
                 StartPosition = FormStartPosition.Manual;
@@ -166,7 +167,7 @@ namespace PostaRomana.LogIn
         private void button1_Click_1(object sender, EventArgs e)
         {
             //test moving view to mainpage here
-            var frm = new MainPageCode();
+            MainPage.MainPage frm = new MainPage.MainPage();
 
             Location = this.Location;
             StartPosition = FormStartPosition.Manual;
