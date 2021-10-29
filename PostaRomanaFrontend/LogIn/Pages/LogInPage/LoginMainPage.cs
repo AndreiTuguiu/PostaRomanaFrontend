@@ -40,11 +40,11 @@ namespace PostaRomana.LogIn
             //public string email { get; set; }
         }
 
-        private async Task<HttpResponseMessage> GetAMessageAsync()
+        /*private async Task<HttpResponseMessage> GetAMessageAsync()
         {
             HttpResponseMessage response = await client.GetAsync("api/Event/ListOfCountries");
             return response;
-        }
+        }*/
         DateTime FourSecondsLater = DateTime.Now.AddSeconds(4);
 
         private void pictureBox1_Click(object sender, EventArgs e)
