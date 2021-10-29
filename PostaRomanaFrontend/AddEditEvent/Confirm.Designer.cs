@@ -60,15 +60,10 @@ namespace AddEditEvent
             this.b_Confirm = new System.Windows.Forms.Button();
             this.pb_Close = new System.Windows.Forms.PictureBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.postaRomanaDataSet = new AddEditEvent.PostaRomanaDataSet();
             this.eventTypeDictionaryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eventTypeDictionaryTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.EventTypeDictionaryTableAdapter();
             this.countriesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.countriesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CountriesTableAdapter();
             this.countiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.countiesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CountiesTableAdapter();
             this.citiesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.citiesTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.CitiesTableAdapter();
             this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -76,7 +71,6 @@ namespace AddEditEvent
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventTypeDictionaryBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.countiesBindingSource)).BeginInit();
@@ -402,47 +396,7 @@ namespace AddEditEvent
             this.pb_Close.TabStop = false;
             this.pb_Close.Click += new System.EventHandler(this.pb_Close_Click);
             // 
-            // postaRomanaDataSet
-            // 
-            this.postaRomanaDataSet.DataSetName = "PostaRomanaDataSet";
-            this.postaRomanaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // eventTypeDictionaryBindingSource
-            // 
-            this.eventTypeDictionaryBindingSource.DataMember = "EventTypeDictionary";
-            this.eventTypeDictionaryBindingSource.DataSource = this.postaRomanaDataSet;
-            // 
-            // eventTypeDictionaryTableAdapter
-            // 
-            this.eventTypeDictionaryTableAdapter.ClearBeforeFill = true;
-            // 
-            // countriesBindingSource
-            // 
-            this.countriesBindingSource.DataMember = "Countries";
-            this.countriesBindingSource.DataSource = this.postaRomanaDataSet;
-            // 
-            // countriesTableAdapter
-            // 
-            this.countriesTableAdapter.ClearBeforeFill = true;
-            // 
-            // countiesBindingSource
-            // 
-            this.countiesBindingSource.DataMember = "Counties";
-            this.countiesBindingSource.DataSource = this.postaRomanaDataSet;
-            // 
-            // countiesTableAdapter
-            // 
-            this.countiesTableAdapter.ClearBeforeFill = true;
-            // 
-            // citiesBindingSource
-            // 
-            this.citiesBindingSource.DataMember = "Cities";
-            this.citiesBindingSource.DataSource = this.postaRomanaDataSet;
-            // 
-            // citiesTableAdapter
-            // 
-            this.citiesTableAdapter.ClearBeforeFill = true;
-            // 
+            
             // gradientPanel1
             // 
             this.gradientPanel1.ColorBottom = System.Drawing.Color.LightCyan;
@@ -506,7 +460,6 @@ namespace AddEditEvent
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventTypeDictionaryBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.countriesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.countiesBindingSource)).EndInit();
@@ -550,15 +503,10 @@ namespace AddEditEvent
         public System.Windows.Forms.ComboBox cb_EventType;
         public System.Windows.Forms.TextBox tb_AddressLine;
         public System.Windows.Forms.TextBox tb_Cost;
-        private PostaRomanaDataSet postaRomanaDataSet;
         private System.Windows.Forms.BindingSource eventTypeDictionaryBindingSource;
-        private PostaRomanaDataSetTableAdapters.EventTypeDictionaryTableAdapter eventTypeDictionaryTableAdapter;
         private System.Windows.Forms.BindingSource countriesBindingSource;
-        private PostaRomanaDataSetTableAdapters.CountriesTableAdapter countriesTableAdapter;
         private System.Windows.Forms.BindingSource countiesBindingSource;
-        private PostaRomanaDataSetTableAdapters.CountiesTableAdapter countiesTableAdapter;
         private System.Windows.Forms.BindingSource citiesBindingSource;
-        private PostaRomanaDataSetTableAdapters.CitiesTableAdapter citiesTableAdapter;
         private PostaRomanaFrontend.GradientPanel gradientPanel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;

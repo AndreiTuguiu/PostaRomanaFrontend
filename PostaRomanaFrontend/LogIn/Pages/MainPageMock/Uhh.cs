@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Net.Http.Json;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -60,10 +59,10 @@ namespace LogIn.Pages.MainPageMock
         }
 
         
-        private void label1_Click(object sender, EventArgs e)
-        {
-            CreateProductAsync("/api/Account/CreateLogInSession", sesiune);
+        //private void label1_Click(object sender, EventArgs e)
+        //{
+        //    CreateProductAsync("/api/Account/CreateLogInSession", sesiune);
 
-        }
+        //}
     }
 }

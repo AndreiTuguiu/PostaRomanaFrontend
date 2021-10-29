@@ -31,9 +31,7 @@ namespace AddEditEvent
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEvent3));
-            this.postaRomanaDataSet = new AddEditEvent.PostaRomanaDataSet();
             this.eventTypeDictionaryBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eventTypeDictionaryTableAdapter = new AddEditEvent.PostaRomanaDataSetTableAdapters.EventTypeDictionaryTableAdapter();
             this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pb_Close = new System.Windows.Forms.PictureBox();
@@ -52,7 +50,6 @@ namespace AddEditEvent
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.l_Error = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventTypeDictionaryBindingSource)).BeginInit();
             this.gradientPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,20 +61,7 @@ namespace AddEditEvent
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.SuspendLayout();
             // 
-            // postaRomanaDataSet
-            // 
-            this.postaRomanaDataSet.DataSetName = "PostaRomanaDataSet";
-            this.postaRomanaDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // eventTypeDictionaryBindingSource
-            // 
-            this.eventTypeDictionaryBindingSource.DataMember = "EventTypeDictionary";
-            this.eventTypeDictionaryBindingSource.DataSource = this.postaRomanaDataSet;
-            // 
-            // eventTypeDictionaryTableAdapter
-            // 
-            this.eventTypeDictionaryTableAdapter.ClearBeforeFill = true;
-            // 
+            
             // gradientPanel1
             // 
             this.gradientPanel1.ColorBottom = System.Drawing.Color.LightCyan;
@@ -322,7 +306,6 @@ namespace AddEditEvent
             this.Text = "AddEvent3";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.AddEvent3_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.postaRomanaDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eventTypeDictionaryBindingSource)).EndInit();
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
@@ -344,9 +327,7 @@ namespace AddEditEvent
         private System.Windows.Forms.PictureBox pb_Close;
         public System.Windows.Forms.TextBox tb_cost;
         public System.Windows.Forms.ComboBox cb_EventType;
-        private PostaRomanaDataSet postaRomanaDataSet;
         private System.Windows.Forms.BindingSource eventTypeDictionaryBindingSource;
-        private PostaRomanaDataSetTableAdapters.EventTypeDictionaryTableAdapter eventTypeDictionaryTableAdapter;
         private PostaRomanaFrontend.GradientPanel gradientPanel1;
         private System.Windows.Forms.Button bt_NextSlide;
         private System.Windows.Forms.Panel panel1;

@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.IO;
-using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace LogIn
@@ -12,20 +12,20 @@ namespace LogIn
 
     }
 
-    public class SerializeJson
-    {
-        public static string Serialize()
-        {
-            var UC = new UserCredentials
-            {
-                Username = "TestUsername",
-                Password = "TestPassword"
+    //public class SerializeJson
+    //{
+    //    public static string Serialize(UserCredentials userCredentials)
+    //    {
+    //         userCredentials = new UserCredentials
+    //        {
+    //            Username = "TestUsername",
+    //            Password = "TestPassword"
             
-            };
+    //        };
 
-            string jsonString = JsonSerializer.Serialize(UC);
+    //        string jsonString = JsonSerializer.Serialize(userCredentials);
 
-            return jsonString;
-        }
-    }
+    //        return jsonString;
+    //    }
+    //}
 }
