@@ -105,20 +105,20 @@ namespace PostaRomana.LogIn
 
         }
 
-        private void bt_login_LogInButton_Click(object sender, EventArgs e)
+        private async void bt_login_LogInButton_Click(object sender, EventArgs e)
         {
             var toSend = new ToSend()
             {
                 //fullName = tb_FirstName.Text.Trim() + " " + tb_LastName.Text.Trim(),
-                Username = textBox1.Text.Trim(),
-                Password = textBox2.Text.Trim()
+                Username = textBox1.Text,
+                Password = textBox2.Text
                 //email = tb_Email.Text.Trim()
             };
 
-            client.PostAsJsonAsync("/api/Account/LogTheUser", toSend);
+            HttpResponseMessage response = await client.GetAsync($"api/Account/LogTheUser?Username={toSend.Username}Password={toSend.Password}");
 
             //if parola and username are leo and parola123 login, else
-            if (this.textBox1.Text == "Leo" && this.textBox2.Text == "Parola")
+            if (response.IsSuccessStatusCode)
 
                 /*
                   //send textBox1 and textBox2 to httpPost LogTheUser (Compare credentials + Create Session)

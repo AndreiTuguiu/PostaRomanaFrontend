@@ -121,24 +121,6 @@
     <Compile Include="LogIn\Pages\LogInPage\LoginMainPage.Designer.cs">
       <DependentUpon>LoginMainPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="LogIn\Pages\MainPageMock\MainPageCode.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LogIn\Pages\MainPageMock\MainPageCode.Designer.cs">
-      <DependentUpon>MainPageCode.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LogIn\Pages\MainPageMock\MainPageSecond.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LogIn\Pages\MainPageMock\MainPageSecond.Designer.cs">
-      <DependentUpon>MainPageSecond.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LogIn\Pages\MainPageMock\Uhh.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="LogIn\Pages\MainPageMock\Uhh.Designer.cs">
-      <DependentUpon>Uhh.cs</DependentUpon>
-    </Compile>
     <Compile Include="LogIn\Pages\RecoverPasswordPage\RecoverPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,15 +180,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn\Pages\LogInPage\LoginMainPage.resx">
       <DependentUpon>LoginMainPage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LogIn\Pages\MainPageMock\MainPageCode.resx">
-      <DependentUpon>MainPageCode.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LogIn\Pages\MainPageMock\MainPageSecond.resx">
-      <DependentUpon>MainPageSecond.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="LogIn\Pages\MainPageMock\Uhh.resx">
-      <DependentUpon>Uhh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LogIn\Pages\RecoverPasswordPage\RecoverPassword.resx">
       <DependentUpon>RecoverPassword.cs</DependentUpon>
