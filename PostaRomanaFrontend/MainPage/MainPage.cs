@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PostaRomana.AddEditEvent;
+using PostaRomana.LogIn;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -76,8 +78,8 @@ namespace MainPage
 
         private void l_login_Click(object sender, EventArgs e)
         {
-            //LoginMainPage login = new LoginMainPage();
-            //login.Show();
+            LoginMainPage login = new LoginMainPage();
+            login.Show();
         }
 
         private void pb_Search_Click(object sender, EventArgs e)
@@ -93,6 +95,12 @@ namespace MainPage
         private void cb_Interval_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void bt_AddEvent_Click(object sender, EventArgs e)
+        {
+            AddEvent1 add = new AddEvent1();
+            add.Show();
         }
     }
 }

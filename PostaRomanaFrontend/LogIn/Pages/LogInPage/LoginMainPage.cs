@@ -1,6 +1,7 @@
 ﻿using LogIn.Actions;
 using PostaRomana.MainPage;
 using PostaRomana.RecoverPasswordPage;
+using PostaRomanaFrontend.SignUp;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -220,6 +221,12 @@ namespace PostaRomana.LogIn
 
 
             SessionChecker.CheckSessionValidity(FourSecondsLater);
+        }
+
+        private void linkLabel_signUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CredentialsSignUp cSignUp = new CredentialsSignUp();
+            cSignUp.Show();
         }
     }
 }

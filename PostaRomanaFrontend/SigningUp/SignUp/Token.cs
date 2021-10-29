@@ -17,7 +17,8 @@ namespace PostaRomanaFrontend.SignUp
 
         private void bt_Register_Click(object sender, System.EventArgs e)
         {
-
+            MainPage.MainPage main = new MainPage.MainPage();
+            main.Show();
         }
 
         private void tb_Token_TextChanged(object sender, System.EventArgs e)

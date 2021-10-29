@@ -1,5 +1,6 @@
 ﻿
 using PostaRomana.LogIn;
+using PostaRomanaFrontend.SignUp;
 using System;
 using System.Windows.Forms;
 
@@ -15,7 +16,7 @@ namespace PostaRomanaFrontend
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginMainPage());
+            Application.Run(new SignUpMenu());
         }
     }
 }

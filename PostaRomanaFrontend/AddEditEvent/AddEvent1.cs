@@ -57,6 +57,8 @@ namespace PostaRomana.AddEditEvent
 
         private void bt_NextSlide_Click(object sender, EventArgs e)
         {
+           
+
             //Properties.Settings.Default.MyEventName = tb_EventName.Text;
             //Properties.Settings.Default.MyDescription = tb_Description.Text;
             //Properties.Settings.Default.Save();
@@ -73,6 +75,7 @@ namespace PostaRomana.AddEditEvent
             {
                 l_Error.Visible = true;
             }
+            
         }
     }
 }

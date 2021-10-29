@@ -83,6 +83,9 @@ namespace AddEditEvent
 
         private void b_Confirm_Click(object sender, EventArgs e)
         {
+            MainPage.MainPage main = new MainPage.MainPage();
+            main.Show();
+
             var CountryId = getCountryId();
             var CountyId = getCountyId();
             var CityId = getCityId();

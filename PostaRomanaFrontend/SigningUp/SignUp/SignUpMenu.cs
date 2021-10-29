@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PostaRomana.LogIn;
+using System;
 using System.Windows.Forms;
 
 namespace PostaRomanaFrontend.SignUp
@@ -18,7 +19,8 @@ namespace PostaRomanaFrontend.SignUp
 
         private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            LoginMainPage log = new LoginMainPage();
+            log.Show();
         }
 
         private void bt_Exit_Click(object sender, EventArgs e)

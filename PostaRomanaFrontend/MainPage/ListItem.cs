@@ -60,14 +60,14 @@ namespace MainPage
             set { _location = value; l_location.Text = value; }
         }
 
-        [Category("Custom Props")]
-        decimal c = Decimal.Parse(l_cost.Text);
-        public decimal Cost
-        {
+        //[Category("Custom Props")]
+        //decimal c = Decimal.Parse(l_cost.Text);
+        //public decimal Cost
+        //{
             
-            get { return _cost; }
-            set { _cost = value; c = value; }
-        }
+        //    get { return _cost; }
+        //    set { _cost = value; c = value; }
+        //}
 
         private void ListItem_Load(object sender, EventArgs e)
         {

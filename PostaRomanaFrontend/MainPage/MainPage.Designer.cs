@@ -268,6 +268,7 @@ namespace MainPage
             this.bt_AddEvent.Size = new System.Drawing.Size(73, 68);
             this.bt_AddEvent.TabIndex = 20;
             this.bt_AddEvent.UseVisualStyleBackColor = false;
+            this.bt_AddEvent.Click += new System.EventHandler(this.bt_AddEvent_Click);
             // 
             // panel4
             // 

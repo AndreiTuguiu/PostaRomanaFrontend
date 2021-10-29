@@ -5282,7 +5282,7 @@ namespace PostaRomanaFrontend.AddEditEvent.PostaRomanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PostaRomanaFrontend.Properties.Settings.Default.PostaRomanaConnectionString;
+;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5609,7 +5609,6 @@ namespace PostaRomanaFrontend.AddEditEvent.PostaRomanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PostaRomanaFrontend.Properties.Settings.Default.PostaRomanaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5930,7 +5929,6 @@ namespace PostaRomanaFrontend.AddEditEvent.PostaRomanaDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PostaRomanaFrontend.Properties.Settings.Default.PostaRomanaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6285,7 +6283,6 @@ SELECT Id, Name, StartDate, EndDate, LocationId, OrganizerId, Cost, EventTypeID,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PostaRomanaFrontend.Properties.Settings.Default.PostaRomanaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6716,7 +6713,6 @@ SELECT Id, Name, StartDate, EndDate, LocationId, OrganizerId, Cost, EventTypeID,
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PostaRomanaFrontend.Properties.Settings.Default.PostaRomanaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7040,7 +7036,6 @@ SELECT EventId, UserId, StatusId FROM EventXUser WHERE (EventId = @EventId) AND 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PostaRomanaFrontend.Properties.Settings.Default.PostaRomanaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7365,7 +7360,6 @@ SELECT Id, CountryId, CountyId, CityId, AddressLine FROM Locations WHERE (Id = @
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PostaRomanaFrontend.Properties.Settings.Default.PostaRomanaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7787,7 +7781,6 @@ SELECT Id, TokenStatus, ValidTo, UserId, Token FROM Register WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PostaRomanaFrontend.Properties.Settings.Default.PostaRomanaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8137,7 +8130,6 @@ SELECT Id, TokenStatus, ValidTo, UserId, Token FROM Register WHERE (Id = @Id)";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PostaRomanaFrontend.Properties.Settings.Default.PostaRomanaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8480,7 +8472,6 @@ SELECT Id, Username, Password, Email, FullName, SessionId, isActive FROM Users W
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::PostaRomanaFrontend.Properties.Settings.Default.PostaRomanaConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
