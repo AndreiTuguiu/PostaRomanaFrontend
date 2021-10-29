@@ -29,7 +29,15 @@ namespace PostaRomana.LogIn
             client.BaseAddress = new Uri("https://localhost:5001/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/json"));
+                   new MediaTypeWithQualityHeaderValue("application/json"));
+        }
+
+        public class ToSend
+        {
+            //public string fullName { get; set; }
+            public string Username { get; set; }
+            public string Password { get; set; }
+            //public string email { get; set; }
         }
 
         private async Task<HttpResponseMessage> GetAMessageAsync()
@@ -99,7 +107,15 @@ namespace PostaRomana.LogIn
 
         private void bt_login_LogInButton_Click(object sender, EventArgs e)
         {
+            var toSend = new ToSend()
+            {
+                //fullName = tb_FirstName.Text.Trim() + " " + tb_LastName.Text.Trim(),
+                Username = textBox1.Text.Trim(),
+                Password = textBox2.Text.Trim()
+                //email = tb_Email.Text.Trim()
+            };
 
+            client.PostAsJsonAsync("/api/Account/LogTheUser", toSend);
 
             //if parola and username are leo and parola123 login, else
             if (this.textBox1.Text == "Leo" && this.textBox2.Text == "Parola")
@@ -201,15 +217,7 @@ namespace PostaRomana.LogIn
 
         //public class ModelJson(){}
         
-        private void button_actuallogin_Click(object sender, EventArgs e)
-        {
-            var toSend = "test";
-            var client = new HttpClient();
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            client.PostAsJsonAsync("https://localhost:5001/api/User/CreateUser", toSend);
-
-        }
+        
 
         private void button1_Click_2(object sender, EventArgs e)
         {

@@ -62,7 +62,7 @@ namespace LogIn.Pages.MainPageMock
         
         private void label1_Click(object sender, EventArgs e)
         {
-            CreateProductAsync("/api/Account/CreateLogInSession", sesiune);
+            //CreateProductAsync("/api/Account/CreateLogInSession", sesiune);
 
         }
     }
