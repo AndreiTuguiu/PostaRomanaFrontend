@@ -18,11 +18,10 @@ namespace PostaRomanaFrontend.SignUp
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                    new MediaTypeWithQualityHeaderValue("application/json"));
-
         }
 
         public class ToSend
-        { 
+        {
             public string fullName { get; set; }
             public string username { get; set; }
             public string password { get; set; }
@@ -31,7 +30,7 @@ namespace PostaRomanaFrontend.SignUp
 
         private void CredentialsSignUp_Load(object sender, EventArgs e)
         {
-         
+
         }
 
         private void bt_SignUp_Click_1(object sender, EventArgs e)

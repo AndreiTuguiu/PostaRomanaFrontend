@@ -16,19 +16,26 @@ namespace MainPage
         {
             InitializeComponent();
         }
-        
+
         private Image _icon;
         private string _name;
         private string _organizerName;
-        private string _date;
-        private string _location;
-        private decimal _cost ;
+        private string _type;
+        private string _description;
+        private string _dateStart;
+        private string _dateEnd;
+        private string _addressLine;
+        private string _country;
+        private string _county;
+        private string _city;
+        private string _cost;
 
-       [Category("Custom Props")]
+
+        [Category("Custom Props")]
         public Image Icon
         {
             get { return _icon; }
-            set { _icon = value;  pb_Icon.Image = value; }
+            set { _icon = value; pb_Icon.Image = value; }
         }
 
         [Category("Custom Props")]
@@ -49,25 +56,31 @@ namespace MainPage
         [Category("Custom Props")]
         public string Date
         {
-            get { return _date; }
-            set { _date = value; l_date.Text = value; }
+            get { return _dateStart; }
+            set { _dateStart = value; l_date.Text = value; }
         }
 
         [Category("Custom Props")]
         public string Location
         {
-            get { return _location; }
-            set { _location = value; l_location.Text = value; }
+            get { return _addressLine; }
+            set { _addressLine = value; l_location.Text = value; }
         }
 
-        //[Category("Custom Props")]
-        //decimal c = Decimal.Parse(l_cost.Text);
-        //public decimal Cost
-        //{
-            
-        //    get { return _cost; }
-        //    set { _cost = value; c = value; }
-        //}
+        [Category("Custom Props")]
+        //decimal c = decimal.Parse(l_cost.Text);
+        public string Cost
+        {
+            get { return _cost; }
+            set { _cost = value; l_cost.Text = value; }
+        }
+
+        public string Description { get => _description; set => _description = value; }
+        public string DateEnd { get => _dateEnd; set => _dateEnd = value; }
+        public string Country { get => _country; set => _country = value; }
+        public string County { get => _county; set => _county = value; }
+        public string City { get => _city; set => _city = value; }
+        public string Type { get => _type; set => _type = value; }
 
         private void ListItem_Load(object sender, EventArgs e)
         {
