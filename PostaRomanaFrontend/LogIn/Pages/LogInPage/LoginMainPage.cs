@@ -29,14 +29,22 @@ namespace PostaRomana.LogIn
             client.BaseAddress = new Uri("https://localhost:5001/");
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
-            new MediaTypeWithQualityHeaderValue("application/json"));
+                   new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        private async Task<HttpResponseMessage> GetAMessageAsync()
+        public class ToSend
+        {
+            //public string fullName { get; set; }
+            public string Username { get; set; }
+            public string Password { get; set; }
+            //public string email { get; set; }
+        }
+
+        /*private async Task<HttpResponseMessage> GetAMessageAsync()
         {
             HttpResponseMessage response = await client.GetAsync("api/Event/ListOfCountries");
             return response;
-        }
+        }*/
         DateTime FourSecondsLater = DateTime.Now.AddSeconds(4);
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -97,20 +105,29 @@ namespace PostaRomana.LogIn
 
         }
 
-        private void bt_login_LogInButton_Click(object sender, EventArgs e)
+        private async void bt_login_LogInButton_Click(object sender, EventArgs e)
         {
+            var toSend = new ToSend()
+            {
+                //fullName = tb_FirstName.Text.Trim() + " " + tb_LastName.Text.Trim(),
+                Username = textBox1.Text,
+                Password = textBox2.Text
+                //email = tb_Email.Text.Trim()
+            };
 
+            HttpResponseMessage response = await client.GetAsync($"api/Account/LogTheUser?Username={toSend.Username}Password={toSend.Password}");
 
             //if parola and username are leo and parola123 login, else
-            if (this.textBox1.Text == "Leo" && this.textBox2.Text == "Parola")
+            if (response.IsSuccessStatusCode)
 
                 /*
                   //send textBox1 and textBox2 to httpPost LogTheUser (Compare credentials + Create Session)
                   //if LogIn returns not null (the session ValidTo)
                   save ValidTo in a variable for the timer
                 */
-            { 
-                var frm = new MainPageCode();
+            {
+                MainPage.MainPage frm = new MainPage.MainPage();
+               
 
                 Location = this.Location;
                 StartPosition = FormStartPosition.Manual;
@@ -150,7 +167,7 @@ namespace PostaRomana.LogIn
         private void button1_Click_1(object sender, EventArgs e)
         {
             //test moving view to mainpage here
-            var frm = new MainPageCode();
+            MainPage.MainPage frm = new MainPage.MainPage();
 
             Location = this.Location;
             StartPosition = FormStartPosition.Manual;
@@ -201,15 +218,7 @@ namespace PostaRomana.LogIn
 
         //public class ModelJson(){}
         
-        private void button_actuallogin_Click(object sender, EventArgs e)
-        {
-            var toSend = "test";
-            var client = new HttpClient();
-            client.DefaultRequestHeaders.Accept.Clear();
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            client.PostAsJsonAsync("https://localhost:5001/api/User/CreateUser", toSend);
-
-        }
+        
 
         private void button1_Click_2(object sender, EventArgs e)
         {

@@ -11,7 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PostaRomana.MainPage
+namespace PostaRomana.MainPageMock
 {
     public partial class MainPageCode : Form
     {

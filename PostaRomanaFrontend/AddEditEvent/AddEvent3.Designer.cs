@@ -33,14 +33,7 @@ namespace AddEditEvent
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddEvent3));
             this.eventTypeDictionaryBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pb_Close = new System.Windows.Forms.PictureBox();
-            this.bt_NextSlide = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.tb_cost = new System.Windows.Forms.TextBox();
-            this.cb_EventType = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.l_Error = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -49,19 +42,25 @@ namespace AddEditEvent
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.l_Error = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pb_Close = new System.Windows.Forms.PictureBox();
+            this.bt_NextSlide = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tb_cost = new System.Windows.Forms.TextBox();
+            this.cb_EventType = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.eventTypeDictionaryBindingSource)).BeginInit();
             this.gradientPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).BeginInit();
             this.SuspendLayout();
             // 
-            
             // gradientPanel1
             // 
             this.gradientPanel1.ColorBottom = System.Drawing.Color.LightCyan;
@@ -88,99 +87,19 @@ namespace AddEditEvent
             this.gradientPanel1.Size = new System.Drawing.Size(1946, 1080);
             this.gradientPanel1.TabIndex = 20;
             // 
-            // panel1
+            // l_Error
             // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.pb_Close);
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1946, 100);
-            this.panel1.TabIndex = 21;
-            // 
-            // pb_Close
-            // 
-            this.pb_Close.BackColor = System.Drawing.Color.Transparent;
-            this.pb_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pb_Close.Image = ((System.Drawing.Image)(resources.GetObject("pb_Close.Image")));
-            this.pb_Close.Location = new System.Drawing.Point(1844, 12);
-            this.pb_Close.Name = "pb_Close";
-            this.pb_Close.Size = new System.Drawing.Size(90, 85);
-            this.pb_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pb_Close.TabIndex = 10;
-            this.pb_Close.TabStop = false;
-            this.pb_Close.Click += new System.EventHandler(this.pb_Close_Click);
-            // 
-            // bt_NextSlide
-            // 
-            this.bt_NextSlide.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.bt_NextSlide.BackColor = System.Drawing.Color.Transparent;
-            this.bt_NextSlide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_NextSlide.BackgroundImage")));
-            this.bt_NextSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.bt_NextSlide.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
-            this.bt_NextSlide.FlatAppearance.BorderSize = 3;
-            this.bt_NextSlide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.bt_NextSlide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.bt_NextSlide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_NextSlide.Location = new System.Drawing.Point(1406, 817);
-            this.bt_NextSlide.Name = "bt_NextSlide";
-            this.bt_NextSlide.Size = new System.Drawing.Size(141, 116);
-            this.bt_NextSlide.TabIndex = 20;
-            this.bt_NextSlide.UseVisualStyleBackColor = false;
-            this.bt_NextSlide.Click += new System.EventHandler(this.bt_NextSlide_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Berlin Sans FB Demi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Indigo;
-            this.label1.Location = new System.Drawing.Point(489, 571);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(325, 41);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Select an entry cost";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Berlin Sans FB Demi", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Indigo;
-            this.label2.Location = new System.Drawing.Point(491, 646);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 33);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Cost:";
-            // 
-            // tb_cost
-            // 
-            this.tb_cost.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_cost.Location = new System.Drawing.Point(577, 647);
-            this.tb_cost.Name = "tb_cost";
-            this.tb_cost.Size = new System.Drawing.Size(225, 34);
-            this.tb_cost.TabIndex = 3;
-            // 
-            // cb_EventType
-            // 
-            this.cb_EventType.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_EventType.FormattingEnabled = true;
-            this.cb_EventType.Location = new System.Drawing.Point(1000, 645);
-            this.cb_EventType.Name = "cb_EventType";
-            this.cb_EventType.Size = new System.Drawing.Size(417, 34);
-            this.cb_EventType.TabIndex = 4;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Berlin Sans FB Demi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.Indigo;
-            this.label3.Location = new System.Drawing.Point(1007, 530);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(424, 82);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Select the type of \r\nevent you are organizing";
+            this.l_Error.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.l_Error.AutoSize = true;
+            this.l_Error.BackColor = System.Drawing.Color.Transparent;
+            this.l_Error.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.l_Error.ForeColor = System.Drawing.Color.Red;
+            this.l_Error.Location = new System.Drawing.Point(492, 710);
+            this.l_Error.Name = "l_Error";
+            this.l_Error.Size = new System.Drawing.Size(245, 25);
+            this.l_Error.TabIndex = 42;
+            this.l_Error.Text = "*The fields are required!";
+            this.l_Error.Visible = false;
             // 
             // label9
             // 
@@ -281,19 +200,100 @@ namespace AddEditEvent
             this.pictureBox7.TabIndex = 34;
             this.pictureBox7.TabStop = false;
             // 
-            // l_Error
+            // panel1
             // 
-            this.l_Error.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.l_Error.AutoSize = true;
-            this.l_Error.BackColor = System.Drawing.Color.Transparent;
-            this.l_Error.Font = new System.Drawing.Font("Times New Roman", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.l_Error.ForeColor = System.Drawing.Color.Red;
-            this.l_Error.Location = new System.Drawing.Point(492, 710);
-            this.l_Error.Name = "l_Error";
-            this.l_Error.Size = new System.Drawing.Size(245, 25);
-            this.l_Error.TabIndex = 42;
-            this.l_Error.Text = "*The fields are required!";
-            this.l_Error.Visible = false;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.pb_Close);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1946, 100);
+            this.panel1.TabIndex = 21;
+            // 
+            // pb_Close
+            // 
+            this.pb_Close.BackColor = System.Drawing.Color.Transparent;
+            this.pb_Close.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pb_Close.Image = ((System.Drawing.Image)(resources.GetObject("pb_Close.Image")));
+            this.pb_Close.Location = new System.Drawing.Point(1844, 12);
+            this.pb_Close.Name = "pb_Close";
+            this.pb_Close.Size = new System.Drawing.Size(90, 85);
+            this.pb_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pb_Close.TabIndex = 10;
+            this.pb_Close.TabStop = false;
+            this.pb_Close.Click += new System.EventHandler(this.pb_Close_Click);
+            // 
+            // bt_NextSlide
+            // 
+            this.bt_NextSlide.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.bt_NextSlide.BackColor = System.Drawing.Color.Transparent;
+            this.bt_NextSlide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_NextSlide.BackgroundImage")));
+            this.bt_NextSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.bt_NextSlide.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
+            this.bt_NextSlide.FlatAppearance.BorderSize = 3;
+            this.bt_NextSlide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.bt_NextSlide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.bt_NextSlide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_NextSlide.Location = new System.Drawing.Point(1406, 817);
+            this.bt_NextSlide.Name = "bt_NextSlide";
+            this.bt_NextSlide.Size = new System.Drawing.Size(141, 116);
+            this.bt_NextSlide.TabIndex = 20;
+            this.bt_NextSlide.UseVisualStyleBackColor = false;
+            this.bt_NextSlide.Click += new System.EventHandler(this.bt_NextSlide_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Berlin Sans FB Demi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Indigo;
+            this.label1.Location = new System.Drawing.Point(489, 571);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(325, 41);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Select an entry cost";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Berlin Sans FB Demi", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Indigo;
+            this.label2.Location = new System.Drawing.Point(491, 646);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(76, 33);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Cost:";
+            // 
+            // tb_cost
+            // 
+            this.tb_cost.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tb_cost.Location = new System.Drawing.Point(577, 647);
+            this.tb_cost.Name = "tb_cost";
+            this.tb_cost.Size = new System.Drawing.Size(225, 34);
+            this.tb_cost.TabIndex = 3;
+            // 
+            // cb_EventType
+            // 
+            this.cb_EventType.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cb_EventType.FormattingEnabled = true;
+            this.cb_EventType.Location = new System.Drawing.Point(1000, 645);
+            this.cb_EventType.Name = "cb_EventType";
+            this.cb_EventType.Size = new System.Drawing.Size(417, 34);
+            this.cb_EventType.TabIndex = 4;
+            this.cb_EventType.SelectedIndexChanged += new System.EventHandler(this.cb_EventType_SelectedIndexChanged);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Berlin Sans FB Demi", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Indigo;
+            this.label3.Location = new System.Drawing.Point(1007, 530);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(424, 82);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Select the type of \r\nevent you are organizing";
             // 
             // AddEvent3
             // 
@@ -309,13 +309,13 @@ namespace AddEditEvent
             ((System.ComponentModel.ISupportInitialize)(this.eventTypeDictionaryBindingSource)).EndInit();
             this.gradientPanel1.ResumeLayout(false);
             this.gradientPanel1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).EndInit();
             this.ResumeLayout(false);
 
         }

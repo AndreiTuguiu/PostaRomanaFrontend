@@ -226,7 +226,7 @@ namespace PostaRomana.LogIn
             this.label_login_placeholderSuccessfullyLoggedIn.BackColor = System.Drawing.Color.Transparent;
             this.label_login_placeholderSuccessfullyLoggedIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label_login_placeholderSuccessfullyLoggedIn.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label_login_placeholderSuccessfullyLoggedIn.Location = new System.Drawing.Point(700, 630);
+            this.label_login_placeholderSuccessfullyLoggedIn.Location = new System.Drawing.Point(700, 462);
             this.label_login_placeholderSuccessfullyLoggedIn.Name = "label_login_placeholderSuccessfullyLoggedIn";
             this.label_login_placeholderSuccessfullyLoggedIn.Size = new System.Drawing.Size(184, 26);
             this.label_login_placeholderSuccessfullyLoggedIn.TabIndex = 16;

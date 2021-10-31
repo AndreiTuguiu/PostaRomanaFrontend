@@ -1,5 +1,5 @@
 ﻿
-namespace MainPage
+namespace PostaRomana.MainPage
 {
     partial class MainPage
     {

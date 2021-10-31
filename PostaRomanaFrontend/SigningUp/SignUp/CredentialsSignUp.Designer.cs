@@ -192,12 +192,12 @@ namespace PostaRomanaFrontend.SignUp
             this.lL_Terms.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.lL_Terms.AutoSize = true;
             this.lL_Terms.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lL_Terms.Location = new System.Drawing.Point(1001, 969);
+            this.lL_Terms.Location = new System.Drawing.Point(1026, 966);
             this.lL_Terms.Name = "lL_Terms";
-            this.lL_Terms.Size = new System.Drawing.Size(221, 27);
+            this.lL_Terms.Size = new System.Drawing.Size(217, 27);
             this.lL_Terms.TabIndex = 61;
             this.lL_Terms.TabStop = true;
-            this.lL_Terms.Text = "Terms and Conditions";
+            this.lL_Terms.Text = "terms and conditions.";
             this.lL_Terms.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lL_Terms_LinkClicked_1);
             // 
             // bt_ShowPassword
@@ -209,7 +209,7 @@ namespace PostaRomanaFrontend.SignUp
             this.bt_ShowPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.bt_ShowPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bt_ShowPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_ShowPassword.Location = new System.Drawing.Point(787, 701);
+            this.bt_ShowPassword.Location = new System.Drawing.Point(787, 689);
             this.bt_ShowPassword.Name = "bt_ShowPassword";
             this.bt_ShowPassword.Size = new System.Drawing.Size(53, 45);
             this.bt_ShowPassword.TabIndex = 60;
@@ -222,7 +222,7 @@ namespace PostaRomanaFrontend.SignUp
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(421, 649);
+            this.label7.Location = new System.Drawing.Point(413, 655);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(107, 26);
             this.label7.TabIndex = 59;
@@ -234,7 +234,7 @@ namespace PostaRomanaFrontend.SignUp
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(413, 514);
+            this.label6.Location = new System.Drawing.Point(413, 498);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(68, 26);
             this.label6.TabIndex = 58;
@@ -283,11 +283,11 @@ namespace PostaRomanaFrontend.SignUp
             this.cb_Agree.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
             this.cb_Agree.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.cb_Agree.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cb_Agree.Location = new System.Drawing.Point(858, 967);
+            this.cb_Agree.Location = new System.Drawing.Point(848, 965);
             this.cb_Agree.Name = "cb_Agree";
-            this.cb_Agree.Size = new System.Drawing.Size(152, 31);
+            this.cb_Agree.Size = new System.Drawing.Size(188, 31);
             this.cb_Agree.TabIndex = 54;
-            this.cb_Agree.Text = "I agree with";
+            this.cb_Agree.Text = "I agree with the";
             this.cb_Agree.UseVisualStyleBackColor = true;
             this.cb_Agree.CheckedChanged += new System.EventHandler(this.cb_Agree_CheckedChanged_1);
             // 
@@ -313,11 +313,11 @@ namespace PostaRomanaFrontend.SignUp
             // tb_Password
             // 
             this.tb_Password.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.tb_Password.Location = new System.Drawing.Point(410, 689);
+            this.tb_Password.Location = new System.Drawing.Point(404, 689);
             this.tb_Password.Multiline = true;
             this.tb_Password.Name = "tb_Password";
             this.tb_Password.PasswordChar = '•';
-            this.tb_Password.Size = new System.Drawing.Size(371, 60);
+            this.tb_Password.Size = new System.Drawing.Size(368, 43);
             this.tb_Password.TabIndex = 52;
             this.tb_Password.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_Password.TextChanged += new System.EventHandler(this.tb_Password_TextChanged_1);
@@ -326,10 +326,10 @@ namespace PostaRomanaFrontend.SignUp
             // 
             this.tb_Email.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_Email.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_Email.Location = new System.Drawing.Point(410, 559);
+            this.tb_Email.Location = new System.Drawing.Point(404, 538);
             this.tb_Email.Multiline = true;
             this.tb_Email.Name = "tb_Email";
-            this.tb_Email.Size = new System.Drawing.Size(362, 60);
+            this.tb_Email.Size = new System.Drawing.Size(368, 47);
             this.tb_Email.TabIndex = 51;
             this.tb_Email.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_Email.TextChanged += new System.EventHandler(this.tb_Email_TextChanged_1);
@@ -354,7 +354,7 @@ namespace PostaRomanaFrontend.SignUp
             this.tb_LastName.Location = new System.Drawing.Point(404, 389);
             this.tb_LastName.Multiline = true;
             this.tb_LastName.Name = "tb_LastName";
-            this.tb_LastName.Size = new System.Drawing.Size(368, 60);
+            this.tb_LastName.Size = new System.Drawing.Size(368, 43);
             this.tb_LastName.TabIndex = 49;
             this.tb_LastName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_LastName.TextChanged += new System.EventHandler(this.tb_LastName_TextChanged_1);
@@ -367,7 +367,7 @@ namespace PostaRomanaFrontend.SignUp
             this.tb_FirstName.Location = new System.Drawing.Point(849, 388);
             this.tb_FirstName.Multiline = true;
             this.tb_FirstName.Name = "tb_FirstName";
-            this.tb_FirstName.Size = new System.Drawing.Size(341, 59);
+            this.tb_FirstName.Size = new System.Drawing.Size(341, 44);
             this.tb_FirstName.TabIndex = 48;
             this.tb_FirstName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tb_FirstName.TextChanged += new System.EventHandler(this.tb_FirstName_TextChanged_1);
