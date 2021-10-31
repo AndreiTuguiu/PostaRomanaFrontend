@@ -17,7 +17,7 @@ namespace PostaRomanaFrontend
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainPage.MainPage());
+            Application.Run(new SignUpMenu());
         }
     }
 }
