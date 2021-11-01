@@ -1,5 +1,5 @@
 ﻿
-namespace PostaRomana.MainPage
+namespace PostaRomana.MainPageMock
 {
     partial class MainPageCode
     {

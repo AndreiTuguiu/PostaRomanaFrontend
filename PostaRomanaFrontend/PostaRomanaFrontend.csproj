@@ -250,6 +250,7 @@
     <None Include="AddEditEvent\Resources\placeholder_stepper1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\icon_delete.png" />
     <Content Include="Resource\icon_categories_music.png" />
     <Content Include="Resource\icon_categories_sport.png" />
     <Content Include="Resource\icon_delete.png" />

@@ -43,10 +43,9 @@ namespace LogIn.Pages.MainPageMock
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(11, 10);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(217, 82);
+            this.pictureBox1.Size = new System.Drawing.Size(195, 66);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
@@ -54,10 +53,10 @@ namespace LogIn.Pages.MainPageMock
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(197, 73);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
+            this.label1.Location = new System.Drawing.Point(177, 58);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(636, 225);
+            this.label1.Size = new System.Drawing.Size(572, 180);
             this.label1.TabIndex = 4;
             this.label1.Text = "Main Page 2, daca nu intri pe alta pagina in    secunde PA";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -66,9 +65,10 @@ namespace LogIn.Pages.MainPageMock
             // button1
             // 
             this.button1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button1.Location = new System.Drawing.Point(256, 275);
+            this.button1.Location = new System.Drawing.Point(230, 220);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(171, 59);
+            this.button1.Size = new System.Drawing.Size(154, 47);
             this.button1.TabIndex = 5;
             this.button1.Text = "Te rog nu :(";
             this.button1.UseVisualStyleBackColor = true;
@@ -77,9 +77,10 @@ namespace LogIn.Pages.MainPageMock
             // button2
             // 
             this.button2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.button2.Location = new System.Drawing.Point(526, 275);
+            this.button2.Location = new System.Drawing.Point(473, 220);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 59);
+            this.button2.Size = new System.Drawing.Size(153, 47);
             this.button2.TabIndex = 6;
             this.button2.Text = "PA";
             this.button2.UseVisualStyleBackColor = true;
@@ -96,8 +97,8 @@ namespace LogIn.Pages.MainPageMock
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(464, 181);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 20F);
+            this.label2.Location = new System.Drawing.Point(418, 145);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 54);
             this.label2.TabIndex = 7;
@@ -107,14 +108,15 @@ namespace LogIn.Pages.MainPageMock
             // 
             // MainPageSecond
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(936, 443);
+            this.ClientSize = new System.Drawing.Size(842, 354);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainPageSecond";
             this.Text = "MainPageSecond";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -50,6 +50,7 @@ namespace AddEditEvent
             this.tb_cost = new System.Windows.Forms.TextBox();
             this.cb_EventType = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.eventTypeDictionaryBindingSource)).BeginInit();
             this.gradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -108,7 +109,7 @@ namespace AddEditEvent
             this.label9.BackColor = System.Drawing.Color.White;
             this.label9.Font = new System.Drawing.Font("Berlin Sans FB", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.Green;
-            this.label9.Location = new System.Drawing.Point(580, 277);
+            this.label9.Location = new System.Drawing.Point(495, 272);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(48, 65);
             this.label9.TabIndex = 41;
@@ -119,9 +120,9 @@ namespace AddEditEvent
             this.pictureBox8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(496, 211);
+            this.pictureBox8.Location = new System.Drawing.Point(429, 209);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(220, 180);
+            this.pictureBox8.Size = new System.Drawing.Size(180, 180);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 40;
             this.pictureBox8.TabStop = false;
@@ -133,7 +134,7 @@ namespace AddEditEvent
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Berlin Sans FB", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Indigo;
-            this.label7.Location = new System.Drawing.Point(1385, 281);
+            this.label7.Location = new System.Drawing.Point(1301, 274);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(54, 65);
             this.label7.TabIndex = 39;
@@ -146,7 +147,7 @@ namespace AddEditEvent
             this.label8.BackColor = System.Drawing.Color.White;
             this.label8.Font = new System.Drawing.Font("Berlin Sans FB", 26F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.Green;
-            this.label8.Location = new System.Drawing.Point(989, 277);
+            this.label8.Location = new System.Drawing.Point(906, 272);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(56, 65);
             this.label8.TabIndex = 38;
@@ -157,9 +158,9 @@ namespace AddEditEvent
             this.pictureBox5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(1155, 267);
+            this.pictureBox5.Location = new System.Drawing.Point(1027, 264);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(128, 75);
+            this.pictureBox5.Size = new System.Drawing.Size(208, 75);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 37;
             this.pictureBox5.TabStop = false;
@@ -169,9 +170,9 @@ namespace AddEditEvent
             this.pictureBox4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(754, 267);
+            this.pictureBox4.Location = new System.Drawing.Point(621, 265);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(128, 75);
+            this.pictureBox4.Size = new System.Drawing.Size(208, 75);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 36;
             this.pictureBox4.TabStop = false;
@@ -181,9 +182,9 @@ namespace AddEditEvent
             this.pictureBox6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(1304, 211);
+            this.pictureBox6.Location = new System.Drawing.Point(1241, 211);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(220, 180);
+            this.pictureBox6.Size = new System.Drawing.Size(180, 180);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox6.TabIndex = 35;
             this.pictureBox6.TabStop = false;
@@ -193,9 +194,9 @@ namespace AddEditEvent
             this.pictureBox7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(910, 211);
+            this.pictureBox7.Location = new System.Drawing.Point(841, 211);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(220, 180);
+            this.pictureBox7.Size = new System.Drawing.Size(180, 180);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 34;
             this.pictureBox7.TabStop = false;
@@ -228,15 +229,15 @@ namespace AddEditEvent
             this.bt_NextSlide.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bt_NextSlide.BackColor = System.Drawing.Color.Transparent;
             this.bt_NextSlide.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bt_NextSlide.BackgroundImage")));
-            this.bt_NextSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.bt_NextSlide.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bt_NextSlide.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
-            this.bt_NextSlide.FlatAppearance.BorderSize = 3;
+            this.bt_NextSlide.FlatAppearance.BorderSize = 0;
             this.bt_NextSlide.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.bt_NextSlide.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bt_NextSlide.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_NextSlide.Location = new System.Drawing.Point(1406, 817);
+            this.bt_NextSlide.Location = new System.Drawing.Point(1259, 815);
             this.bt_NextSlide.Name = "bt_NextSlide";
-            this.bt_NextSlide.Size = new System.Drawing.Size(141, 116);
+            this.bt_NextSlide.Size = new System.Drawing.Size(90, 90);
             this.bt_NextSlide.TabIndex = 20;
             this.bt_NextSlide.UseVisualStyleBackColor = false;
             this.bt_NextSlide.Click += new System.EventHandler(this.bt_NextSlide_Click);
@@ -295,6 +296,12 @@ namespace AddEditEvent
             this.label3.TabIndex = 5;
             this.label3.Text = "Select the type of \r\nevent you are organizing";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // AddEvent3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -340,5 +347,6 @@ namespace AddEditEvent
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label l_Error;
+        private System.Windows.Forms.Timer timer1;
     }
 }

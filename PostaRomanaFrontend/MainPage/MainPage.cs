@@ -1,4 +1,5 @@
-﻿using MainPage;
+﻿using LogIn.Actions;
+using MainPage;
 using PostaRomana.AddEditEvent;
 using PostaRomana.LogIn;
 using PostaRomanaFrontend.Properties;
@@ -139,6 +140,20 @@ namespace PostaRomana.MainPage
         private void bt_Close_Click(object sender, EventArgs e)
         {
             hidePanel();
+        }
+        bool SessionExpired = false;
+        DateTime ValidTo = DateTime.Now.AddMinutes(10); // aici modifici cat sa dureze sesiunea
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            if (SessionChecker.CheckSessionValidity(ValidTo) && SessionExpired == false)
+            {
+                SessionExpired = true;
+                new LoginMainPage().Show();
+                timer1.Enabled = false;  //daca stergi asta atunci ramane 10 minute per total, fara reset la schimbarea paginii
+                this.Hide();
+            };
         }
     }
 }

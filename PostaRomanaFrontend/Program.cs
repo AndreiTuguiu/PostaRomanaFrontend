@@ -1,4 +1,6 @@
 ﻿
+//using LogIn.Pages.MainPageMock;
+using PostaRomana;
 using PostaRomana.AddEditEvent;
 using PostaRomana.LogIn;
 using PostaRomanaFrontend.SignUp;
@@ -17,7 +19,7 @@ namespace PostaRomanaFrontend
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SignUpMenu());
+            Application.Run(new AddEvent1());
         }
     }
 }

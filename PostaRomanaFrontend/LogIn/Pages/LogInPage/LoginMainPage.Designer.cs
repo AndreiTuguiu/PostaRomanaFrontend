@@ -300,7 +300,7 @@ namespace PostaRomana.LogIn
             this.button_login_showPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button_login_showPassword.Location = new System.Drawing.Point(1093, 523);
             this.button_login_showPassword.Name = "button_login_showPassword";
-            this.button_login_showPassword.Size = new System.Drawing.Size(62, 36);
+            this.button_login_showPassword.Size = new System.Drawing.Size(43, 36);
             this.button_login_showPassword.TabIndex = 3;
             this.button_login_showPassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_login_showPassword.UseVisualStyleBackColor = true;
