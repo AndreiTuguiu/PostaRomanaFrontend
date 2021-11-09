@@ -1,4 +1,5 @@
-﻿using LogIn.Actions;
+﻿using AddEditEvent;
+using LogIn.Actions;
 using MainPage;
 using Models;
 using Newtonsoft.Json;
@@ -34,7 +35,9 @@ namespace PostaRomana.MainPage
         List<Event> events;
 
         static HttpClient client = new HttpClient();
-        
+
+        private ListItem obj;
+        public ListItem theEvent { get => obj; set => obj = value; }
 
         BindingSource bs;
         public MainPage()
@@ -75,6 +78,7 @@ namespace PostaRomana.MainPage
 
             ListItem[] listItems = new ListItem[events.Count()];
 
+            int[] types = LoadEventType().ToArray();
             int[] Locids = LoadEventLocIDs().ToArray();
             string[] name = LoadEventNames().ToArray();
             string[] desc = LoadEventDesc().ToArray();
@@ -99,6 +103,7 @@ namespace PostaRomana.MainPage
                     listItems[i].Icon = icons[i];
                 }
                 listItems[i].LocId = Locids[i];
+                listItems[i].Type = types[i];
                 listItems[i].Name = name[i];
                 listItems[i].Description = desc[i];
                 listItems[i].OrganizerName = organizerName[i];
@@ -114,7 +119,7 @@ namespace PostaRomana.MainPage
 
         void UserControl_Click(object sender, EventArgs e)
         {
-            ListItem obj = (ListItem)sender;
+            obj = (ListItem)sender;
             l_Title.Text = obj.Name;
             l_Description.Text = obj.Description;
             l_Type.Text = obj.Type.ToString();
@@ -365,6 +370,26 @@ namespace PostaRomana.MainPage
             return _eventCost;
         }
 
+        private List<int> LoadEventType()
+        {
+            var url = "https://localhost:5001/api/Event/ListOfEvents";
+            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            List<Event> list = new List<Event>();
+            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+                list = JsonConvert.DeserializeObject<List<Event>>(result);
+            }
+            events = list;
+            List<int> _eventLocation = new List<int>();
+
+            foreach (var item in list)
+            {
+                _eventLocation.Add(item.EventTypeId);
+            }
+            return _eventLocation;
+        }
         private List<int> LoadEventLocation()
         {
             var url = "https://localhost:5001/api/Event/ListOfEvents";
@@ -447,6 +472,86 @@ namespace PostaRomana.MainPage
                 _eventNames.Add(item.Name);
             }
             return _eventNames[0];
+        }
+        private int LoadCountryId(int LocationId)
+        {
+            var url = $"https://localhost:5001/api/Event/GetCountryById/{LocationId}";
+            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            List<Country> list = new List<Country>();
+            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+                list = JsonConvert.DeserializeObject<List<Country>>(result);
+            }
+            countries = list;
+            List<int> _eventNames = new List<int>();
+
+            foreach (var item in list)
+            {
+                _eventNames.Add(item.Id);
+            }
+            return _eventNames[0];
+        }
+        private int LoadCountyId(int LocationId)
+        {
+            var url = $"https://localhost:5001/api/Event/GetCountryById/{LocationId}";
+            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            List<County> list = new List<County>();
+            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+                list = JsonConvert.DeserializeObject<List<County>>(result);
+            }
+            counties = list;
+            List<int> _eventNames = new List<int>();
+
+            foreach (var item in list)
+            {
+                _eventNames.Add(item.Id);
+            }
+            return _eventNames[0];
+        }
+
+        private int LoadCityId(int LocationId)
+        {
+            var url = $"https://localhost:5001/api/Event/GetCountryById/{LocationId}";
+            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            List<City> list = new List<City>();
+            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+                list = JsonConvert.DeserializeObject<List<City>>(result);
+            }
+            cities = list;
+            List<int> _eventNames = new List<int>();
+
+            foreach (var item in list)
+            {
+                _eventNames.Add(item.Id);
+            }
+            return _eventNames[0];
+        }
+
+        private void edit_Click(object sender, EventArgs e)
+        {
+            
+            string nameofevent = theEvent.Name;
+            string desc = theEvent.Description;
+            string add = LoadEventLocAddress(theEvent.LocId);
+            DateTime start = theEvent.Date;
+            DateTime end = theEvent.DateEnd;
+            int country = LoadCountryId(theEvent.LocId);
+            int county = LoadCountyId(theEvent.LocId);
+            int city = LoadCityId(theEvent.LocId);
+            decimal? cost = theEvent.Cost;
+            int type = theEvent.Type;
+
+            Confirm edit = new Confirm(nameofevent, desc,add,start,end,country,county,city,cost,type);
+            this.Hide();
+            edit.Show();
         }
     }
 }

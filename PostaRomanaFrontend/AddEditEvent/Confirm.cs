@@ -32,8 +32,8 @@ namespace AddEditEvent
         public int CountryId { get; set; }
         public int CountyId { get; set; }
         public int CityId { get; set; }
-        public decimal Cost { get; set; }
-        public Confirm(string name, string desc, string addline, DateTime start, DateTime end, int country, int county, int city,decimal cost, int type)
+        public decimal? Cost { get; set; }
+        public Confirm(string name, string desc, string addline, DateTime start, DateTime end, int country, int county, int city,decimal? cost, int type)
         {
 
             InitializeComponent();
@@ -76,7 +76,7 @@ namespace AddEditEvent
             public int countyId { get; set; }
             public int cityId { get; set; }
             public string addressLine { get; set; }
-            public decimal cost { get; set; }
+            public decimal? cost { get; set; }
             public int eventTypeId { get; set; }
             public int organizerId { get; set; }
             public string description { get;set; }
@@ -96,7 +96,7 @@ namespace AddEditEvent
             var Start = dt_start.Value;
             var End = dt_end.Value;
             var Type = cb_EventType.SelectedIndex+1;
-            var CostOfEvent = Cost;
+            var CostOfEvent = Decimal.Parse(tb_Cost.Text);
             toSend send = new toSend()
             {
                 name= EventName,
