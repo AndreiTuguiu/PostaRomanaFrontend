@@ -18,17 +18,18 @@ namespace MainPage
         }
 
         private Image _icon;
+        private int _locid;
         private string _name;
-        private string _organizerName;
-        private string _type;
+        private int _organizerName;
+        private int _type;
         private string _description;
-        private string _dateStart;
-        private string _dateEnd;
-        private string _addressLine;
+        private DateTime _dateStart;
+        private DateTime _dateEnd;
+        private int _addressLine;
         private string _country;
         private string _county;
         private string _city;
-        private string _cost;
+        private decimal? _cost;
 
 
         [Category("Custom Props")]
@@ -46,41 +47,42 @@ namespace MainPage
         }
 
         [Category("Custom Props")]
-        public string OrganizerName
+        public int OrganizerName
         {
             get { return _organizerName; }
-            set { _organizerName = value; l_organizer.Text = value; }
+            set { _organizerName = value; l_organizer.Text = value.ToString(); }
         }
 
 
         [Category("Custom Props")]
-        public string Date
+        public DateTime Date
         {
             get { return _dateStart; }
-            set { _dateStart = value; l_date.Text = value; }
+            set { _dateStart = value; l_date.Text = value.ToString(); }
         }
 
         [Category("Custom Props")]
-        public string Location
+        public int Location
         {
             get { return _addressLine; }
-            set { _addressLine = value; l_location.Text = value; }
+            set { _addressLine = value; l_location.Text = value.ToString(); }
         }
 
         [Category("Custom Props")]
         //decimal c = decimal.Parse(l_cost.Text);
-        public string Cost
+        public decimal? Cost
         {
             get { return _cost; }
-            set { _cost = value; l_cost.Text = value; }
+            set { _cost = value; l_cost.Text = value.ToString(); }
         }
 
+        public int LocId { get => _locid; set => _locid = value; }
         public string Description { get => _description; set => _description = value; }
-        public string DateEnd { get => _dateEnd; set => _dateEnd = value; }
+        public DateTime DateEnd { get => _dateEnd; set => _dateEnd = value; }
         public string Country { get => _country; set => _country = value; }
         public string County { get => _county; set => _county = value; }
         public string City { get => _city; set => _city = value; }
-        public string Type { get => _type; set => _type = value; }
+        public int Type { get => _type; set => _type = value; }
 
         private void ListItem_Load(object sender, EventArgs e)
         {
