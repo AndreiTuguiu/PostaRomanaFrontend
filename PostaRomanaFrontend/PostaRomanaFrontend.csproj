@@ -184,7 +184,9 @@
     <EmbeddedResource Include="LogIn\Pages\RecoverPasswordPage\RecoverPassword.resx">
       <DependentUpon>RecoverPassword.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LogIn\Properties\Resources.resx" />
+    <EmbeddedResource Include="LogIn\Properties\Resources.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainPage\ListItem.resx">
       <DependentUpon>ListItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,13 +194,14 @@
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="SigningUp\SignUp\CredentialsSignUp.resx">
       <DependentUpon>CredentialsSignUp.cs</DependentUpon>
@@ -247,8 +250,13 @@
     <None Include="AddEditEvent\Resources\placeholder_stepper1.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="LogIn\Resources\OIP.jpg" />
-    <Content Include="LogIn\Resources\showpasgrey.jpg" />
+    <None Include="Resources\icon_delete.png" />
+    <Content Include="Resource\icon_categories_music.png" />
+    <Content Include="Resource\icon_categories_sport.png" />
+    <Content Include="Resource\icon_delete.png" />
+    <Content Include="Resource\icon_details.png" />
+    <Content Include="Resource\icon_edit.png" />
+    <Content Include="Resource\icon_email.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

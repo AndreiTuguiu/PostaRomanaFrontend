@@ -1,4 +1,6 @@
-﻿using PostaRomana.AddEditEvent;
+﻿using LogIn.Actions;
+using PostaRomana.AddEditEvent;
+using PostaRomana.LogIn;
 using PostaRomanaFrontend.AddEditEvent.Models;
 using System;
 using System.Collections.Generic;
@@ -106,6 +108,21 @@ namespace AddEditEvent
 
             cb_EventType.SelectedIndex = -1;
 
+        }
+
+        bool SessionExpired = false;
+        DateTime ValidTo = DateTime.Now.AddMinutes(10); // aici modifici cat sa dureze sesiunea
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            if (SessionChecker.CheckSessionValidity(ValidTo) && SessionExpired == false)
+            {
+                SessionExpired = true;
+                new LoginMainPage().Show();
+                timer1.Enabled = false;  //daca stergi asta atunci ramane 10 minute per total, fara reset la schimbarea paginii
+                this.Hide();
+            };
         }
 
         //private void pb_secondStep_Click(object sender, EventArgs e)

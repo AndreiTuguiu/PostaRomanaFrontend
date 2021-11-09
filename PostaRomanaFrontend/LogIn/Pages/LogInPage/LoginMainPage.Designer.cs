@@ -59,7 +59,7 @@ namespace PostaRomana.LogIn
             // 
             this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox1.Font = new System.Drawing.Font("Berlin Sans FB", 11F);
-            this.textBox1.Location = new System.Drawing.Point(593, 334);
+            this.textBox1.Location = new System.Drawing.Point(699, 465);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(389, 32);
             this.textBox1.TabIndex = 1;
@@ -70,7 +70,7 @@ namespace PostaRomana.LogIn
             // 
             this.textBox2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textBox2.Font = new System.Drawing.Font("Berlin Sans FB", 11F);
-            this.textBox2.Location = new System.Drawing.Point(593, 396);
+            this.textBox2.Location = new System.Drawing.Point(699, 527);
             this.textBox2.Name = "textBox2";
             this.textBox2.PasswordChar = '•';
             this.textBox2.Size = new System.Drawing.Size(389, 32);
@@ -87,7 +87,7 @@ namespace PostaRomana.LogIn
             this.bt_login_LogInButton.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bt_login_LogInButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_login_LogInButton.Font = new System.Drawing.Font("Impact", 14F);
-            this.bt_login_LogInButton.Location = new System.Drawing.Point(705, 538);
+            this.bt_login_LogInButton.Location = new System.Drawing.Point(811, 686);
             this.bt_login_LogInButton.Name = "bt_login_LogInButton";
             this.bt_login_LogInButton.Size = new System.Drawing.Size(164, 80);
             this.bt_login_LogInButton.TabIndex = 7;
@@ -101,7 +101,7 @@ namespace PostaRomana.LogIn
             this.checkbox_login_rememberPassword.AutoSize = true;
             this.checkbox_login_rememberPassword.BackColor = System.Drawing.Color.Transparent;
             this.checkbox_login_rememberPassword.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.checkbox_login_rememberPassword.Location = new System.Drawing.Point(595, 431);
+            this.checkbox_login_rememberPassword.Location = new System.Drawing.Point(701, 567);
             this.checkbox_login_rememberPassword.Name = "checkbox_login_rememberPassword";
             this.checkbox_login_rememberPassword.Size = new System.Drawing.Size(231, 26);
             this.checkbox_login_rememberPassword.TabIndex = 4;
@@ -117,7 +117,7 @@ namespace PostaRomana.LogIn
             this.label_login_username.BackColor = System.Drawing.Color.Transparent;
             this.label_login_username.Font = new System.Drawing.Font("Berlin Sans FB", 12F);
             this.label_login_username.ForeColor = System.Drawing.Color.Indigo;
-            this.label_login_username.Location = new System.Drawing.Point(593, 305);
+            this.label_login_username.Location = new System.Drawing.Point(699, 436);
             this.label_login_username.Name = "label_login_username";
             this.label_login_username.Size = new System.Drawing.Size(119, 26);
             this.label_login_username.TabIndex = 4;
@@ -131,7 +131,7 @@ namespace PostaRomana.LogIn
             this.label_login_password.BackColor = System.Drawing.Color.Transparent;
             this.label_login_password.Font = new System.Drawing.Font("Berlin Sans FB", 12F);
             this.label_login_password.ForeColor = System.Drawing.Color.Indigo;
-            this.label_login_password.Location = new System.Drawing.Point(598, 367);
+            this.label_login_password.Location = new System.Drawing.Point(704, 498);
             this.label_login_password.Name = "label_login_password";
             this.label_login_password.Size = new System.Drawing.Size(112, 26);
             this.label_login_password.TabIndex = 6;
@@ -143,7 +143,7 @@ namespace PostaRomana.LogIn
             this.label_login_WelcomeBack.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label_login_WelcomeBack.AutoSize = true;
             this.label_login_WelcomeBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
-            this.label_login_WelcomeBack.Location = new System.Drawing.Point(642, 178);
+            this.label_login_WelcomeBack.Location = new System.Drawing.Point(748, 309);
             this.label_login_WelcomeBack.Name = "label_login_WelcomeBack";
             this.label_login_WelcomeBack.Size = new System.Drawing.Size(439, 69);
             this.label_login_WelcomeBack.TabIndex = 7;
@@ -157,7 +157,7 @@ namespace PostaRomana.LogIn
             this.label_login_WelcomeSubtitle.BackColor = System.Drawing.Color.Transparent;
             this.label_login_WelcomeSubtitle.Font = new System.Drawing.Font("Berlin Sans FB Demi", 18F, System.Drawing.FontStyle.Bold);
             this.label_login_WelcomeSubtitle.ForeColor = System.Drawing.Color.Indigo;
-            this.label_login_WelcomeSubtitle.Location = new System.Drawing.Point(449, 250);
+            this.label_login_WelcomeSubtitle.Location = new System.Drawing.Point(555, 381);
             this.label_login_WelcomeSubtitle.Name = "label_login_WelcomeSubtitle";
             this.label_login_WelcomeSubtitle.Size = new System.Drawing.Size(884, 41);
             this.label_login_WelcomeSubtitle.TabIndex = 8;
@@ -170,7 +170,7 @@ namespace PostaRomana.LogIn
             this.label_login_dontHaveAccount.AutoSize = true;
             this.label_login_dontHaveAccount.BackColor = System.Drawing.Color.Transparent;
             this.label_login_dontHaveAccount.Font = new System.Drawing.Font("Times New Roman", 10F);
-            this.label_login_dontHaveAccount.Location = new System.Drawing.Point(652, 494);
+            this.label_login_dontHaveAccount.Location = new System.Drawing.Point(758, 645);
             this.label_login_dontHaveAccount.Name = "label_login_dontHaveAccount";
             this.label_login_dontHaveAccount.Size = new System.Drawing.Size(191, 22);
             this.label_login_dontHaveAccount.TabIndex = 9;
@@ -183,7 +183,7 @@ namespace PostaRomana.LogIn
             this.label_login_invalidUsername.BackColor = System.Drawing.Color.Transparent;
             this.label_login_invalidUsername.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label_login_invalidUsername.ForeColor = System.Drawing.Color.Red;
-            this.label_login_invalidUsername.Location = new System.Drawing.Point(629, 459);
+            this.label_login_invalidUsername.Location = new System.Drawing.Point(749, 600);
             this.label_login_invalidUsername.Name = "label_login_invalidUsername";
             this.label_login_invalidUsername.Size = new System.Drawing.Size(326, 26);
             this.label_login_invalidUsername.TabIndex = 12;
@@ -197,7 +197,7 @@ namespace PostaRomana.LogIn
             this.linkLabel_signUp.AutoSize = true;
             this.linkLabel_signUp.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel_signUp.Font = new System.Drawing.Font("Berlin Sans FB Demi", 12F, System.Drawing.FontStyle.Bold);
-            this.linkLabel_signUp.Location = new System.Drawing.Point(856, 488);
+            this.linkLabel_signUp.Location = new System.Drawing.Point(979, 641);
             this.linkLabel_signUp.Name = "linkLabel_signUp";
             this.linkLabel_signUp.Size = new System.Drawing.Size(99, 27);
             this.linkLabel_signUp.TabIndex = 6;
@@ -211,7 +211,7 @@ namespace PostaRomana.LogIn
             this.linkLabel_forgotPassword.AutoSize = true;
             this.linkLabel_forgotPassword.BackColor = System.Drawing.Color.Transparent;
             this.linkLabel_forgotPassword.Font = new System.Drawing.Font("Berlin Sans FB Demi", 12F, System.Drawing.FontStyle.Bold);
-            this.linkLabel_forgotPassword.Location = new System.Drawing.Point(831, 430);
+            this.linkLabel_forgotPassword.Location = new System.Drawing.Point(953, 568);
             this.linkLabel_forgotPassword.Name = "linkLabel_forgotPassword";
             this.linkLabel_forgotPassword.Size = new System.Drawing.Size(257, 27);
             this.linkLabel_forgotPassword.TabIndex = 5;
@@ -226,7 +226,7 @@ namespace PostaRomana.LogIn
             this.label_login_placeholderSuccessfullyLoggedIn.BackColor = System.Drawing.Color.Transparent;
             this.label_login_placeholderSuccessfullyLoggedIn.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
             this.label_login_placeholderSuccessfullyLoggedIn.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label_login_placeholderSuccessfullyLoggedIn.Location = new System.Drawing.Point(700, 462);
+            this.label_login_placeholderSuccessfullyLoggedIn.Location = new System.Drawing.Point(806, 601);
             this.label_login_placeholderSuccessfullyLoggedIn.Name = "label_login_placeholderSuccessfullyLoggedIn";
             this.label_login_placeholderSuccessfullyLoggedIn.Size = new System.Drawing.Size(184, 26);
             this.label_login_placeholderSuccessfullyLoggedIn.TabIndex = 16;
@@ -257,7 +257,7 @@ namespace PostaRomana.LogIn
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gradientPanel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gradientPanel1.Name = "gradientPanel1";
-            this.gradientPanel1.Size = new System.Drawing.Size(1708, 819);
+            this.gradientPanel1.Size = new System.Drawing.Size(1920, 1080);
             this.gradientPanel1.TabIndex = 17;
             // 
             // panel1
@@ -266,10 +266,10 @@ namespace PostaRomana.LogIn
             this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Location = new System.Drawing.Point(-11, -24);
+            this.panel1.Location = new System.Drawing.Point(-3, -17);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1729, 80);
+            this.panel1.Size = new System.Drawing.Size(1923, 100);
             this.panel1.TabIndex = 18;
             // 
             // button1
@@ -281,7 +281,7 @@ namespace PostaRomana.LogIn
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(1617, 7);
+            this.button1.Location = new System.Drawing.Point(1814, 12);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 70);
@@ -298,9 +298,9 @@ namespace PostaRomana.LogIn
             this.button_login_showPassword.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button_login_showPassword.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button_login_showPassword.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button_login_showPassword.Location = new System.Drawing.Point(987, 398);
+            this.button_login_showPassword.Location = new System.Drawing.Point(1093, 523);
             this.button_login_showPassword.Name = "button_login_showPassword";
-            this.button_login_showPassword.Size = new System.Drawing.Size(32, 20);
+            this.button_login_showPassword.Size = new System.Drawing.Size(43, 36);
             this.button_login_showPassword.TabIndex = 3;
             this.button_login_showPassword.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.button_login_showPassword.UseVisualStyleBackColor = true;
@@ -310,7 +310,7 @@ namespace PostaRomana.LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1708, 819);
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.gradientPanel1);
             this.Controls.Add(this.label_login_WelcomeBack);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
