@@ -14,12 +14,14 @@ namespace PostaRomanaFrontend.SignUp
         private void btSignUp_Click(object sender, EventArgs e)
         {
             CredentialsSignUp csu = new CredentialsSignUp();
+            this.Hide();
             csu.Show();
         }
 
         private void linkSignUp_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             LoginMainPage log = new LoginMainPage();
+            this.Hide();
             log.Show();
         }
 

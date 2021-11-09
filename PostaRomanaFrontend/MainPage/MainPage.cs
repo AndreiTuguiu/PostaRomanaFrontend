@@ -26,9 +26,9 @@ namespace PostaRomana.MainPage
         List<Country> countries;
         List<County> counties;
         List<City> cities;
+        List<Location> locations;
         List<string> intervals;
         List<string> eventTypes;
-        List<string> locations;
         List<string> organizers;
         List<string> costs;
         List<Event> events;
@@ -42,9 +42,7 @@ namespace PostaRomana.MainPage
             InitializeComponent();
             GenerateDynamicUserControl();
             hidePanel();
-            locations = new List<string>();
-            locations.Add("Greacia, Pieria, Katerini");
-            locations.Add("Romania, Iasi, Iasi");
+            
 
             //asta ramane
             cb_Interval.DataSource = intervals;
@@ -79,8 +77,10 @@ namespace PostaRomana.MainPage
 
             int[] Locids = LoadEventLocIDs().ToArray();
             string[] name = LoadEventNames().ToArray();
+            string[] desc = LoadEventDesc().ToArray();
             int[] organizerName = LoadEventOrganizer().ToArray();
-            DateTime[] date = LoadEventStartDate().ToArray();
+            DateTime[] startdate = LoadEventStartDate().ToArray();
+            DateTime[] enddate = LoadEventEndDate().ToArray();
             int[] location = LoadEventLocation().ToArray();
             decimal?[] cost = LoadEventCost().ToArray();
             Image[] icons = new Image[5] {
@@ -100,8 +100,10 @@ namespace PostaRomana.MainPage
                 }
                 listItems[i].LocId = Locids[i];
                 listItems[i].Name = name[i];
+                listItems[i].Description = desc[i];
                 listItems[i].OrganizerName = organizerName[i];
-                listItems[i].Date = date[i];
+                listItems[i].Date = startdate[i];
+                listItems[i].DateEnd = enddate[i];
                 listItems[i].Location = location[i];
                 listItems[i].Cost = cost[i];
 
@@ -118,7 +120,7 @@ namespace PostaRomana.MainPage
             l_Type.Text = obj.Type.ToString();
             l_StartDate.Text = obj.Date.ToString();
             l_EndDate.Text = obj.DateEnd.ToString();
-            l_AddressLine.Text = obj.Location.ToString();
+            l_AddressLine.Text = LoadEventLocAddress(obj.LocId);
             l_Country.Text = LoadCountryName(obj.LocId);
             l_County.Text = LoadCountyName(obj.LocId);
             l_City.Text = LoadCityName(obj.LocId);
@@ -198,7 +200,26 @@ namespace PostaRomana.MainPage
             }
             return _eventIDs;
         }
+        private string LoadEventLocAddress(int LocationId)
+        {
+            var url = $"https://localhost:5001/api/Event/GetAddressById/{LocationId}";
+            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            List<Location> list = new List<Location>();
+            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+                list = JsonConvert.DeserializeObject<List<Location>>(result);
+            }
+            locations = list;
+            List<string> _eventadd = new List<string>();
 
+            foreach (var item in list)
+            {
+                _eventadd.Add(item.AddressLine);
+            }
+            return _eventadd[0];
+        }
         private List<string> LoadEventNames()
         {
             var url = "https://localhost:5001/api/Event/ListOfEvents";
@@ -216,6 +237,26 @@ namespace PostaRomana.MainPage
             foreach (var item in list)
             {
                 _eventNames.Add(item.Name);
+            }
+            return _eventNames;
+        }
+        private List<string> LoadEventDesc()
+        {
+            var url = "https://localhost:5001/api/Event/ListOfEvents";
+            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            List<Event> list = new List<Event>();
+            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+                list = JsonConvert.DeserializeObject<List<Event>>(result);
+            }
+            events = list;
+            List<string> _eventNames = new List<string>();
+
+            foreach (var item in list)
+            {
+                _eventNames.Add(item.Description);
             }
             return _eventNames;
         }
@@ -280,6 +321,27 @@ namespace PostaRomana.MainPage
                 _eventSD.Add(item.StartDate);
             }
             return _eventSD;
+        }
+
+        private List<DateTime> LoadEventEndDate()
+        {
+            var url = "https://localhost:5001/api/Event/ListOfEvents";
+            var httpRequest = (HttpWebRequest)WebRequest.Create(url);
+            List<Event> list = new List<Event>();
+            var httpResponse = (HttpWebResponse)httpRequest.GetResponse();
+            using (var streamReader = new StreamReader(httpResponse.GetResponseStream()))
+            {
+                var result = streamReader.ReadToEnd();
+                list = JsonConvert.DeserializeObject<List<Event>>(result);
+            }
+            events = list;
+            List<DateTime> _eventED = new List<DateTime>();
+
+            foreach (var item in list)
+            {
+                _eventED.Add(item.EndDate);
+            }
+            return _eventED;
         }
 
         private List<Decimal?> LoadEventCost()
