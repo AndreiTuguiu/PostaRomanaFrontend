@@ -187,7 +187,7 @@ namespace LogIn.Pages.CreateNewPassword
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Impact", 14F);
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.button3.Location = new System.Drawing.Point(719, 491);
+            this.button3.Location = new System.Drawing.Point(727, 510);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(313, 113);

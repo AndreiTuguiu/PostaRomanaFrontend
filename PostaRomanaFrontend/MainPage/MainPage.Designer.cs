@@ -29,6 +29,7 @@ namespace PostaRomana.MainPage
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
             this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -84,6 +85,7 @@ namespace PostaRomana.MainPage
             this.tb_Search = new System.Windows.Forms.TextBox();
             this.l_login = new System.Windows.Forms.Label();
             this.bt_Exit = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.gradientPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -747,6 +749,12 @@ namespace PostaRomana.MainPage
             this.bt_Exit.TabIndex = 1;
             this.bt_Exit.UseVisualStyleBackColor = true;
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // MainPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -833,6 +841,7 @@ namespace PostaRomana.MainPage
         private System.Windows.Forms.Label l_Title;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Button bt_Close;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LogIn.Actions;
+using System;
 using System.Diagnostics;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -114,7 +115,8 @@ namespace PostaRomanaFrontend.SignUp
             {
                 fullName = tb_FirstName.Text.Trim() + " " + tb_LastName.Text.Trim(),
                 username = tb_Username.Text.Trim(),
-                password = tb_Password.Text.Trim(),
+                //password = tb_Password.Text.Trim(), //parola criptata
+                password = EncryptPasswords.GenerateHash(tb_Password.Text.Trim(), EncryptPasswords.CreateSalt(5)), //criptare cu salt
                 email = tb_Email.Text.Trim()
             };
 

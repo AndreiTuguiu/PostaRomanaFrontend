@@ -107,6 +107,44 @@ namespace PostaRomana.LogIn
 
         private async void bt_login_LogInButton_Click(object sender, EventArgs e)
         {
+            /*            var toSend = new ToSend()
+                        {
+                            //fullName = tb_FirstName.Text.Trim() + " " + tb_LastName.Text.Trim(),
+                            Username = textBox1.Text,
+                            Password = textBox2.Text
+                            //email = tb_Email.Text.Trim()
+                        };
+
+                        HttpResponseMessage response = await client.GetAsync($"api/Account/LogTheUser?Username={toSend.Username}?Password={toSend.Password}");
+
+                        //if parola and username are leo and parola123 login, else
+                        if (response.IsSuccessStatusCode)
+
+                            *//*
+                              //send textBox1 and textBox2 to httpPost LogTheUser (Compare credentials + Create Session)
+                              //if LogIn returns not null (the session ValidTo)
+                              save ValidTo in a variable for the timer
+                            *//*
+                        {
+                            MainPage.MainPage frm = new MainPage.MainPage();
+
+
+                            Location = this.Location;
+                            StartPosition = FormStartPosition.Manual;
+
+                            //frm.FormClosing += delegate { this.Show(); }; //atunci cand inchid main page deschide login
+                            frm.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            label_login_placeholderSuccessfullyLoggedIn.Visible = false;
+                            label_login_invalidUsername.Visible = true;
+                        }*/
+            await LoginOperation();
+        }
+        private async Task LoginOperation()
+        {
             var toSend = new ToSend()
             {
                 //fullName = tb_FirstName.Text.Trim() + " " + tb_LastName.Text.Trim(),
@@ -115,19 +153,19 @@ namespace PostaRomana.LogIn
                 //email = tb_Email.Text.Trim()
             };
 
-            HttpResponseMessage response = await client.GetAsync($"api/Account/LogTheUser?Username={toSend.Username}Password={toSend.Password}");
+            HttpResponseMessage response = await client.GetAsync($"api/Account/LogTheUser?Username={toSend.Username}&Password={toSend.Password}");
 
             //if parola and username are leo and parola123 login, else
             if (response.IsSuccessStatusCode)
 
-                /*
-                  //send textBox1 and textBox2 to httpPost LogTheUser (Compare credentials + Create Session)
-                  //if LogIn returns not null (the session ValidTo)
-                  save ValidTo in a variable for the timer
-                */
+            /*
+              //send textBox1 and textBox2 to httpPost LogTheUser (Compare credentials + Create Session)
+              //if LogIn returns not null (the session ValidTo)
+              save ValidTo in a variable for the timer
+            */
             {
                 MainPage.MainPage frm = new MainPage.MainPage();
-               
+
 
                 Location = this.Location;
                 StartPosition = FormStartPosition.Manual;
@@ -208,13 +246,13 @@ namespace PostaRomana.LogIn
             }
         }
 
-        private void textBox2_KeyDown(object sender, KeyEventArgs e)
+/*        private async void textBox2_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
-                bt_login_LogInButton_Click(sender, e);
+                await bt_login_LogInButton_Click(sender, e);
             }
-        }
+        }*/
 
         //public class ModelJson(){}
         

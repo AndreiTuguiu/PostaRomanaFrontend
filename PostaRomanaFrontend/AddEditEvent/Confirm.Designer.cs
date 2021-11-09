@@ -67,6 +67,7 @@ namespace AddEditEvent
             this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -396,7 +397,6 @@ namespace AddEditEvent
             this.pb_Close.TabStop = false;
             this.pb_Close.Click += new System.EventHandler(this.pb_Close_Click);
             // 
-            
             // gradientPanel1
             // 
             this.gradientPanel1.ColorBottom = System.Drawing.Color.LightCyan;
@@ -441,6 +441,12 @@ namespace AddEditEvent
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(159, 81);
             this.panel4.TabIndex = 21;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Confirm
             // 
@@ -510,5 +516,6 @@ namespace AddEditEvent
         private PostaRomanaFrontend.GradientPanel gradientPanel1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Timer timer1;
     }
 }
