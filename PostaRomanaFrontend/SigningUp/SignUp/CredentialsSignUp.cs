@@ -94,6 +94,7 @@ namespace PostaRomanaFrontend.SignUp
                 tb_Password.Text.Length < 8 ||
                 !hasNumber.IsMatch(tb_Password.Text) ||
                 !hasUpperChar.IsMatch(tb_Password.Text))
+
             {
                 l_error_password.Text = "The password must have at least 8 characters, a number and an uppercase letter!";
                 isValid = false;
