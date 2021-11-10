@@ -118,9 +118,9 @@ namespace AddEditEvent
 
         private void Confirm_Load(object sender, EventArgs e)
         {
-            cb_EventType.DataSource=LoadTypes();
+            LoadTypes();
 
-            cb_EventType.SelectedIndex = EventType;
+            //cb_EventType.SelectedIndex = EventType;
 
             cb_country.DataSource = LoadCountries();
             //var c = LoadCountiesByCountry(CountryId);
@@ -380,7 +380,7 @@ namespace AddEditEvent
             return -1;
         }
 
-        private List<string> LoadTypes()
+        private void LoadTypes()
         {
             var url = "https://localhost:5001/api/Event/GetfTypes";
             var httpRequest = (HttpWebRequest)WebRequest.Create(url);
@@ -398,7 +398,11 @@ namespace AddEditEvent
             {
                 _types.Add(items.EventTypeName);
             }
-            return _types;
+            
+
+            cb_EventType.DataSource = _types;
+            cb_EventType.SelectedIndex = EventType-1;
+
 
         }
         bool SessionExpired = false;

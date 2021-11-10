@@ -31,6 +31,7 @@ namespace PostaRomana.MainPage
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.gradientPanel1 = new PostaRomanaFrontend.GradientPanel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@ namespace PostaRomana.MainPage
             this.bt_AddEvent = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.edit = new System.Windows.Forms.Button();
             this.bt_Close = new System.Windows.Forms.Button();
             this.l_Cost = new System.Windows.Forms.Label();
             this.l_City = new System.Windows.Forms.Label();
@@ -85,8 +87,6 @@ namespace PostaRomana.MainPage
             this.tb_Search = new System.Windows.Forms.TextBox();
             this.l_login = new System.Windows.Forms.Label();
             this.bt_Exit = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.edit = new System.Windows.Forms.Button();
             this.gradientPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -100,6 +100,12 @@ namespace PostaRomana.MainPage
             ((System.ComponentModel.ISupportInitialize)(this.pb_Close)).BeginInit();
             this.SuspendLayout();
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // gradientPanel1
             // 
             this.gradientPanel1.ColorBottom = System.Drawing.Color.LightCyan;
@@ -110,7 +116,7 @@ namespace PostaRomana.MainPage
             this.gradientPanel1.Controls.Add(this.bt_Exit);
             this.gradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.gradientPanel1.Name = "gradientPanel1";
             this.gradientPanel1.Size = new System.Drawing.Size(1280, 702);
             this.gradientPanel1.TabIndex = 0;
@@ -132,7 +138,7 @@ namespace PostaRomana.MainPage
             this.panel5.Controls.Add(this.cb_Interval);
             this.panel5.Controls.Add(this.bt_AddEvent);
             this.panel5.Location = new System.Drawing.Point(-1, 94);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1285, 59);
             this.panel5.TabIndex = 22;
@@ -208,7 +214,7 @@ namespace PostaRomana.MainPage
             this.bt_Filter.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bt_Filter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Filter.Location = new System.Drawing.Point(1001, 19);
-            this.bt_Filter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Filter.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Filter.Name = "bt_Filter";
             this.bt_Filter.Size = new System.Drawing.Size(39, 38);
             this.bt_Filter.TabIndex = 26;
@@ -220,7 +226,7 @@ namespace PostaRomana.MainPage
             this.cb_Cost.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Cost.FormattingEnabled = true;
             this.cb_Cost.Location = new System.Drawing.Point(815, 32);
-            this.cb_Cost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_Cost.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Cost.Name = "cb_Cost";
             this.cb_Cost.Size = new System.Drawing.Size(159, 21);
             this.cb_Cost.TabIndex = 25;
@@ -231,7 +237,7 @@ namespace PostaRomana.MainPage
             this.cb_Organizer.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Organizer.FormattingEnabled = true;
             this.cb_Organizer.Location = new System.Drawing.Point(611, 32);
-            this.cb_Organizer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_Organizer.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Organizer.Name = "cb_Organizer";
             this.cb_Organizer.Size = new System.Drawing.Size(159, 21);
             this.cb_Organizer.TabIndex = 24;
@@ -246,7 +252,7 @@ namespace PostaRomana.MainPage
             "County",
             "City"});
             this.cb_Location.Location = new System.Drawing.Point(412, 32);
-            this.cb_Location.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_Location.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Location.Name = "cb_Location";
             this.cb_Location.Size = new System.Drawing.Size(159, 21);
             this.cb_Location.TabIndex = 23;
@@ -257,7 +263,7 @@ namespace PostaRomana.MainPage
             this.cb_EventType.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_EventType.FormattingEnabled = true;
             this.cb_EventType.Location = new System.Drawing.Point(213, 32);
-            this.cb_EventType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_EventType.Margin = new System.Windows.Forms.Padding(2);
             this.cb_EventType.Name = "cb_EventType";
             this.cb_EventType.Size = new System.Drawing.Size(159, 21);
             this.cb_EventType.TabIndex = 22;
@@ -268,7 +274,7 @@ namespace PostaRomana.MainPage
             this.cb_Interval.Font = new System.Drawing.Font("Berlin Sans FB", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Interval.FormattingEnabled = true;
             this.cb_Interval.Location = new System.Drawing.Point(13, 32);
-            this.cb_Interval.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_Interval.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Interval.Name = "cb_Interval";
             this.cb_Interval.Size = new System.Drawing.Size(159, 21);
             this.cb_Interval.TabIndex = 21;
@@ -285,7 +291,7 @@ namespace PostaRomana.MainPage
             this.bt_AddEvent.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.bt_AddEvent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_AddEvent.Location = new System.Drawing.Point(1221, 6);
-            this.bt_AddEvent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_AddEvent.Margin = new System.Windows.Forms.Padding(2);
             this.bt_AddEvent.Name = "bt_AddEvent";
             this.bt_AddEvent.Size = new System.Drawing.Size(49, 44);
             this.bt_AddEvent.TabIndex = 20;
@@ -300,7 +306,7 @@ namespace PostaRomana.MainPage
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Controls.Add(this.flowLayoutPanel1);
             this.panel4.Location = new System.Drawing.Point(17, 215);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(1244, 535);
             this.panel4.TabIndex = 19;
@@ -332,10 +338,27 @@ namespace PostaRomana.MainPage
             this.panel6.Controls.Add(this.label10);
             this.panel6.Controls.Add(this.label9);
             this.panel6.Location = new System.Drawing.Point(691, 44);
-            this.panel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(511, 430);
             this.panel6.TabIndex = 1;
+            // 
+            // edit
+            // 
+            this.edit.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
+            this.edit.FlatAppearance.BorderSize = 3;
+            this.edit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.edit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.edit.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.edit.Location = new System.Drawing.Point(251, 370);
+            this.edit.Margin = new System.Windows.Forms.Padding(2);
+            this.edit.Name = "edit";
+            this.edit.Size = new System.Drawing.Size(98, 41);
+            this.edit.TabIndex = 21;
+            this.edit.Text = "Edit";
+            this.edit.UseVisualStyleBackColor = true;
+            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // bt_Close
             // 
@@ -346,7 +369,7 @@ namespace PostaRomana.MainPage
             this.bt_Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Close.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_Close.Location = new System.Drawing.Point(374, 370);
-            this.bt_Close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Close.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Close.Name = "bt_Close";
             this.bt_Close.Size = new System.Drawing.Size(98, 41);
             this.bt_Close.TabIndex = 20;
@@ -580,7 +603,7 @@ namespace PostaRomana.MainPage
             this.flowLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.flowLayoutPanel1.AutoScroll = true;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(20, 44);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
             this.flowLayoutPanel1.Size = new System.Drawing.Size(667, 430);
             this.flowLayoutPanel1.TabIndex = 0;
@@ -601,7 +624,7 @@ namespace PostaRomana.MainPage
             this.panel1.Controls.Add(this.tb_Search);
             this.panel1.Controls.Add(this.l_login);
             this.panel1.Location = new System.Drawing.Point(-1, -9);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1293, 105);
             this.panel1.TabIndex = 18;
@@ -655,7 +678,7 @@ namespace PostaRomana.MainPage
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.pb_Location);
             this.panel2.Location = new System.Drawing.Point(507, 36);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(299, 44);
             this.panel2.TabIndex = 20;
@@ -666,7 +689,7 @@ namespace PostaRomana.MainPage
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.Location = new System.Drawing.Point(50, 6);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(234, 34);
@@ -679,7 +702,7 @@ namespace PostaRomana.MainPage
             this.pb_Location.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pb_Location.Image = ((System.Drawing.Image)(resources.GetObject("pb_Location.Image")));
             this.pb_Location.Location = new System.Drawing.Point(3, 1);
-            this.pb_Location.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pb_Location.Margin = new System.Windows.Forms.Padding(2);
             this.pb_Location.Name = "pb_Location";
             this.pb_Location.Size = new System.Drawing.Size(43, 40);
             this.pb_Location.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -693,7 +716,7 @@ namespace PostaRomana.MainPage
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.cb_Categories);
             this.panel3.Location = new System.Drawing.Point(810, 36);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(224, 44);
             this.panel3.TabIndex = 19;
@@ -704,7 +727,7 @@ namespace PostaRomana.MainPage
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(2, 1);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(44, 42);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -717,7 +740,7 @@ namespace PostaRomana.MainPage
             this.cb_Categories.Font = new System.Drawing.Font("Berlin Sans FB", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_Categories.FormattingEnabled = true;
             this.cb_Categories.Location = new System.Drawing.Point(63, 14);
-            this.cb_Categories.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cb_Categories.Margin = new System.Windows.Forms.Padding(2);
             this.cb_Categories.Name = "cb_Categories";
             this.cb_Categories.Size = new System.Drawing.Size(154, 25);
             this.cb_Categories.TabIndex = 21;
@@ -729,7 +752,7 @@ namespace PostaRomana.MainPage
             this.pb_Search.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pb_Search.Image = ((System.Drawing.Image)(resources.GetObject("pb_Search.Image")));
             this.pb_Search.Location = new System.Drawing.Point(1045, 36);
-            this.pb_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pb_Search.Margin = new System.Windows.Forms.Padding(2);
             this.pb_Search.Name = "pb_Search";
             this.pb_Search.Size = new System.Drawing.Size(50, 40);
             this.pb_Search.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -742,7 +765,7 @@ namespace PostaRomana.MainPage
             this.pb_Close.BackColor = System.Drawing.Color.Transparent;
             this.pb_Close.Image = ((System.Drawing.Image)(resources.GetObject("pb_Close.Image")));
             this.pb_Close.Location = new System.Drawing.Point(1215, 12);
-            this.pb_Close.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pb_Close.Margin = new System.Windows.Forms.Padding(2);
             this.pb_Close.Name = "pb_Close";
             this.pb_Close.Size = new System.Drawing.Size(61, 51);
             this.pb_Close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -761,7 +784,7 @@ namespace PostaRomana.MainPage
             this.bt_Logo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bt_Logo.ForeColor = System.Drawing.Color.White;
             this.bt_Logo.Location = new System.Drawing.Point(13, 25);
-            this.bt_Logo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Logo.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Logo.Name = "bt_Logo";
             this.bt_Logo.Size = new System.Drawing.Size(124, 60);
             this.bt_Logo.TabIndex = 0;
@@ -773,7 +796,7 @@ namespace PostaRomana.MainPage
             this.tb_Search.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.tb_Search.Font = new System.Drawing.Font("Berlin Sans FB", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tb_Search.Location = new System.Drawing.Point(181, 36);
-            this.tb_Search.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tb_Search.Margin = new System.Windows.Forms.Padding(2);
             this.tb_Search.Multiline = true;
             this.tb_Search.Name = "tb_Search";
             this.tb_Search.Size = new System.Drawing.Size(323, 45);
@@ -799,34 +822,11 @@ namespace PostaRomana.MainPage
             // 
             this.bt_Exit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.bt_Exit.Location = new System.Drawing.Point(1202, 33);
-            this.bt_Exit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bt_Exit.Margin = new System.Windows.Forms.Padding(2);
             this.bt_Exit.Name = "bt_Exit";
             this.bt_Exit.Size = new System.Drawing.Size(50, 51);
             this.bt_Exit.TabIndex = 1;
             this.bt_Exit.UseVisualStyleBackColor = true;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // edit
-            // 
-            this.edit.FlatAppearance.BorderColor = System.Drawing.Color.Indigo;
-            this.edit.FlatAppearance.BorderSize = 3;
-            this.edit.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.edit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.edit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.edit.Font = new System.Drawing.Font("Impact", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.edit.Location = new System.Drawing.Point(251, 370);
-            this.edit.Margin = new System.Windows.Forms.Padding(2);
-            this.edit.Name = "edit";
-            this.edit.Size = new System.Drawing.Size(98, 41);
-            this.edit.TabIndex = 21;
-            this.edit.Text = "Edit";
-            this.edit.UseVisualStyleBackColor = true;
-            this.edit.Click += new System.EventHandler(this.edit_Click);
             // 
             // MainPage
             // 
@@ -836,7 +836,7 @@ namespace PostaRomana.MainPage
             this.ClientSize = new System.Drawing.Size(1280, 702);
             this.Controls.Add(this.gradientPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainPage";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
