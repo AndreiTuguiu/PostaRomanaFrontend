@@ -87,6 +87,7 @@ namespace AddEditEvent
             AddEvent1 close = new AddEvent1();
             close.Close();
             this.Close();
+            Application.Exit();
         }
 
         private void cb_EventType_SelectedIndexChanged(object sender, EventArgs e)

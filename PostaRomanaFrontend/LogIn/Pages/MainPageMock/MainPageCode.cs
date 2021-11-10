@@ -19,7 +19,7 @@ namespace PostaRomana.MainPageMock
         {
             InitializeComponent();
         }
-        DateTime ValidTo = DateTime.Now.AddSeconds(4);
+        DateTime ValidTo = DateTime.Now.AddMinutes(10);
         private void label1_Click(object sender, EventArgs e)
         {
 

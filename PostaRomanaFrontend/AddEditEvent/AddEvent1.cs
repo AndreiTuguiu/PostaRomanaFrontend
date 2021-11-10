@@ -53,7 +53,7 @@ namespace PostaRomana.AddEditEvent
 
         private void pb_Close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
         
         public string MyEventName

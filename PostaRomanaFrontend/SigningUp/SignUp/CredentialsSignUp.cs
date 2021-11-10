@@ -108,6 +108,7 @@ namespace PostaRomanaFrontend.SignUp
             if (isValid)
             {
                 Token token = new Token();
+                this.Hide();
                 token.Show();
             }
 
@@ -211,6 +212,7 @@ namespace PostaRomanaFrontend.SignUp
         private void bt_Back_Click(object sender, EventArgs e)
         {
             SignUpMenu back = new SignUpMenu();
+            this.Hide();
             back.Show();
         }
 

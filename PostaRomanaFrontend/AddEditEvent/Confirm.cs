@@ -82,7 +82,7 @@ namespace AddEditEvent
             public string description { get;set; }
         }
 
-        private void b_Confirm_Click(object sender, EventArgs e)
+        private async void b_Confirm_Click(object sender, EventArgs e)
         {
             PostaRomana.MainPage.MainPage main = new PostaRomana.MainPage.MainPage();
             main.Show();
@@ -112,8 +112,8 @@ namespace AddEditEvent
                 description=tb_EventDesc.Text
             };
             
-
-            client.PostAsJsonAsync("/api/Event/EventCommands", send);
+            var result = await client.PostAsJsonAsync("/api/Event/EventCommands", send);
+            result.EnsureSuccessStatusCode();
         }
 
         private void Confirm_Load(object sender, EventArgs e)
@@ -151,7 +151,7 @@ namespace AddEditEvent
 
         private void pb_Close_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
         #region attempt1
         //private async void LoadCountry()

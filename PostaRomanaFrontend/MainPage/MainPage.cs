@@ -65,11 +65,12 @@ namespace PostaRomana.MainPage
             cb_Cost.SelectedIndex = -1;
 
 
-            client.BaseAddress = new Uri("https://localhost:5001/");
+            
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                    new MediaTypeWithQualityHeaderValue("application/json"));
         }
+        
         private void GenerateDynamicUserControl()
         {
             flowLayoutPanel1.Controls.Clear();
@@ -552,6 +553,12 @@ namespace PostaRomana.MainPage
             Confirm edit = new Confirm(nameofevent, desc,add,start,end,country,county,city,cost,type);
             this.Hide();
             edit.Show();
+        }
+
+        private void label19_Click(object sender, EventArgs e)
+        {
+            GenerateDynamicUserControl();
+
         }
     }
 }

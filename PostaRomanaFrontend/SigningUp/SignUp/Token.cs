@@ -31,6 +31,7 @@ namespace PostaRomanaFrontend.SignUp
         private void bt_Register_Click(object sender, System.EventArgs e)
         {
             PostaRomana.MainPage.MainPage main = new PostaRomana.MainPage.MainPage();
+            this.Hide();
             main.Show();
 
             var toSend = new ToSend()

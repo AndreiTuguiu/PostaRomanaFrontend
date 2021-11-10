@@ -76,6 +76,7 @@ namespace PostaRomana.AddEditEvent
             AddEvent1 close = new AddEvent1();
             close.Close();
             this.Close();
+            Application.Exit();
         }
 
         private void pb_firstStep_Click(object sender, EventArgs e)

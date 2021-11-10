@@ -21,17 +21,18 @@ namespace PostaRomana.LogIn
     public partial class LoginMainPage : Form
     {
         static HttpClient client = new HttpClient();
+        
         public LoginMainPage()
         {
             DateTime FourSecondsLater = DateTime.Now.AddSeconds(4);
             InitializeComponent();
 
-            client.BaseAddress = new Uri("https://localhost:5001/");
+            
             client.DefaultRequestHeaders.Accept.Clear();
             client.DefaultRequestHeaders.Accept.Add(
                    new MediaTypeWithQualityHeaderValue("application/json"));
         }
-
+        
         public class ToSend
         {
             //public string fullName { get; set; }
@@ -152,32 +153,37 @@ namespace PostaRomana.LogIn
                 Password = textBox2.Text
                 //email = tb_Email.Text.Trim()
             };
-
-            HttpResponseMessage response = await client.GetAsync($"api/Account/LogTheUser?Username={toSend.Username}&Password={toSend.Password}");
-
-            //if parola and username are leo and parola123 login, else
-            if (response.IsSuccessStatusCode)
-
-            /*
-              //send textBox1 and textBox2 to httpPost LogTheUser (Compare credentials + Create Session)
-              //if LogIn returns not null (the session ValidTo)
-              save ValidTo in a variable for the timer
-            */
+            try
             {
-                MainPage.MainPage frm = new MainPage.MainPage();
+                HttpResponseMessage response = await client.GetAsync($"https://localhost:5001/api/Account/LogTheUser?Username={toSend.Username}&Password={toSend.Password}");
+
+                //if parola and username are leo and parola123 login, else
+                if (response.IsSuccessStatusCode)
+
+                /*
+                  //send textBox1 and textBox2 to httpPost LogTheUser (Compare credentials + Create Session)
+                  //if LogIn returns not null (the session ValidTo)
+                  save ValidTo in a variable for the timer
+                */
+                {
+                    MainPage.MainPage frm = new MainPage.MainPage();
 
 
-                Location = this.Location;
-                StartPosition = FormStartPosition.Manual;
+                    Location = this.Location;
+                    StartPosition = FormStartPosition.Manual;
 
-                //frm.FormClosing += delegate { this.Show(); }; //atunci cand inchid main page deschide login
-                frm.Show();
-                this.Hide();
-            }
-            else
+                    //frm.FormClosing += delegate { this.Show(); }; //atunci cand inchid main page deschide login
+                    frm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    label_login_placeholderSuccessfullyLoggedIn.Visible = false;
+                    label_login_invalidUsername.Visible = true;
+                }
+            }catch(Exception e)
             {
-                label_login_placeholderSuccessfullyLoggedIn.Visible = false;
-                label_login_invalidUsername.Visible = true;
+                MessageBox.Show("Invalid credentials");
             }
         }
 
