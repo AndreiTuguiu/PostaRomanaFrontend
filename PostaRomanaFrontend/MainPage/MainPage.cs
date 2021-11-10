@@ -557,7 +557,7 @@ namespace PostaRomana.MainPage
 
         private void label19_Click(object sender, EventArgs e)
         {
-            GenerateDynamicUserControl();
+            events = LoadEvents();
 
         }
     }
